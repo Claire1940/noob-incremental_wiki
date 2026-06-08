@@ -1,12 +1,15 @@
 {
-  "name": "Lucid Blocks Wiki - Crafting, Biomes & Achievements",
-  "short_name": "Lucid Blocks",
-  "description": "Lucid Blocks Wiki covers crafting, biomes, creatures, items, achievements, endings, and survival tips for the surreal voxel sandbox adventure on Steam.",
+  "name": "Noob Incremental Wiki - Codes, Runes & Prestige",
+  "short_name": "Noob Incremental",
+  "description": "Noob Incremental Wiki tracks Roblox codes, runes, prestige layers, upgrades, Oof farming, and beginner progression routes.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
-  "theme_color": "#1a7a7a",
-  "background_color": "#0a0a0a",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["games", "entertainment", "reference"],
+  "theme_color": "#a855f7",
+  "background_color": "#0f071a",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
