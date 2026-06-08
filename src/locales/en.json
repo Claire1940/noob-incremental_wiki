@@ -10,7 +10,15 @@
       "twitterDescription": "Noob Incremental Wiki covers Roblox codes, runes, prestige layers, upgrades, Oof farming, and beginner progression tips."
     }
   },
-  "nav": {},
+  "nav": {
+    "codes": "Codes",
+    "guide": "Guide",
+    "farming": "Farming",
+    "upgrades": "Upgrades",
+    "runes": "Runes",
+    "progression": "Progression",
+    "updates": "Updates"
+  },
   "common": {
     "home": "Home",
     "more": "More",
@@ -601,125 +609,145 @@
     "disclaimer": "Unofficial fan-made resource website."
   },
   "pages": {
-    "guides": {
-      "title": "Noob Incremental Guides",
-      "description": "Beginner routes, code tips, Oof farming plans, and prestige advice for Noob Incremental.",
-      "metaTitle": "Noob Incremental Guides - Beginner Routes and Progression Tips",
-      "metaDescription": "Browse Noob Incremental guides covering early progression, codes, Oof farming, rune timing, and prestige planning.",
-      "categoryLabel": "GAME GUIDES",
-      "whatIs": "What are Guides?",
-      "whatIsDescription": "This section collects the core Noob Incremental walkthroughs for new players, including the opening route, Oof farming choices, and code redemption habits.",
-      "why": "Why read guides?",
+    "codes": {
+      "title": "Noob Incremental Codes",
+      "description": "Latest working Noob Incremental codes for Tickets, Tokens, Potions, and milestone rewards.",
+      "metaTitle": "Noob Incremental Codes - Active Rewards and Redeem Help",
+      "metaDescription": "Get the latest Noob Incremental codes for Tickets, Tokens, Potions, and launch rewards, plus fast redeem steps.",
+      "categoryLabel": "REDEEM CODES",
+      "whatIs": "What are Codes?",
+      "whatIsDescription": "The Noob Incremental codes section tracks active redeem strings, reward types, and the short ABX redemption route inside the Shop menu.",
+      "why": "Why check codes?",
       "whySteps": {
-        "step1Title": "Learn the Opening Loop",
-        "step1Description": "Understand how Noobs, Oof, upgrades, and runes fit together.",
-        "step2Title": "Move Faster",
-        "step2Description": "Use cleaner routes to avoid stalling on the first big wall.",
-        "step3Title": "Plan Better Resets",
-        "step3Description": "Turn prestige into a speed boost instead of a restart."
+        "step1Title": "Claim Free Resources",
+        "step1Description": "Use active codes to add Tickets, Tokens, and Potions before long farming sessions.",
+        "step2Title": "Catch New Drops Early",
+        "step2Description": "Release gifts, bug-fix rewards, and CCU milestone bundles tend to matter most when redeemed right away.",
+        "step3Title": "Keep Redeems Simple",
+        "step3Description": "Use one page for current code status, reward notes, and the exact redeem path."
       },
       "featured": "Featured & Essential",
-      "all": "All Guides"
+      "all": "All Codes"
     },
-    "crafting": {
+    "guide": {
+      "title": "Noob Incremental Guide",
+      "description": "Beginner routes, how-to-play help, and practical progression advice for Noob Incremental.",
+      "metaTitle": "Noob Incremental Guide - Beginner Routes and Core Progression Tips",
+      "metaDescription": "Browse Noob Incremental guide articles covering beginner routes, how to play, F2P advice, and practical early progression tips.",
+      "categoryLabel": "GAME GUIDE",
+      "whatIs": "What is the Guide section?",
+      "whatIsDescription": "The Noob Incremental guide section collects the broadest walkthroughs, including beginner paths, general how-to-play explainers, and route-planning articles for the first major walls.",
+      "why": "Why read the guide section?",
+      "whySteps": {
+        "step1Title": "Learn the Core Loop",
+        "step1Description": "See how Noobs, Oof, upgrades, runes, and prestige connect before you branch into niche systems.",
+        "step2Title": "Fix Slow Starts",
+        "step2Description": "Use a cleaner opening order so the first hour turns into steady scaling instead of stalled clicks.",
+        "step3Title": "Build Better Habits",
+        "step3Description": "Use route guides to decide when to farm, when to roll runes, and when to reset."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Guide Articles"
+    },
+    "farming": {
+      "title": "Noob Incremental Farming",
+      "description": "Oof farming routes, income pacing, and resource loop planning for Noob Incremental.",
+      "metaTitle": "Noob Incremental Farming - Oof Routes and Resource Planning",
+      "metaDescription": "Improve Noob Incremental farming with better Oof loops, income pacing, and route planning for stronger runs.",
+      "categoryLabel": "FARMING ROUTES",
+      "whatIs": "What is Farming?",
+      "whatIsDescription": "The Noob Incremental farming section focuses on Oof generation, repeatable grinding routes, and the choices that keep resource flow strong between upgrades and resets.",
+      "why": "Why improve farming?",
+      "whySteps": {
+        "step1Title": "Raise Oof Faster",
+        "step1Description": "Use better purchase order and route timing to improve the main economy sooner.",
+        "step2Title": "Spend With Purpose",
+        "step2Description": "Turn code rewards and earned currency into the next meaningful spike instead of scattered upgrades.",
+        "step3Title": "Support Every System",
+        "step3Description": "Stronger farming feeds upgrades, rune sessions, and prestige rebuilds at the same time."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Farming Articles"
+    },
+    "upgrades": {
+      "title": "Noob Incremental Upgrades",
+      "description": "Upgrade priorities, stat reading, Noob scaling, and premium-value choices for Noob Incremental.",
+      "metaTitle": "Noob Incremental Upgrades - Stats, Noobs, and Best Buy Order",
+      "metaDescription": "Learn the best Noob Incremental upgrades to prioritize, how stats affect scaling, and when gamepasses or secret upgrades matter.",
+      "categoryLabel": "UPGRADES",
+      "whatIs": "What are Upgrades?",
+      "whatIsDescription": "The Noob Incremental upgrades section breaks down the shop, stat growth, Noob scaling, and premium options so you can invest in the systems that actually move the run forward.",
+      "why": "Why review upgrades?",
+      "whySteps": {
+        "step1Title": "Buy Better Multipliers",
+        "step1Description": "Prioritize the upgrades that raise output and rebuild speed instead of chasing low-impact costs.",
+        "step2Title": "Read Your Stats",
+        "step2Description": "Use stat jumps, Noob scaling, and utility unlocks to decide when a lane is still worth funding.",
+        "step3Title": "Compare Premium Value",
+        "step3Description": "Separate strong gamepasses and secret upgrades from options that only help at the margins."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Upgrade Articles"
+    },
+    "runes": {
       "title": "Noob Incremental Runes",
-      "description": "Rune timing, luck windows, leveling choices, and roll-session planning for Noob Incremental.",
-      "metaTitle": "Noob Incremental Runes - Luck, Leveling, and Roll Strategy",
-      "metaDescription": "Learn how Noob Incremental runes work, when to roll, which boosts matter, and how to fit runes into the wider progression route.",
+      "description": "Rune rolling, leveling, tier list notes, and luck-window planning for Noob Incremental.",
+      "metaTitle": "Noob Incremental Runes - Best Runes, Levels, and Roll Timing",
+      "metaDescription": "Study Noob Incremental runes with roll timing, rune level advice, best-rune notes, and tier-list planning.",
       "categoryLabel": "RUNE SYSTEM",
       "whatIs": "What are Runes?",
-      "whatIsDescription": "Rune guides focus on how to time rolls, use community and potion bonuses well, and keep your rune choices aligned with the rest of the build.",
+      "whatIsDescription": "The Noob Incremental runes section covers rune rolls, leveling decisions, tier-list thinking, and the timing needed to fit rune sessions into your wider progression route.",
       "why": "Why study runes?",
       "whySteps": {
         "step1Title": "Time Your Rolls",
-        "step1Description": "Roll when your economy can support the session cleanly.",
-        "step2Title": "Use Boosts Well",
-        "step2Description": "Save luck and speed bonuses for meaningful rune windows.",
-        "step3Title": "Avoid Waste",
-        "step3Description": "Do not let weak duplicates drain a strong run."
+        "step1Description": "Start rune sessions when your economy can support repeated attempts without stalling the rest of the build.",
+        "step2Title": "Level the Right Pieces",
+        "step2Description": "Put resources into the runes that stay useful across prestige cycles and longer grinds.",
+        "step3Title": "Use Luck Windows Well",
+        "step3Description": "Pair boosts, bonuses, and saved resources with meaningful roll sessions instead of spending them casually."
       },
       "featured": "Featured & Essential",
-      "all": "All Rune Guides"
+      "all": "All Rune Articles"
     },
-    "items": {
-      "title": "Noob Incremental Upgrades",
-      "description": "Upgrade routes, stat priorities, and shop pacing advice for Noob Incremental.",
-      "metaTitle": "Noob Incremental Upgrades - Stats, Multipliers, and Shop Routes",
-      "metaDescription": "Learn which Noob Incremental upgrades to prioritize first, how stats affect scaling, and when to rotate into the next system.",
-      "categoryLabel": "UPGRADES & STATS",
-      "whatIs": "What are Upgrades?",
-      "whatIsDescription": "Upgrade guides break down the shop into useful lanes so you can improve generation, stats, rune support, and prestige rebuild speed at the right time.",
-      "why": "Why check upgrade guides?",
+    "progression": {
+      "title": "Noob Incremental Progression",
+      "description": "Prestige timing, world progression, Prism growth, and long-run route planning for Noob Incremental.",
+      "metaTitle": "Noob Incremental Progression - Prestige, Worlds, and Prism Planning",
+      "metaDescription": "Plan Noob Incremental progression with prestige timing, world unlock routes, Prism growth, and long-run pacing advice.",
+      "categoryLabel": "PROGRESSION",
+      "whatIs": "What is Progression?",
+      "whatIsDescription": "The Noob Incremental progression section focuses on big milestones such as prestige resets, world unlocks, Prism growth, and the pacing decisions that shape the full account climb.",
+      "why": "Why plan progression?",
       "whySteps": {
-        "step1Title": "Buy Better Multipliers",
-        "step1Description": "Invest in the upgrades that actually change your pace.",
-        "step2Title": "Read Your Stats",
-        "step2Description": "Use stat jumps to decide when to switch focus.",
-        "step3Title": "Keep Rebuilds Fast",
-        "step3Description": "Use utility upgrades to shorten every prestige cycle."
+        "step1Title": "Reset at Better Times",
+        "step1Description": "Use prestige only after real slowdown or a meaningful unlock threshold appears.",
+        "step2Title": "Map Future Milestones",
+        "step2Description": "Keep world, Prism, and max-world goals in order so each run feeds the next checkpoint cleanly.",
+        "step3Title": "Shorten Rebuilds",
+        "step3Description": "Use progression planning to return to previous peaks faster after each major reset."
       },
       "featured": "Featured & Essential",
-      "all": "All Upgrade Guides"
+      "all": "All Progression Articles"
     },
-    "biomes": {
-      "title": "Noob Incremental Prestige",
-      "description": "Prestige timing, reset planning, and rebuild routes for Noob Incremental.",
-      "metaTitle": "Noob Incremental Prestige - Reset Timing and Rebuild Advice",
-      "metaDescription": "Find the best times to prestige in Noob Incremental, what to buy before resetting, and how to rebuild into the next layer faster.",
-      "categoryLabel": "PRESTIGE LAYERS",
-      "whatIs": "What is Prestige?",
-      "whatIsDescription": "Prestige guides explain when resets are worth taking, how to prepare for them, and how to use the new layer to break the previous wall faster.",
-      "why": "Why plan prestige?",
+    "updates": {
+      "title": "Noob Incremental Updates",
+      "description": "Release tracking, patch note coverage, and update-focused planning for Noob Incremental.",
+      "metaTitle": "Noob Incremental Updates - Release Notes and Patch Tracking",
+      "metaDescription": "Follow Noob Incremental updates with release tracking, patch-note coverage, and practical advice for adapting to new content.",
+      "categoryLabel": "GAME UPDATES",
+      "whatIs": "What are Updates?",
+      "whatIsDescription": "The Noob Incremental updates section collects release notes, patch summaries, and update-specific articles so players can react quickly when content, balance, or rewards change.",
+      "why": "Why follow updates?",
       "whySteps": {
-        "step1Title": "Reset at the Right Time",
-        "step1Description": "Prestige after real slowdown, not out of habit.",
-        "step2Title": "Spend Before Resetting",
-        "step2Description": "Collect the last efficient upgrades before you wipe the run.",
-        "step3Title": "Rebuild With Intent",
-        "step3Description": "Use a clear first-buy plan on the next cycle."
+        "step1Title": "Track New Content",
+        "step1Description": "See when releases, patches, and milestone events change the value of current routes.",
+        "step2Title": "Adjust Faster",
+        "step2Description": "Use update coverage to revisit builds, rune priorities, and farming plans after balance changes.",
+        "step3Title": "Catch Reward Windows",
+        "step3Description": "Patch cycles often bring new codes, event bonuses, or temporary progression opportunities."
       },
       "featured": "Featured & Essential",
-      "all": "All Prestige Guides"
-    },
-    "building": {
-      "title": "Noob Incremental Oof Farming",
-      "description": "Early income plans, Noob purchases, and Oof pacing advice for Noob Incremental.",
-      "metaTitle": "Noob Incremental Oof Farming - Early Income and Growth Routes",
-      "metaDescription": "Use cleaner Noob Incremental Oof farming routes to improve early generation, spend rewards well, and enter each prestige cycle stronger.",
-      "categoryLabel": "OOF FARMING",
-      "whatIs": "What is Oof Farming?",
-      "whatIsDescription": "Oof farming guides focus on how to grow the main early currency, when to spend it, and how to combine codes, upgrades, and runes with the grind.",
-      "why": "Why improve Oof farming?",
-      "whySteps": {
-        "step1Title": "Grow Faster",
-        "step1Description": "Increase the speed of the opening economy.",
-        "step2Title": "Break Early Walls",
-        "step2Description": "Use better spending order to avoid flat runs.",
-        "step3Title": "Support the Whole Build",
-        "step3Description": "Feed upgrades, runes, and prestige with stronger income."
-      },
-      "featured": "Featured & Essential",
-      "all": "All Oof Farming Guides"
-    },
-    "support": {
-      "title": "Noob Incremental Support",
-      "description": "Official links, update tracking, and basic help resources for Noob Incremental players.",
-      "metaTitle": "Noob Incremental Support - Official Links and Update Tracking",
-      "metaDescription": "Use the Noob Incremental support hub to find the official Roblox page, Roblox group, Discord, and update-tracking resources.",
-      "categoryLabel": "OFFICIAL RESOURCES",
-      "whatIs": "What is Support?",
-      "whatIsDescription": "Support content keeps the official Noob Incremental destinations together so players can follow updates, bonuses, and live announcements from the right places.",
-      "why": "Why check support?",
-      "whySteps": {
-        "step1Title": "Find Official Links",
-        "step1Description": "Keep the Roblox, group, Discord, and X links in one place.",
-        "step2Title": "Track Rewards",
-        "step2Description": "Check where bonus announcements and code drops show up first.",
-        "step3Title": "Follow Updates",
-        "step3Description": "Stay current when new live milestones or fixes arrive."
-      },
-      "featured": "Featured & Essential",
-      "all": "All Support Articles"
+      "all": "All Update Articles"
     }
   }
 }

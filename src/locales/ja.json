@@ -1,1 +1,11 @@
-{}
+{
+  "nav": {
+    "codes": "Codes",
+    "guide": "Guide",
+    "farming": "Farming",
+    "upgrades": "Upgrades",
+    "runes": "Runes",
+    "progression": "Progression",
+    "updates": "Updates"
+  }
+}

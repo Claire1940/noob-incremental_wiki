@@ -16,32 +16,6 @@ interface NavigationPageProps {
   language: Language
 }
 
-// 辅助函数：基于种子的确定性随机选择
-// 使用简单的哈希函数生成伪随机数，确保服务器端和客户端结果一致
-function seededRandom(seed: string): number {
-  let hash = 0
-  for (let i = 0; i < seed.length; i++) {
-    const char = seed.charCodeAt(i)
-    hash = ((hash << 5) - hash) + char
-    hash = hash & hash // Convert to 32bit integer
-  }
-  return Math.abs(hash) / 2147483647
-}
-
-// 辅助函数：使用确定性算法选择 n 个元素
-function getRandomItems<T>(array: T[], count: number, seed: string): T[] {
-  const indices = array.map((_, i) => i)
-
-  // 使用种子生成确定性的排序
-  indices.sort((a, b) => {
-    const hashA = seededRandom(`${seed}-${a}`)
-    const hashB = seededRandom(`${seed}-${b}`)
-    return hashA - hashB
-  })
-
-  return indices.slice(0, count).map(i => array[i])
-}
-
 export async function NavigationPage({
   title,
   description,
@@ -53,11 +27,8 @@ export async function NavigationPage({
   const t = await getTranslations(`pages.${contentType}`)
   const mobileBannerAd = getPreferredMobileBannerSelection()
 
-  // 随机选择 2 个作为 Featured & Essential
-  // 使用 contentType 作为种子，确保服务器端和客户端结果一致
-  const featuredItems = getRandomItems(items, 2, contentType)
-  // 剩余的文章
-  const allItems = items.filter(item => !featuredItems.includes(item))
+  const featuredItems = items.slice(0, 2)
+  const allItems = items.slice(2)
 
   return (
     <div className="bg-background min-h-screen">
@@ -112,28 +83,28 @@ export async function NavigationPage({
           {/* Why Card - 6/10 */}
           <div className="md:col-span-6 relative overflow-hidden rounded-xl bg-card border border-border p-6">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-green-400" />
+              <div className="w-10 h-10 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
               </div>
               <h2 className="text-xl font-bold text-foreground">{t('why')}</h2>
             </div>
             <div className="space-y-4">
               <div className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">1</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[hsl(var(--nav-theme)/0.18)] flex items-center justify-center text-[hsl(var(--nav-theme-light))] font-bold text-sm">1</div>
                 <div>
                   <h3 className="text-foreground font-semibold mb-1 text-base">{t('whySteps.step1Title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{t('whySteps.step1Description')}</p>
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">2</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[hsl(var(--nav-theme)/0.18)] flex items-center justify-center text-[hsl(var(--nav-theme-light))] font-bold text-sm">2</div>
                 <div>
                   <h3 className="text-foreground font-semibold mb-1 text-base">{t('whySteps.step2Title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{t('whySteps.step2Description')}</p>
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">3</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[hsl(var(--nav-theme)/0.18)] flex items-center justify-center text-[hsl(var(--nav-theme-light))] font-bold text-sm">3</div>
                 <div>
                   <h3 className="text-foreground font-semibold mb-1 text-base">{t('whySteps.step3Title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{t('whySteps.step3Description')}</p>
