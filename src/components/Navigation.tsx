@@ -191,7 +191,7 @@ export default function Navigation({ navPreviewData, wikiLinks }: NavigationProp
 								<div
 									className="absolute right-0 mt-2 py-1 w-32 bg-card rounded-lg shadow-lg border border-border z-50"
 									role="listbox"
-									aria-label="Select language"
+									aria-label={t('common.selectLanguage')}
 								>
 									{routing.locales.map((loc) => (
 										<button
@@ -219,7 +219,7 @@ export default function Navigation({ navPreviewData, wikiLinks }: NavigationProp
 								aria-expanded={wikiMenuOpen}
 								aria-haspopup="menu"
 							>
-								More Wikis
+								{t('common.moreWikis')}
 								<ChevronDown className={`w-3 h-3 ml-1 transition-transform ${wikiMenuOpen ? 'rotate-180' : ''}`} />
 							</Button>
 
@@ -322,7 +322,7 @@ export default function Navigation({ navPreviewData, wikiLinks }: NavigationProp
 								>
 									<span className="flex items-center gap-3 font-medium">
 										<ExternalLink className="w-5 h-5" />
-										More Wikis
+										{t('common.moreWikis')}
 									</span>
 									<ChevronDown className={`w-4 h-4 transition-transform ${mobileWikiExpanded ? 'rotate-180' : ''}`} />
 								</button>

@@ -1,11 +1,764 @@
 {
+  "seo": {
+    "home": {
+      "title": "Noob Incremental Wiki - Mã, Ngọc, Oof & Uy tín",
+      "description": "Noob Incremental Wiki theo dõi các mã Roblox đang hoạt động, Oof farm, ngọc, nâng cấp, lớp uy tín và lộ trình phát triển của người mới bắt đầu để mở rộng quy mô nhanh hơn hiện nay.",
+      "keywords": "__TRÒ CHƠI__, __trò chơi__ wiki, Roblox mã, chữ rune, uy tín, nâng cấp, Oof, hướng dẫn người mới bắt đầu",
+      "ogTitle": "Noob Incremental Wiki - Mã, Ngọc, Oof & Uy tín",
+      "ogDescription": "Noob Incremental Wiki theo dõi các mã Roblox đang hoạt động, Oof farm, ngọc, nâng cấp, lớp uy tín và lộ trình phát triển của người mới bắt đầu để mở rộng quy mô nhanh hơn hiện nay.",
+      "twitterTitle": "Noob Incremental Wiki - Mã, Ngọc, Oof & Uy tín",
+      "twitterDescription": "Noob Incremental Wiki theo dõi các mã Roblox đang hoạt động, Oof farm, ngọc, nâng cấp, lớp uy tín và lộ trình phát triển của người mới bắt đầu để mở rộng quy mô nhanh hơn hiện nay."
+    }
+  },
   "nav": {
-    "codes": "Codes",
-    "guide": "Guide",
-    "farming": "Farming",
-    "upgrades": "Upgrades",
+    "codes": "Mã",
+    "guide": "Hướng dẫn",
+    "farming": "nông nghiệp",
+    "upgrades": "Nâng cấp",
     "runes": "Runes",
-    "progression": "Progression",
-    "updates": "Updates"
+    "progression": "Tiến triển",
+    "updates": "Cập nhật"
+  },
+  "common": {
+    "home": "Trang chủ",
+    "more": "Hơn",
+    "moreWikis": "Thêm Wiki",
+    "playNow": "Chơi trên Roblox",
+    "playVideo": "Phát video",
+    "watchOnYouTube": "Xem trên YouTube",
+    "switchLanguage": "Chuyển đổi ngôn ngữ",
+    "selectLanguage": "Chọn ngôn ngữ",
+    "switchTheme": "Chuyển đổi chủ đề",
+    "lightMode": "Chế độ ánh sáng",
+    "darkMode": "Chế độ tối",
+    "notFound": "Không tìm thấy trang",
+    "notFoundDescription": "Trang bạn đang tìm kiếm không tồn tại.",
+    "backToHome": "Quay lại trang chủ",
+    "contentNotFound": "Không tìm thấy nội dung",
+    "relatedArticles": "bài viết liên quan",
+    "readMore": "Đọc thêm",
+    "articlesComingSoon": "Bài viết sắp ra mắt",
+    "advertisement": "Quảng cáo",
+    "playerValue": "Giá trị người chơi",
+    "bestUse": "Sử dụng tốt nhất",
+    "action": "Hoạt động",
+    "rewardNote": "Ghi chú khen thưởng",
+    "bestFor": "Tốt nhất cho"
+  },
+  "hero": {
+    "badge": "Trò chơi nhàn rỗi gia tăng theo lớp Roblox",
+    "title": "Noob Incremental Wiki",
+    "description": "Tạo thu nhập Oof bằng cách mua Noobs, xếp chồng các nâng cấp, lăn và thăng cấp ngọc, sau đó uy tín qua nhiều lớp để mở khóa tiến trình mạnh mẽ hơn.",
+    "getFreeCodesCTA": "Tham gia Discord",
+    "playOnSteamCTA": "Chơi trên Roblox",
+    "playOnRobloxCTA": "Chơi trên Roblox",
+    "stats": {
+      "stat1": {
+        "value": "__TỰ ĐỘNG_0__+",
+        "label": "Mã hoạt động"
+      },
+      "stat2": {
+        "value": "hàng trăm",
+        "label": "Nâng cấp"
+      },
+      "stat3": {
+        "value": "Nhiều",
+        "label": "Lớp uy tín"
+      },
+      "stat4": {
+        "value": "+10%",
+        "label": "Rune Luck Tiền thưởng"
+      }
+    }
+  },
+  "gameFeature": {
+    "title": "Noob Incremental Cách chơi",
+    "description": "Xem đoạn chơi trò chơi Noob Incremental hiển thị vòng lặp Noob, Oof, ngọc và uy tín sớm trên Roblox."
+  },
+  "tools": {
+    "title": "Noob Incremental",
+    "titleHighlight": "Mô-đun",
+    "subtitle": "Đi thẳng vào tám mô-đun trang chủ bao gồm mã, nâng cấp, ngọc, uy tín, liên kết cộng đồng và giai đoạn đầu.",
+    "cards": [
+      {
+        "icon": "Gift",
+        "title": "Noob Incremental Mã",
+        "description": "Phần thưởng đang hoạt động, điểm mốc quan trọng và ghi chú mã hết hạn hiện tại.",
+        "sectionId": "codes"
+      },
+      {
+        "icon": "ScrollText",
+        "title": "Noob Incremental Cách đổi mã",
+        "description": "Luồng quy đổi ABX chính xác bên trong menu Cửa hàng trong trò chơi.",
+        "sectionId": "how-to-redeem-codes"
+      },
+      {
+        "icon": "Compass",
+        "title": "Noob Incremental Hướng dẫn cho người mới bắt đầu",
+        "description": "Lộ trình phiên đầu tiên từ Noobs và Oof thành rune và uy tín.",
+        "sectionId": "beginner-guide"
+      },
+      {
+        "icon": "Coins",
+        "title": "Noob Incremental Oof Hướng dẫn trồng trọt",
+        "description": "Ưu tiên thu nhập sớm giúp tiếp tục nâng cấp và cuộn ngọc.",
+        "sectionId": "oof-farming-guide"
+      },
+      {
+        "icon": "LineChart",
+        "title": "Noob Incremental Hướng dẫn nâng cấp và thống kê",
+        "description": "Làn đường nâng cấp nào cần đẩy trước và cách đọc tỷ lệ của bạn.",
+        "sectionId": "upgrades-and-stats-guide"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Noob Incremental Runes Hướng dẫn",
+        "description": "Rune may mắn, thăng cấp, trùng lặp và khi nào nên tung đòn mạnh mẽ.",
+        "sectionId": "runes-guide"
+      },
+      {
+        "icon": "Layers3",
+        "title": "Noob Incremental Hướng dẫn uy tín",
+        "description": "Đặt lại thời gian, xây dựng lại thứ tự và danh sách kiểm tra trước khi uy tín.",
+        "sectionId": "prestige-guide"
+      },
+      {
+        "icon": "Megaphone",
+        "title": "Noob Incremental Discord và các bản cập nhật",
+        "description": "Các liên kết Roblox, nhóm, Discord chính thức và theo dõi cập nhật ở cùng một nơi.",
+        "sectionId": "discord-and-updates"
+      }
+    ]
+  },
+  "modules": {
+    "codes": {
+      "eyebrow": "Phần thưởng miễn phí",
+      "title": "Noob Incremental Mã",
+      "intro": "Đổi mã Noob Incremental đang hoạt động cho Tickets, Tokens, Potions và khởi động các phần thưởng quan trọng trước khi bức tường lớn đầu tiên của bạn làm chậm quá trình chạy.",
+      "panelTitle": "Noob Incremental Ghi chú mã",
+      "panelText": "Phần thưởng hiện tại nghiêng về hỗ trợ phát hành, sửa lỗi Tickets và gói kỷ niệm CCU. Hãy đổi chúng sớm để lộ trình nâng cấp đầu tiên của bạn bắt đầu với Tokens, Tickets và Potions bổ sung.",
+      "expiredTitle": "Mã Noob Incremental đã hết hạn",
+      "expiredNote": "Không có mã Noob Incremental hết hạn nào được liệt kê trong ảnh chụp nhanh bản cập nhật hiện tại.",
+      "tipTitle": "Đổi tiền boa",
+      "tipText": "Dán từng mã một vào phần mã ABX, sau đó sử dụng phần thưởng trước một phiên nâng cấp hoặc ngọc dài.",
+      "activeCodes": [
+        {
+          "code": "THANKS4JOINING",
+          "status": "Tích cực",
+          "reward": "Tokens, Tickets và Potions",
+          "rewardType": "Phần thưởng hỗn hợp",
+          "category": "Phần thưởng ra mắt cộng đồng"
+        },
+        {
+          "code": "RELEASE",
+          "status": "Tích cực",
+          "reward": "Tokens, Tickets và Potions",
+          "rewardType": "Phần thưởng hỗn hợp",
+          "category": "Phát hành phần thưởng"
+        },
+        {
+          "code": "WWWRELEASE",
+          "status": "Tích cực",
+          "reward": "Tokens, Tickets và Potions",
+          "rewardType": "Phần thưởng hỗn hợp",
+          "category": "Phát hành phần thưởng"
+        },
+        {
+          "code": "BUGFIX1",
+          "status": "Tích cực",
+          "reward": "10 Tickets",
+          "rewardType": "Tickets",
+          "category": "Phần thưởng sửa lỗi"
+        },
+        {
+          "code": "BUGFIX2",
+          "status": "Tích cực",
+          "reward": "10 Tickets",
+          "rewardType": "Tickets",
+          "category": "Phần thưởng sửa lỗi"
+        },
+        {
+          "code": "BUGFIX3",
+          "status": "Tích cực",
+          "reward": "10 Tickets",
+          "rewardType": "Tickets",
+          "category": "Phần thưởng sửa lỗi"
+        },
+        {
+          "code": "1.5KCCU!!",
+          "status": "Tích cực",
+          "reward": "Potions",
+          "rewardType": "Potions",
+          "category": "CCU phần thưởng cột mốc"
+        },
+        {
+          "code": "2KCCU!!",
+          "status": "Tích cực",
+          "reward": "Potions",
+          "rewardType": "Potions",
+          "category": "CCU phần thưởng cột mốc"
+        },
+        {
+          "code": "3KCCU!!",
+          "status": "Tích cực",
+          "reward": "Tokens, Tickets và Potions",
+          "rewardType": "Phần thưởng hỗn hợp",
+          "category": "CCU phần thưởng cột mốc"
+        },
+        {
+          "code": "4KCCU!!",
+          "status": "Tích cực",
+          "reward": "Tokens và Tickets",
+          "rewardType": "Phần thưởng hỗn hợp",
+          "category": "CCU phần thưởng cột mốc"
+        }
+      ]
+    },
+    "redeem": {
+      "eyebrow": "Hướng dẫn đổi quà",
+      "title": "Noob Incremental Cách đổi mã",
+      "intro": "Sử dụng menu Cửa hàng và hộp mã ABX để nhận phần thưởng Noob Incremental. Đường dẫn ngắn nhưng trường mã nằm ở vị trí thấp hơn trong bảng Cửa hàng so với mong đợi của nhiều người chơi.",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Khởi chạy Noob Incremental",
+          "text": "Mở Noob Incremental trên Roblox và đợi giao diện trò chơi đầy đủ tải xong.",
+          "action": "Bắt đầu trải nghiệm"
+        },
+        {
+          "step": 2,
+          "title": "Mở cửa hàng",
+          "text": "Sử dụng nút Mua sắm ở cuối màn hình để mở menu phần thưởng và tăng cường.",
+          "action": "Nhấn vào cửa hàng"
+        },
+        {
+          "step": 3,
+          "title": "Cuộn đến phần ABX",
+          "text": "Tiếp tục cuộn cho đến khi vùng nhập mã ABX xuất hiện bên trong bảng Cửa hàng.",
+          "action": "Tìm ABX"
+        },
+        {
+          "step": 4,
+          "title": "Nhập một mã",
+          "text": "Dán hoặc nhập một mã Noob Incremental đang hoạt động vào trường chính xác như đã viết.",
+          "action": "Mỗi lần một mã"
+        },
+        {
+          "step": 5,
+          "title": "Nhấn Đổi quà",
+          "text": "Yêu cầu phần thưởng Tickets, Tokens, Potions hoặc cột mốc đính kèm, sau đó lặp lại cho mã hoạt động tiếp theo.",
+          "action": "Thu thập phần thưởng"
+        }
+      ]
+    },
+    "beginner": {
+      "eyebrow": "Lộ trình khởi đầu",
+      "title": "Noob Incremental Hướng dẫn cho người mới bắt đầu",
+      "intro": "Phiên Noob Incremental đầu tiên sẽ hướng dẫn nhanh chóng về vòng lặp cốt lõi: mua Noobs, tăng Oof, chi tiêu để nâng cấp, tung ngọc khi vòng lặp ổn định và chỉ uy tín sau khi tiến trình bắt đầu chững lại.",
+      "goalLabel": "Mục tiêu của cầu thủ:",
+      "cards": [
+        {
+          "title": "Mua Noobs Đầu tiên",
+          "tag": "Vòng lõi",
+          "text": "Mỗi lần chạy sớm đều bắt đầu bằng cách mở rộng số lượng Noob của bạn để thế hệ Oof bắt đầu tăng ngay lập tức.",
+          "playerGoal": "Xây dựng tầng Oof ổn định trước khi theo đuổi các hệ thống sâu hơn."
+        },
+        {
+          "title": "Biến Oof thành động lực",
+          "tag": "Tài nguyên chính",
+          "text": "Oof là động cơ của giai đoạn mở đầu, vì vậy mọi bản vá chậm cần được giải quyết bằng cách cải thiện tốc độ quay trở lại của Oof.",
+          "playerGoal": "Hãy duy trì Oof để việc mua nâng cấp được duy trì thường xuyên."
+        },
+        {
+          "title": "Mua nâng cấp trong Bursts",
+          "tag": "Chia tỷ lệ",
+          "text": "Sử dụng thời gian canh tác ngắn, sau đó là các đợt nâng cấp nhanh chóng thay vì ngồi quá lâu với thu nhập chưa tiêu.",
+          "playerGoal": "Xếp chồng nhiều mức tăng theo cấp số nhân trước khi bức tường tiếp theo xuất hiện."
+        },
+        {
+          "title": "Chạm vào Runes Sau khi ổn định",
+          "tag": "Runes",
+          "text": "Rune sẽ quan trọng hơn khi vòng lặp Noob và Oof đã đủ thoải mái để hỗ trợ các lần thử lặp lại.",
+          "playerGoal": "Sử dụng rune để kéo dài thời gian chạy chứ không phải để giải cứu sơ hở yếu kém."
+        },
+        {
+          "title": "Uy tín khi lợi nhuận chậm lại",
+          "tag": "Đặt lại lớp",
+          "text": "Uy tín là câu trả lời khi một đợt mua hoặc nâng cấp khác của Noob không còn thay đổi tốc độ một cách có ý nghĩa nữa.",
+          "playerGoal": "Đặt lại để xây dựng lại mạnh mẽ hơn thay vì buộc phải đạt được những lợi ích nhỏ."
+        },
+        {
+          "title": "Yêu cầu nguồn tiền thưởng sớm",
+          "tag": "Tăng thêm",
+          "text": "Roblox Plus, nhóm Roblox, lượt thích và máy chủ cộng đồng đều cung cấp giá trị thưởng cho các phiên dài hơn.",
+          "playerGoal": "Khóa mọi tăng cường thụ động trước một đợt đẩy farm kéo dài."
+        }
+      ]
+    },
+    "oof": {
+      "eyebrow": "Lộ trình thu nhập",
+      "title": "Noob Incremental Oof Hướng dẫn trồng trọt",
+      "intro": "Oof thúc đẩy nền kinh tế mở cửa trong Noob Incremental. Con đường canh tác rõ ràng nhất là mở rộng Noobs trước tiên, mua các bản nâng cấp theo đợt và chỉ đưa phần thưởng mã hoặc tăng rune vào cuộc chạy sau khi thu nhập cơ bản đã tăng tốt.",
+      "priorities": [
+        {
+          "priority": 1,
+          "title": "Mua Noobs trước mọi thứ khác",
+          "resourceFocus": "Oof sản xuất",
+          "timing": "Bắt đầu tiến triển",
+          "reason": "Tài khoản sẽ mở rộng nhanh hơn khi số lượng cơ sở Noob tăng lên trước khi bạn theo đuổi các hệ thống phụ."
+        },
+        {
+          "priority": 2,
+          "title": "Chi Oof cho việc nâng cấp hệ số nhân",
+          "resourceFocus": "Nâng cấp tăng trưởng",
+          "timing": "Khi Oof bắt đầu chảy",
+          "reason": "Khi Oof đến đều đặn, hệ số nhân sẽ thúc đẩy làn sóng nâng cấp tiếp theo khó hơn nhiều so với việc tích trữ nhàn rỗi."
+        },
+        {
+          "priority": 3,
+          "title": "Thả phần thưởng mã vào quá trình nghiền",
+          "resourceFocus": "Tickets, Tokens, Potions",
+          "timing": "Trước một cú đẩy dài",
+          "reason": "Mã hoạt động làm phẳng bức tường ban đầu và giữ cho đường cong tăng trưởng không bị phẳng quá sớm."
+        },
+        {
+          "priority": 4,
+          "title": "Lớp Runes Lên thu nhập ổn định",
+          "resourceFocus": "Rune hiệu quả",
+          "timing": "Sau vòng lặp ổn định đầu tiên",
+          "reason": "Runes mang lại hiệu quả tốt nhất khi họ khuếch đại đường cơ sở Oof mạnh thay vì che đậy đường cơ sở yếu."
+        }
+      ]
+    },
+    "upgrades": {
+      "eyebrow": "Kế hoạch mở rộng quy mô",
+      "title": "Noob Incremental Hướng dẫn nâng cấp và thống kê",
+      "intro": "Sử dụng nâng cấp, chỉ số, tăng Noobs, Oof, tăng Prism, thưởng ngọc và mở khóa uy tín để tăng quy mô nhanh hơn thông qua Noob Incremental.",
+      "headers": {
+        "system": "Hệ thống",
+        "playerAction": "Hành động của người chơi",
+        "effect": "Tác dụng",
+        "checkpoint": "Điểm kiểm tra sử dụng tốt nhất"
+      },
+      "rows": [
+        {
+          "system": "Noobs",
+          "playerAction": "Mua Noobs làm hành động bắt đầu cốt lõi.",
+          "effect": "Noobs giúp tạo Oof, kết quả tiến triển ban đầu chính được hiển thị trong vòng lặp phát chính thức.",
+          "checkpoint": "Bắt đầu mỗi lần chạy bằng cách cải thiện hoạt động sản xuất dựa trên Noob trước khi theo đuổi các hệ thống sau này."
+        },
+        {
+          "system": "Oof",
+          "playerAction": "Tạo Oof đến Noobs và củng cố nó bằng các bản nâng cấp.",
+          "effect": "Oof là mục tiêu sản xuất chính trong vòng chơi trò chơi chính thức và Roblox Plus người chơi nhận được +10% Oof.",
+          "checkpoint": "Ưu tiên tăng trưởng Oof khi việc nâng cấp vẫn còn giá cả phải chăng và lợi nhuận đang tăng lên nhanh chóng."
+        },
+        {
+          "system": "Nâng cấp",
+          "playerAction": "Mua nâng cấp sau khi xây dựng đủ sản lượng Oof.",
+          "effect": "Các nâng cấp giúp người chơi mạnh mẽ hơn và hỗ trợ mở rộng quy mô nhanh hơn trong quá trình chạy.",
+          "checkpoint": "Tiếp tục nâng cấp trong khi chi phí có thể đạt được; khi tiến độ chậm lại, hãy kiểm tra rune và các tùy chọn uy tín."
+        },
+        {
+          "system": "Thống kê",
+          "playerAction": "Theo dõi nhiều danh mục chỉ số của trò chơi khi chúng mở khóa trong quá trình phát triển.",
+          "effect": "Số liệu thống kê hỗ trợ mở rộng quy mô dài hạn qua các bản nâng cấp, ngọc, lớp uy tín và các tính năng khác.",
+          "checkpoint": "Sử dụng mức tăng chỉ số làm tín hiệu cho biết tuyến đường hiện tại có còn hiệu quả hay không."
+        },
+        {
+          "system": "Prism",
+          "playerAction": "Sử dụng lợi ích liên quan đến Prism nếu có thông qua hệ thống tiến triển của trò chơi.",
+          "effect": "Roblox Plus người chơi nhận được +10% Prism theo trang Roblox chính thức.",
+          "checkpoint": "Hãy coi Prism như một tài nguyên tiến triển được hỗ trợ bằng tiền thưởng khi so sánh mức tăng tài khoản."
+        },
+        {
+          "system": "Runes",
+          "playerAction": "Cuộn rune và tăng cấp chúng trong quá trình phát triển.",
+          "effect": "Runes là một phần của vòng lặp sức mạnh chính thức và giúp mở rộng quy mô sâu hơn ngoài các nâng cấp cơ bản.",
+          "checkpoint": "Thêm rune sau Oof cơ bản và quá trình nâng cấp đang diễn ra."
+        },
+        {
+          "system": "Rune Speed",
+          "playerAction": "Tham gia nhóm Ghoulax Games và thích trò chơi.",
+          "effect": "Trang Roblox chính thức liệt kê +10% Rune Speed dành cho những người chơi tham gia nhóm và thích trò chơi.",
+          "checkpoint": "Yêu cầu điều này trước các phiên rune dài để phần thưởng tốc độ hoạt động trong quá trình lăn lặp lại."
+        },
+        {
+          "system": "Rune Luck",
+          "playerAction": "Tham gia máy chủ cộng đồng.",
+          "effect": "Trang Roblox chính thức liệt kê +10% Rune Luck để tham gia máy chủ cộng đồng.",
+          "checkpoint": "Sử dụng điều này trước khi tung ra nhiều rune, đặc biệt là khi săn kết quả rune mạnh hơn."
+        },
+        {
+          "system": "Lớp uy tín",
+          "playerAction": "Uy tín sau khi xây dựng đủ sức mạnh từ Noobs, nâng cấp, chỉ số và ngọc.",
+          "effect": "Uy tín mở khóa nội dung mới và thêm các lớp tiến triển sâu hơn.",
+          "checkpoint": "Uy tín khi có sẵn tùy chọn trong trò chơi và lần mở khóa tiếp theo có giá trị hơn việc duy trì hoạt động hiện tại."
+        }
+      ],
+      "stats": [
+        "Bắt đầu với Noobs và Oof, sau đó mở rộng sang rune và uy tín khi lộ trình ban đầu chậm lại.",
+        "Sử dụng phần thưởng theo nhóm, chẳng hạn như Roblox Plus và Discord trước các phiên chơi dài dựa vào Prism hoặc tỷ lệ rune.",
+        "Hãy để mức tăng chỉ số cho bạn biết khi nào nên rời khỏi làn nâng cấp bằng phẳng và chuyển sang lớp tiếp theo."
+      ]
+    },
+    "runes": {
+      "eyebrow": "Rune Lớp",
+      "title": "Noob Incremental Runes Hướng dẫn",
+      "intro": "Runes là một trong những hệ thống mở rộng quy mô quan trọng trong Noob Incremental, được xây dựng dựa trên việc lăn, tăng cấp, thưởng tốc độ và thưởng may mắn.",
+      "cards": [
+        {
+          "title": "Cuộn Runes",
+          "tag": "Hành động cốt lõi Rune",
+          "description": "Cuộn rune như một phần của vòng tiến triển chính sau khi xây dựng đủ sớm Oof và nâng cấp sức mạnh.",
+          "playerValue": "Thêm lớp mở rộng sâu hơn ngoài Noob cơ bản và nâng cấp mức tăng trưởng.",
+          "bestUse": "Bắt đầu tung ra ngọc khi việc nâng cấp sớm không còn là nguồn tiến bộ có ý nghĩa duy nhất nữa."
+        },
+        {
+          "title": "Cấp độ Runes",
+          "tag": "Mở rộng quy mô dài hạn",
+          "description": "Cấp rune sau khi tung ra chúng để nâng cao giá trị của chúng trong quá trình phát triển trong tương lai.",
+          "playerValue": "Biến bộ sưu tập ngọc thành một hệ thống năng lượng liên tục thay vì kiểm tra một lần.",
+          "bestUse": "Tiếp tục thăng cấp các rune hữu ích trong khi chuẩn bị cho uy tín và mở khóa sau này."
+        },
+        {
+          "title": "Rune Speed Tiền thưởng",
+          "tag": "+10% Rune Speed",
+          "description": "Tham gia nhóm Ghoulax Games và thích trải nghiệm Roblox để kích hoạt phần thưởng Rune Speed được liệt kê.",
+          "playerValue": "Giúp tiến triển ngọc nhanh hơn trong các phiên cuộn lặp đi lặp lại.",
+          "bestUse": "Kích hoạt trước các phiên rune dài để phần thưởng đã có sẵn."
+        },
+        {
+          "title": "Rune Luck Tiền thưởng",
+          "tag": "+10% Rune Luck",
+          "description": "Tham gia máy chủ cộng đồng để kích hoạt phần thưởng Rune Luck được liệt kê từ trang Roblox chính thức.",
+          "playerValue": "Hỗ trợ các phiên chạy rune tốt hơn bằng cách cải thiện độ may mắn của rune.",
+          "bestUse": "Kích hoạt trước khi dành thời gian cho việc cuộn rune hoặc tiến trình tập trung vào rune."
+        },
+        {
+          "title": "Rune Thời gian tiến triển",
+          "tag": "Kiểm tra tiến độ",
+          "description": "Sử dụng ngọc sau Noobs, Oof cơ bản và nâng cấp đã tạo nền tảng chạy ổn định.",
+          "playerValue": "Giữ cho tiến trình ban đầu không bị dàn trải quá mỏng trên quá nhiều hệ thống cùng một lúc.",
+          "bestUse": "Chuyển sự chú ý nhiều hơn đến ngọc khi chi phí nâng cấp chậm lại hoặc bắt đầu chuẩn bị uy tín."
+        },
+        {
+          "title": "Cộng đồng Rune Thiết lập",
+          "tag": "Tiền thưởng chuẩn bị",
+          "description": "Kiểm tra nhóm trò chơi, trạng thái giống trò chơi và máy chủ cộng đồng trước khi tập trung vào hệ thống ngọc.",
+          "playerValue": "Kết hợp cả hai phần thưởng rune công khai: +10% Rune Speed và +10% Rune Luck.",
+          "bestUse": "Hoàn tất thiết lập này một lần, sau đó sử dụng nó làm điểm bắt đầu mặc định cho các phiên rune trong tương lai."
+        }
+      ],
+      "bonuses": [
+        "Các ngọc tăng cấp và cuộn sau lộ trình Noob và Oof đã ổn định.",
+        "Sử dụng phần thưởng nhóm, lượt thích và máy chủ cộng đồng trước các phiên rune dài.",
+        "Hãy coi rune như một lớp vảy giúp kéo dài những bước chạy mạnh mẽ và hỗ trợ sự chuẩn bị uy tín."
+      ]
+    },
+    "prestige": {
+      "eyebrow": "Đặt lại thời gian",
+      "title": "Noob Incremental Hướng dẫn uy tín",
+      "intro": "Uy tín là lớp đặt lại và mở khóa giúp đẩy Noob Incremental vượt xa Oof, nâng cấp, chỉ số và ngọc cơ bản.",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Xây dựng đường chạy cơ bản",
+          "action": "Mua Noobs và tạo Oof.",
+          "text": "Điều này tạo ra lớp sản xuất đầu tiên cần thiết để đủ khả năng nâng cấp và chuẩn bị cho các hệ thống sau này.",
+          "checkpoint": "Tiếp tục xây dựng trong khi Oof mua và nâng cấp vẫn diễn ra nhanh chóng."
+        },
+        {
+          "step": 2,
+          "title": "Mua nâng cấp sức mạnh",
+          "action": "Dành tài nguyên tiến triển cho các nâng cấp giúp đường chạy mạnh hơn.",
+          "text": "Nâng cấp là cầu nối chính giữa sản xuất Noob cơ bản và mở rộng quy mô sâu hơn.",
+          "checkpoint": "Tiếp tục nâng cấp cho đến khi mất nhiều thời gian hơn để đạt được các nâng cấp hữu ích tiếp theo."
+        },
+        {
+          "step": 3,
+          "title": "Thêm tiến trình Rune",
+          "action": "Cuộn rune và tăng cấp chúng trước khi tiến sâu hơn vào đường chạy.",
+          "text": "Runes thêm một lớp chia tỷ lệ khác và giúp hỗ trợ quá trình phát triển lâu hơn ngoài các nâng cấp cơ bản.",
+          "checkpoint": "Sử dụng hệ thống rune sớm một lần Oof và tốc độ nâng cấp ổn định."
+        },
+        {
+          "step": 4,
+          "title": "Kích hoạt Rune tiền thưởng",
+          "action": "Tham gia nhóm và thích trò chơi để được +10% Rune Speed, sau đó tham gia máy chủ cộng đồng để được +10% Rune Luck.",
+          "text": "Những phần thưởng này cải thiện các phiên rune trước khi tập trung vào uy tín.",
+          "checkpoint": "Hãy kiểm tra những phần thưởng này trước khi đầu tư mạnh vào việc luyện rune."
+        },
+        {
+          "step": 5,
+          "title": "Kiểm tra tùy chọn uy tín",
+          "action": "Mở lớp uy tín trong trò chơi khi có sẵn.",
+          "text": "Uy tín được sử dụng để mở khóa nội dung mới và chuyển sang các lớp tiến trình sâu hơn.",
+          "checkpoint": "Đặt lại khi lần mở khóa uy tín tiếp theo mang lại giá trị lâu dài tốt hơn so với việc duy trì hoạt động hiện tại."
+        },
+        {
+          "step": 6,
+          "title": "Uy tín và xây dựng lại",
+          "action": "Sử dụng uy tín, sau đó xây dựng lại thông qua thế hệ Noobs, Oof, nâng cấp và rune lại.",
+          "text": "Việc thiết lập lại tạo ra một lộ trình dài hạn mạnh mẽ hơn thông qua nội dung mới được mở khóa.",
+          "checkpoint": "Sau khi tạo được uy tín, hãy quay lại sản xuất ban đầu trước thay vì lan truyền sự chú ý trên mọi hệ thống ngay lập tức."
+        },
+        {
+          "step": 7,
+          "title": "Lặp lại qua các lớp mới",
+          "action": "Sử dụng mỗi lần chạy mạnh hơn để đạt đến lớp uy tín tiếp theo và mở khóa nội dung mới.",
+          "text": "Trò chơi được thiết kế xoay quanh nhiều lớp uy tín, vì vậy việc đặt lại nhiều lần là một phần của tiến trình bình thường.",
+          "checkpoint": "Sử dụng mỗi lần chạy để cải thiện thời gian đặt lại tiếp theo thay vì coi uy tín là cột mốc một lần."
+        }
+      ]
+    },
+    "updates": {
+      "eyebrow": "Liên kết chính thức",
+      "title": "Noob Incremental Discord và các bản cập nhật",
+      "intro": "Sử dụng trang Roblox chính thức, nhóm Ghoulax Games, cộng đồng Discord và bài đăng cập nhật GhoulaxDev để theo dõi tin tức và phần thưởng Noob Incremental.",
+      "panelTitle": "Noob Incremental Danh sách kiểm tra tiền thưởng nhanh",
+      "panelText": "Các nguồn công khai này bao gồm trang trò chơi, phần thưởng cộng đồng và các đích đến theo dõi cập nhật chính mà người chơi có nhiều khả năng sử dụng nhất giữa các phiên chơi.",
+      "bonusTitle": "Noob Incremental Danh sách kiểm tra tiền thưởng",
+      "links": [
+        {
+          "title": "Noob Incremental Roblox Trang",
+          "type": "Trang trò chơi chính thức",
+          "href": "https://www.roblox.com/games/76911729991355/Noob-Incremental",
+          "description": "Nơi chính để chơi Noob Incremental và kiểm tra mô tả trò chơi chính thức, vòng lặp trò chơi, phần thưởng công khai và các khoản tín dụng được liệt kê.",
+          "rewardNote": "Danh sách Roblox Plus +10% Oof và +10% Prism, giống nhóm +10% Rune Speed và máy chủ cộng đồng +10% Rune Luck.",
+          "bestFor": "Chơi trò chơi và xác nhận mô tả chính thức hiện tại."
+        },
+        {
+          "title": "Ghoulax Games Roblox Nhóm",
+          "type": "Nhóm Roblox chính thức",
+          "href": "https://www.roblox.com/communities/356937272/Ghoulax-Games",
+          "description": "Nhóm Roblox chính thức được kết nối với trang người sáng tạo Noob Incremental và luồng phần thưởng trò chơi liên quan đến nhóm.",
+          "rewardNote": "Trang trò chơi Roblox liệt kê +10% Rune Speed để tham gia nhóm và thích trò chơi.",
+          "bestFor": "Thiết lập phần thưởng liên kết nhóm và cập nhật Roblox phía người sáng tạo."
+        },
+        {
+          "title": "Ghoulax Studio Discord",
+          "type": "Máy chủ cộng đồng",
+          "href": "https://discord.com/invite/ghoulaxstudio",
+          "description": "Máy chủ cộng đồng được liên kết từ các nguồn công khai của trò chơi để người chơi thảo luận, thông báo và thông tin cộng đồng.",
+          "rewardNote": "Trang trò chơi Roblox liệt kê +10% Rune Luck để tham gia máy chủ cộng đồng.",
+          "bestFor": "Rune thiết lập may mắn, theo dõi tin tức, thảo luận về mã và câu hỏi của cộng đồng."
+        },
+        {
+          "title": "GhoulaxDev Đăng bài khởi động",
+          "type": "Bài đăng trên mạng xã hội của nhà phát triển",
+          "href": "https://x.com/GhoulaxDev/status/2061172178754658457",
+          "description": "Bài đăng ra mắt của nhà phát triển hướng người chơi đến trải nghiệm Noob Incremental mới phát hành.",
+          "rewardNote": "Hữu ích cho việc xác nhận nguồn thông báo ra mắt và theo dõi các bài đăng của nhà phát triển trong tương lai.",
+          "bestFor": "Cập nhật dành cho nhà phát triển và bối cảnh lịch sử phát hành."
+        },
+        {
+          "title": "Mã hủy diệt Noob Incremental",
+          "type": "Hướng dẫn truyền thông",
+          "href": "https://www.destructoid.com/noob-incremental-codes/",
+          "description": "Hướng dẫn mã Roblox công khai bao gồm các mã đang hoạt động, phần thưởng bằng mã và đường dẫn đổi quà tại Cửa hàng trong trò chơi.",
+          "rewardNote": "Đề cập Tickets, Tokens, Potions và quy trình đổi mã dựa trên Cửa hàng.",
+          "bestFor": "Kiểm tra phần thưởng mã và các bước đổi quà cùng với các nguồn chính thức."
+        }
+      ],
+      "bonuses": [
+        "Roblox Plus thêm +10% Oof và +10% Prism.",
+        "Tham gia nhóm Roblox và thích trò chơi để được +10% Rune Speed.",
+        "Tham gia cộng đồng Discord để có +10% Rune Luck.",
+        "Luôn sẵn sàng đăng bài giới thiệu và hướng dẫn mã công khai khi kiểm tra các đợt phần thưởng mới."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Noob Incremental",
+    "titleHighlight": "FAQ",
+    "subtitle": "Câu trả lời nhanh cho những câu hỏi mà người chơi thường hỏi nhất trước phiên Noob Incremental mới.",
+    "questions": [
+      {
+        "question": "Mã Noob Incremental giúp tiến bộ sớm như thế nào?",
+        "answer": "Mã Noob Incremental thêm Tickets, Tokens, Potions và các phần thưởng theo mốc giúp tăng tốc lộ trình nâng cấp đầu tiên và làm cho nền kinh tế mở cửa bớt chật chội hơn."
+      },
+      {
+        "question": "Khi nào người chơi Noob Incremental nên bắt đầu tung ngọc?",
+        "answer": "Noob Incremental rune mạnh nhất sau khi vòng lặp Noob và Oof của bạn đã đủ ổn định để hỗ trợ các lần cuộn lặp lại mà không làm chậm mọi thứ khác."
+      },
+      {
+        "question": "Khi nào là thời điểm thích hợp để gây uy tín trong Noob Incremental?",
+        "answer": "Uy tín trong Noob Incremental khi một đợt mua và nâng cấp khác của Noob hầu như không làm thay đổi tốc độ của bạn và lượt mở khóa có ý nghĩa tiếp theo vẫn được kiểm soát."
+      },
+      {
+        "question": "Lộ trình dành cho người mới bắt đầu Noob Incremental nhanh nhất là gì?",
+        "answer": "Công cụ mở Noob Incremental tốt nhất là đổi mã, tăng Noobs, tạo thu nhập Oof, mua nâng cấp theo đợt, sau đó xếp lớp ngọc và uy tín chỉ sau khi bức tường đầu tiên xuất hiện."
+      },
+      {
+        "question": "Tôi có thể theo dõi thông tin cập nhật và tiền thưởng Noob Incremental ở đâu?",
+        "answer": "Theo dõi Noob Incremental thông qua trang trò chơi Roblox chính thức, nhóm Ghoulax Games Roblox, Ghoulax Studio Discord và tài khoản GhoulaxDev X."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Sẵn sàng để tiến sâu hơn trong Noob Incremental?",
+    "description": "Tham gia cộng đồng Ghoulax Studio để nhận mã, cập nhật thông báo và thảo luận về tiến trình Noob Incremental.",
+    "joinCommunity": "Tham gia Discord",
+    "joinGame": "Chơi trên Roblox"
+  },
+  "footer": {
+    "title": "Noob Incremental Wiki",
+    "description": "Trung tâm tài nguyên của bạn về mã Noob Incremental, ngọc, tuyến đường uy tín, mức độ ưu tiên nâng cấp và hướng dẫn tiến triển cho người mới bắt đầu.",
+    "resources": "Tài nguyên",
+    "community": "Cộng đồng",
+    "legal": "Hợp pháp",
+    "discord": "Discord",
+    "twitter": "X/Twitter",
+    "steamCommunity": "Roblox Nhóm",
+    "steamStore": "Chơi trên Roblox",
+    "about": "Về",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ",
+    "copyrightNotice": "Bản quyền",
+    "copyright": "© 2026 Noob Incremental Wiki. Không liên kết với các nhà phát triển của Noob Incremental.",
+    "disclaimer": "Trang web tài nguyên không chính thức do người hâm mộ tạo ra."
+  },
+  "pages": {
+    "codes": {
+      "title": "Noob Incremental Mã",
+      "description": "Mã Noob Incremental hoạt động mới nhất cho các phần thưởng Tickets, Tokens, Potions và cột mốc.",
+      "metaTitle": "Noob Incremental Mã - Phần thưởng tích cực và Trợ giúp đổi quà",
+      "metaDescription": "Nhận mã Noob Incremental mới nhất cho Tickets, Tokens, Potions và khởi chạy phần thưởng cùng với các bước đổi thưởng nhanh chóng.",
+      "categoryLabel": "REDEEM CODES",
+      "whatIs": "Mã là gì?",
+      "whatIsDescription": "Phần mã Noob Incremental theo dõi các chuỗi quy đổi đang hoạt động, loại phần thưởng và lộ trình quy đổi ABX ngắn bên trong menu Cửa hàng.",
+      "why": "Tại sao phải kiểm tra mã?",
+      "whySteps": {
+        "step1Title": "Yêu cầu tài nguyên miễn phí",
+        "step1Description": "Sử dụng mã hoạt động để thêm Tickets, Tokens và Potions trước các phiên canh tác kéo dài.",
+        "step2Title": "Bắt những giọt mới sớm",
+        "step2Description": "Quà tặng phát hành, phần thưởng sửa lỗi và gói cột mốc CCU có xu hướng quan trọng nhất khi được đổi ngay lập tức.",
+        "step3Title": "Giữ việc đổi quà đơn giản",
+        "step3Description": "Sử dụng một trang để biết trạng thái mã hiện tại, ghi chú phần thưởng và đường dẫn đổi thưởng chính xác."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả các mã"
+    },
+    "guide": {
+      "title": "Noob Incremental Hướng dẫn",
+      "description": "Các tuyến đường dành cho người mới bắt đầu, trợ giúp về cách chơi và lời khuyên thực tế về tiến trình dành cho Noob Incremental.",
+      "metaTitle": "Noob Incremental Hướng dẫn - Lộ trình dành cho người mới bắt đầu và Mẹo tiến triển cốt lõi",
+      "metaDescription": "Duyệt qua các bài viết hướng dẫn Noob Incremental bao gồm các lộ trình dành cho người mới bắt đầu, cách chơi, lời khuyên F2P và các mẹo tiến bộ ban đầu thực tế.",
+      "categoryLabel": "GAME GUIDE",
+      "whatIs": "Phần Hướng dẫn là gì?",
+      "whatIsDescription": "Phần hướng dẫn Noob Incremental thu thập các hướng dẫn chi tiết nhất, bao gồm các đường dẫn dành cho người mới bắt đầu, phần giải thích chung về cách chơi và các bài viết lập kế hoạch lộ trình cho các bức tường lớn đầu tiên.",
+      "why": "Tại sao phải đọc phần hướng dẫn?",
+      "whySteps": {
+        "step1Title": "Tìm hiểu vòng lặp cốt lõi",
+        "step1Description": "Xem cách Noobs, Oof, nâng cấp, ngọc và uy tín kết nối với nhau trước khi bạn phân nhánh sang các hệ thống thích hợp.",
+        "step2Title": "Khắc phục khởi động chậm",
+        "step2Description": "Sử dụng thứ tự mở rõ ràng hơn để giờ đầu tiên chuyển sang quy mô ổn định thay vì nhấp chuột bị đình trệ.",
+        "step3Title": "Xây dựng thói quen tốt hơn",
+        "step3Description": "Sử dụng hướng dẫn lộ trình để quyết định khi nào nên farm, khi nào tung ngọc và khi nào cần thiết lập lại."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả các bài viết hướng dẫn"
+    },
+    "farming": {
+      "title": "Noob Incremental Trồng trọt",
+      "description": "Oof lộ trình canh tác, nhịp độ thu nhập và lập kế hoạch vòng lặp tài nguyên cho Noob Incremental.",
+      "metaTitle": "Noob Incremental Nông nghiệp - Oof Quy hoạch tuyến đường và tài nguyên",
+      "metaDescription": "Cải thiện việc canh tác Noob Incremental với các vòng lặp Oof tốt hơn, nhịp độ thu nhập và lập kế hoạch lộ trình để có những lần chạy mạnh hơn.",
+      "categoryLabel": "FARMING ROUTES",
+      "whatIs": "Nông nghiệp là gì?",
+      "whatIsDescription": "Phần canh tác Noob Incremental tập trung vào việc tạo Oof, các lộ trình nghiền có thể lặp lại và các lựa chọn giúp duy trì luồng tài nguyên mạnh mẽ giữa các lần nâng cấp và đặt lại.",
+      "why": "Tại sao phải cải tiến nông nghiệp?",
+      "whySteps": {
+        "step1Title": "Tăng Oof nhanh hơn",
+        "step1Description": "Sử dụng đơn đặt hàng và thời gian định tuyến tốt hơn để cải thiện nền kinh tế chính sớm hơn.",
+        "step2Title": "Chi tiêu có mục đích",
+        "step2Description": "Biến phần thưởng mã và số tiền kiếm được thành đợt tăng đột biến có ý nghĩa tiếp theo thay vì nâng cấp rải rác.",
+        "step3Title": "Hỗ trợ mọi hệ thống",
+        "step3Description": "Nuôi trồng mạnh hơn sẽ nâng cấp thức ăn, phiên rune và xây dựng lại uy tín cùng một lúc."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả các bài viết về nông nghiệp"
+    },
+    "upgrades": {
+      "title": "Noob Incremental Nâng cấp",
+      "description": "Nâng cấp mức độ ưu tiên, đọc chỉ số, chia tỷ lệ Noob và lựa chọn giá trị cao cấp cho Noob Incremental.",
+      "metaTitle": "Noob Incremental Nâng cấp - Số liệu thống kê, Noobs và Đơn đặt hàng mua tốt nhất",
+      "metaDescription": "Tìm hiểu các nâng cấp Noob Incremental tốt nhất để ưu tiên, số liệu thống kê ảnh hưởng như thế nào đến việc mở rộng quy mô và khi nào thì lượt chơi hoặc nâng cấp bí mật trở nên quan trọng.",
+      "categoryLabel": "__TỰ ĐỘNG_0__",
+      "whatIs": "Nâng cấp là gì?",
+      "whatIsDescription": "Phần nâng cấp Noob Incremental chia nhỏ cửa hàng, chỉ số tăng trưởng, mở rộng quy mô Noob và các tùy chọn cao cấp để bạn có thể đầu tư vào các hệ thống thực sự thúc đẩy tiến trình phát triển.",
+      "why": "Tại sao nên xem xét nâng cấp?",
+      "whySteps": {
+        "step1Title": "Mua hệ số nhân tốt hơn",
+        "step1Description": "Ưu tiên các nâng cấp nhằm tăng sản lượng và tốc độ xây dựng lại thay vì theo đuổi các chi phí có tác động thấp.",
+        "step2Title": "Đọc số liệu thống kê của bạn",
+        "step2Description": "Sử dụng các bước nhảy chỉ số, tăng tỷ lệ Noob và mở khóa tiện ích để quyết định khi nào một làn đường vẫn đáng được tài trợ.",
+        "step3Title": "So sánh giá trị cao cấp",
+        "step3Description": "Tách biệt các trò chơi mạnh mẽ và nâng cấp bí mật khỏi các tùy chọn chỉ trợ giúp ở bên lề."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả các bài viết nâng cấp"
+    },
+    "runes": {
+      "title": "Noob Incremental Runes",
+      "description": "Rune lăn lộn, thăng cấp, ghi chú danh sách cấp độ và lập kế hoạch may mắn cho Noob Incremental.",
+      "metaTitle": "Noob Incremental Runes - Runes, cấp độ và thời gian cuộn tốt nhất",
+      "metaDescription": "Nghiên cứu Noob Incremental ngọc với thời gian tung ngọc, lời khuyên về cấp độ ngọc, ghi chú về ngọc tốt nhất và lập kế hoạch danh sách cấp bậc.",
+      "categoryLabel": "RUNE SYSTEM",
+      "whatIs": "Runes là gì?",
+      "whatIsDescription": "Phần Noob Incremental ngọc bao gồm các cuộn ngọc, quyết định thăng cấp, suy nghĩ về danh sách cấp độ và thời gian cần thiết để đưa các phiên ngọc vào lộ trình phát triển rộng hơn của bạn.",
+      "why": "Tại sao phải nghiên cứu rune?",
+      "whySteps": {
+        "step1Title": "Thời gian cuộn của bạn",
+        "step1Description": "Bắt đầu các phiên rune khi nền kinh tế của bạn có thể hỗ trợ các nỗ lực lặp đi lặp lại mà không làm cản trở phần còn lại của quá trình xây dựng.",
+        "step2Title": "Cấp các mảnh phù hợp",
+        "step2Description": "Đưa tài nguyên vào ngọc sẽ hữu ích trong các chu kỳ uy tín và thời gian luyện tập lâu hơn.",
+        "step3Title": "Sử dụng May mắn Windows Tốt",
+        "step3Description": "Ghép nối các khoản tăng cường, tiền thưởng và tài nguyên đã lưu với các phiên cuộn có ý nghĩa thay vì chi tiêu chúng một cách tùy tiện."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả bài viết Rune"
+    },
+    "progression": {
+      "title": "Noob Incremental Tiến triển",
+      "description": "Thời điểm uy tín, sự phát triển trên thế giới, sự phát triển Prism và quy hoạch tuyến đường dài hạn cho Noob Incremental.",
+      "metaTitle": "Noob Incremental Tiến triển - Uy tín, Thế giới và Prism Lập kế hoạch",
+      "metaDescription": "Lập kế hoạch tiến trình Noob Incremental với thời gian uy tín, lộ trình mở khóa thế giới, mức tăng trưởng Prism và lời khuyên về nhịp độ dài hạn.",
+      "categoryLabel": "__TỰ ĐỘNG_0__",
+      "whatIs": "Sự tiến bộ là gì?",
+      "whatIsDescription": "Phần tiến trình Noob Incremental tập trung vào các cột mốc quan trọng như đặt lại uy tín, mở khóa thế giới, tăng trưởng Prism và các quyết định về tốc độ định hình toàn bộ quá trình thăng tiến của tài khoản.",
+      "why": "Tại sao phải lập kế hoạch tiến triển?",
+      "whySteps": {
+        "step1Title": "Đặt lại vào thời điểm tốt hơn",
+        "step1Description": "Chỉ sử dụng uy tín sau khi thực sự chậm lại hoặc xuất hiện ngưỡng mở khóa có ý nghĩa.",
+        "step2Title": "Bản đồ các mốc quan trọng trong tương lai",
+        "step2Description": "Giữ các mục tiêu thế giới, Prism và thế giới tối đa theo thứ tự để mỗi lần chạy sẽ cung cấp điểm kiểm tra tiếp theo một cách rõ ràng.",
+        "step3Title": "Rút ngắn thời gian xây dựng lại",
+        "step3Description": "Sử dụng kế hoạch tiến triển để quay lại mức cao nhất trước đó nhanh hơn sau mỗi lần đặt lại chính."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả các bài viết về tiến trình"
+    },
+    "updates": {
+      "title": "Noob Incremental Cập nhật",
+      "description": "Theo dõi bản phát hành, phạm vi ghi chú bản vá và lập kế hoạch tập trung vào cập nhật cho Noob Incremental.",
+      "metaTitle": "Noob Incremental Cập nhật - Ghi chú phát hành và theo dõi bản vá",
+      "metaDescription": "Theo dõi các bản cập nhật Noob Incremental với tính năng theo dõi phát hành, ghi chú về bản vá và lời khuyên thiết thực để thích ứng với nội dung mới.",
+      "categoryLabel": "GAME UPDATES",
+      "whatIs": "Cập nhật là gì?",
+      "whatIsDescription": "Phần cập nhật Noob Incremental thu thập các ghi chú phát hành, tóm tắt bản vá và các bài viết dành riêng cho bản cập nhật để người chơi có thể phản ứng nhanh chóng khi nội dung, số dư hoặc phần thưởng thay đổi.",
+      "why": "Tại sao phải theo dõi cập nhật?",
+      "whySteps": {
+        "step1Title": "Theo dõi nội dung mới",
+        "step1Description": "Xem khi nào các bản phát hành, bản vá và sự kiện quan trọng thay đổi giá trị của các tuyến đường hiện tại.",
+        "step2Title": "Điều chỉnh nhanh hơn",
+        "step2Description": "Sử dụng phạm vi cập nhật để xem lại cách xây dựng, mức độ ưu tiên của ngọc và kế hoạch canh tác sau khi thay đổi số dư.",
+        "step3Title": "Bắt phần thưởng Windows",
+        "step3Description": "Chu kỳ vá lỗi thường mang lại mã mới, phần thưởng sự kiện hoặc cơ hội thăng tiến tạm thời."
+      },
+      "featured": "Nổi bật & Cần thiết",
+      "all": "Tất cả các bài viết cập nhật"
+    }
   }
 }

@@ -1,13 +1,13 @@
 {
   "seo": {
     "home": {
-      "title": "Noob Incremental Wiki - Codes, Runes & Prestige",
-      "description": "Noob Incremental Wiki covers Roblox codes, runes, prestige layers, upgrades, Oof farming, and beginner progression tips.",
-      "keywords": "Noob Incremental, Noob Incremental wiki, Roblox codes, runes, prestige, upgrades, Oof",
-      "ogTitle": "Noob Incremental Wiki - Codes, Runes & Prestige",
-      "ogDescription": "Noob Incremental Wiki covers Roblox codes, runes, prestige layers, upgrades, Oof farming, and beginner progression tips.",
-      "twitterTitle": "Noob Incremental Wiki - Codes, Runes & Prestige",
-      "twitterDescription": "Noob Incremental Wiki covers Roblox codes, runes, prestige layers, upgrades, Oof farming, and beginner progression tips."
+      "title": "Noob Incremental Wiki - Codes, Runes, Oof & Prestige",
+      "description": "Noob Incremental Wiki tracks active Roblox codes, Oof farming, runes, upgrades, prestige layers, and beginner progression routes for faster scaling today.",
+      "keywords": "Noob Incremental, Noob Incremental wiki, Roblox codes, runes, prestige, upgrades, Oof, beginner guide",
+      "ogTitle": "Noob Incremental Wiki - Codes, Runes, Oof & Prestige",
+      "ogDescription": "Noob Incremental Wiki tracks active Roblox codes, Oof farming, runes, upgrades, prestige layers, and beginner progression routes for faster scaling today.",
+      "twitterTitle": "Noob Incremental Wiki - Codes, Runes, Oof & Prestige",
+      "twitterDescription": "Noob Incremental Wiki tracks active Roblox codes, Oof farming, runes, upgrades, prestige layers, and beginner progression routes for faster scaling today."
     }
   },
   "nav": {
@@ -22,17 +22,28 @@
   "common": {
     "home": "Home",
     "more": "More",
+    "moreWikis": "More Wikis",
     "playNow": "Play on Roblox",
+    "playVideo": "Play Video",
+    "watchOnYouTube": "Watch on YouTube",
     "switchLanguage": "Switch Language",
+    "selectLanguage": "Select language",
     "switchTheme": "Switch Theme",
     "lightMode": "Light Mode",
     "darkMode": "Dark Mode",
     "notFound": "Page Not Found",
     "notFoundDescription": "The page you are looking for does not exist.",
     "backToHome": "Back to Home",
+    "contentNotFound": "Content not found",
     "relatedArticles": "Related Articles",
     "readMore": "Read More",
-    "articlesComingSoon": "Articles coming soon"
+    "articlesComingSoon": "Articles coming soon",
+    "advertisement": "Advertisement",
+    "playerValue": "Player Value",
+    "bestUse": "Best Use",
+    "action": "Action",
+    "rewardNote": "Reward Note",
+    "bestFor": "Best For"
   },
   "hero": {
     "badge": "Layered Roblox Incremental Idle Game",

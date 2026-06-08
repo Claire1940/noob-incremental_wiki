@@ -1,11 +1,764 @@
 {
+  "seo": {
+    "home": {
+      "title": "Noob Incremental Wiki - Códigos, Runas, Oof e Prestígio",
+      "description": "Noob Incremental Wiki rastreia códigos Roblox ativos, agricultura Oof, runas, atualizações, camadas de prestígio e rotas de progressão para iniciantes para um escalonamento mais rápido hoje.",
+      "keywords": "__JOGO__, Noob Incrementalwiki, Códigos Roblox, runas, prestígio, atualizações, Oof, guia para iniciantes",
+      "ogTitle": "Noob Incremental Wiki - Códigos, Runas, Oof e Prestígio",
+      "ogDescription": "Noob Incremental Wiki rastreia códigos Roblox ativos, agricultura Oof, runas, atualizações, camadas de prestígio e rotas de progressão para iniciantes para um escalonamento mais rápido hoje.",
+      "twitterTitle": "Noob Incremental Wiki - Códigos, Runas, Oof e Prestígio",
+      "twitterDescription": "Noob Incremental Wiki rastreia códigos Roblox ativos, agricultura Oof, runas, atualizações, camadas de prestígio e rotas de progressão para iniciantes para um escalonamento mais rápido hoje."
+    }
+  },
   "nav": {
-    "codes": "Codes",
-    "guide": "Guide",
-    "farming": "Farming",
-    "upgrades": "Upgrades",
-    "runes": "Runes",
-    "progression": "Progression",
-    "updates": "Updates"
+    "codes": "Códigos",
+    "guide": "Guia",
+    "farming": "Agricultura",
+    "upgrades": "Atualizações",
+    "runes": "__TERMO_20__",
+    "progression": "Progressão",
+    "updates": "Atualizações"
+  },
+  "common": {
+    "home": "Lar",
+    "more": "Mais",
+    "moreWikis": "Mais wikis",
+    "playNow": "Jogue em Roblox",
+    "playVideo": "Reproduzir vídeo",
+    "watchOnYouTube": "Assistir em YouTube",
+    "switchLanguage": "Mudar idioma",
+    "selectLanguage": "Selecione o idioma",
+    "switchTheme": "Mudar tema",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo escuro",
+    "notFound": "Página não encontrada",
+    "notFoundDescription": "A página que você procura não existe.",
+    "backToHome": "De volta para casa",
+    "contentNotFound": "Conteúdo não encontrado",
+    "relatedArticles": "Artigos relacionados",
+    "readMore": "Leia mais",
+    "articlesComingSoon": "Artigos em breve",
+    "advertisement": "Anúncio",
+    "playerValue": "Valor do jogador",
+    "bestUse": "Melhor uso",
+    "action": "Ação",
+    "rewardNote": "Nota de recompensa",
+    "bestFor": "Melhor para"
+  },
+  "hero": {
+    "badge": "Jogo ocioso incremental em camadas Roblox",
+    "title": "__TERMO_0__",
+    "description": "Aumente a renda de Oof comprando Noobs, acumulando atualizações, rolando e nivelando runas e, em seguida, prestigie através de múltiplas camadas para desbloquear uma progressão mais forte.",
+    "getFreeCodesCTA": "Junte-se a Discord",
+    "playOnSteamCTA": "Jogue em Roblox",
+    "playOnRobloxCTA": "Jogue em Roblox",
+    "stats": {
+      "stat1": {
+        "value": "10+",
+        "label": "Códigos Ativos"
+      },
+      "stat2": {
+        "value": "Centenas",
+        "label": "Atualizações"
+      },
+      "stat3": {
+        "value": "Múltiplo",
+        "label": "Camadas de Prestígio"
+      },
+      "stat4": {
+        "value": "+10%",
+        "label": "Rune Luck Bônus"
+      }
+    }
+  },
+  "gameFeature": {
+    "title": "Noob Incremental Jogabilidade",
+    "description": "Assista a uma jogabilidade de Noob Incremental mostrando o loop inicial de Noob, Oof, runa e prestígio em Roblox."
+  },
+  "tools": {
+    "title": "__TERMO_1__",
+    "titleHighlight": "Módulos",
+    "subtitle": "Vá direto para os oito módulos da página inicial que cobrem códigos, atualizações, runas, prestígio, links de comunidade e trabalho inicial.",
+    "cards": [
+      {
+        "icon": "Gift",
+        "title": "Noob Incremental Códigos",
+        "description": "Recompensas ativas, quedas de marcos e a nota de código expirado atual.",
+        "sectionId": "codes"
+      },
+      {
+        "icon": "ScrollText",
+        "title": "Noob Incremental Como resgatar códigos",
+        "description": "O fluxo exato de resgate de ABX dentro do menu da Loja do jogo.",
+        "sectionId": "how-to-redeem-codes"
+      },
+      {
+        "icon": "Compass",
+        "title": "Noob Incremental Guia para iniciantes",
+        "description": "A primeira sessão passa de Noobs e Oof para runas e prestígio.",
+        "sectionId": "beginner-guide"
+      },
+      {
+        "icon": "Coins",
+        "title": "Noob Incremental Oof Guia Agrícola",
+        "description": "Prioridades de renda antecipada que mantêm as atualizações e rolagens de runas em movimento.",
+        "sectionId": "oof-farming-guide"
+      },
+      {
+        "icon": "LineChart",
+        "title": "Noob Incremental Guia de atualizações e estatísticas",
+        "description": "Quais pistas de atualização avançar primeiro e como ler sua escala.",
+        "sectionId": "upgrades-and-stats-guide"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Noob Incremental Runes Guia",
+        "description": "Rune sorte, nivelamento, duplicatas e quando rolar agressivamente.",
+        "sectionId": "runes-guide"
+      },
+      {
+        "icon": "Layers3",
+        "title": "Noob Incremental Guia de prestígio",
+        "description": "Redefina o tempo, a ordem de reconstrução e a lista de verificação antes de prestigiar.",
+        "sectionId": "prestige-guide"
+      },
+      {
+        "icon": "Megaphone",
+        "title": "Noob Incremental Discord e atualizações",
+        "description": "Roblox oficial, grupo, Discord e links de rastreamento de atualização em um só lugar.",
+        "sectionId": "discord-and-updates"
+      }
+    ]
+  },
+  "modules": {
+    "codes": {
+      "eyebrow": "Recompensas grátis",
+      "title": "Noob Incremental Códigos",
+      "intro": "Resgate códigos Noob Incremental ativos para Tickets, Tokens, Potions e lance recompensas de marcos antes que sua primeira grande parede diminua a velocidade.",
+      "panelTitle": "Noob Incremental Notas de código",
+      "panelText": "As recompensas atuais estão voltadas para suporte de lançamento, correção de bugs Tickets e pacotes de celebração CCU. Resgate-os antecipadamente para que sua primeira rota de atualização comece com Tokens, Tickets e Potions extras.",
+      "expiredTitle": "Códigos Noob Incremental expirados",
+      "expiredNote": "Nenhum código Noob Incremental expirado está listado no instantâneo de atualização atual.",
+      "tipTitle": "Resgatar dica",
+      "tipText": "Cole cada código, um de cada vez, na seção de código ABX e gaste as recompensas antes de uma longa sessão de atualização ou runa.",
+      "activeCodes": [
+        {
+          "code": "THANKS4JOINING",
+          "status": "Ativo",
+          "reward": "Tokens, Tickets e Potions",
+          "rewardType": "Recompensa mista",
+          "category": "Recompensa de lançamento da comunidade"
+        },
+        {
+          "code": "RELEASE",
+          "status": "Ativo",
+          "reward": "Tokens, Tickets e Potions",
+          "rewardType": "Recompensa mista",
+          "category": "Liberar recompensa"
+        },
+        {
+          "code": "WWWRELEASE",
+          "status": "Ativo",
+          "reward": "Tokens, Tickets e Potions",
+          "rewardType": "Recompensa mista",
+          "category": "Liberar recompensa"
+        },
+        {
+          "code": "BUGFIX1",
+          "status": "Ativo",
+          "reward": "10 Tickets",
+          "rewardType": "__TERMO_10__",
+          "category": "Recompensa por correção de bug"
+        },
+        {
+          "code": "BUGFIX2",
+          "status": "Ativo",
+          "reward": "10 Tickets",
+          "rewardType": "__TERMO_10__",
+          "category": "Recompensa por correção de bug"
+        },
+        {
+          "code": "BUGFIX3",
+          "status": "Ativo",
+          "reward": "10 Tickets",
+          "rewardType": "__TERMO_10__",
+          "category": "Recompensa por correção de bug"
+        },
+        {
+          "code": "1.5KCCU!!",
+          "status": "Ativo",
+          "reward": "__TERMO_12__",
+          "rewardType": "__TERMO_12__",
+          "category": "CCU recompensa por marco"
+        },
+        {
+          "code": "2KCCU!!",
+          "status": "Ativo",
+          "reward": "__TERMO_12__",
+          "rewardType": "__TERMO_12__",
+          "category": "CCU recompensa por marco"
+        },
+        {
+          "code": "3KCCU!!",
+          "status": "Ativo",
+          "reward": "Tokens, Tickets e Potions",
+          "rewardType": "Recompensa mista",
+          "category": "CCU recompensa por marco"
+        },
+        {
+          "code": "4KCCU!!",
+          "status": "Ativo",
+          "reward": "Tokens e Tickets",
+          "rewardType": "Recompensa mista",
+          "category": "CCU recompensa por marco"
+        }
+      ]
+    },
+    "redeem": {
+      "eyebrow": "Guia de resgate",
+      "title": "Noob Incremental Como resgatar códigos",
+      "intro": "Use o menu Loja e a caixa de código ABX para reivindicar recompensas Noob Incremental. O caminho é curto, mas o campo do código fica mais abaixo no painel da Loja do que muitos jogadores esperam.",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Lançar Noob Incremental",
+          "text": "Abra Noob Incremental em Roblox e espere a interface completa do jogo terminar de carregar.",
+          "action": "Comece a experiência"
+        },
+        {
+          "step": 2,
+          "title": "Abra a loja",
+          "text": "Use o botão Comprar na parte inferior da tela para abrir o menu de recompensas e impulsos.",
+          "action": "Toque em Comprar"
+        },
+        {
+          "step": 3,
+          "title": "Role até a seção ABX",
+          "text": "Continue rolando até que a área de entrada do código ABX apareça dentro do painel Loja.",
+          "action": "Encontre ABX"
+        },
+        {
+          "step": 4,
+          "title": "Insira um código",
+          "text": "Cole ou digite um código Noob Incremental ativo no campo exatamente como está escrito.",
+          "action": "Um código de cada vez"
+        },
+        {
+          "step": 5,
+          "title": "Pressione Resgatar",
+          "text": "Reivindique as recompensas Tickets, Tokens, Potions ou marcos anexados e repita para o próximo código ativo.",
+          "action": "Colete a recompensa"
+        }
+      ]
+    },
+    "beginner": {
+      "eyebrow": "Rota inicial",
+      "title": "Noob Incremental Guia para iniciantes",
+      "intro": "A primeira sessão Noob Incremental deve ensinar o loop principal rapidamente: compre Noobs, aumente Oof, gaste em atualizações, role runas quando o loop estiver estável e prestigie somente depois que o progresso começar a se estabilizar.",
+      "goalLabel": "Objetivo do jogador:",
+      "cards": [
+        {
+          "title": "Compre Noobs primeiro",
+          "tag": "Loop Central",
+          "text": "Cada execução inicial começa expandindo sua contagem de Noob para que a geração de Oof comece a subir imediatamente.",
+          "playerGoal": "Construa um piso Oof estável antes de perseguir os sistemas mais profundos."
+        },
+        {
+          "title": "Transforme Oof em impulso",
+          "tag": "Recurso Principal",
+          "text": "Oof é o mecanismo da fase de abertura, portanto, cada patch lento deve ser resolvido melhorando a rapidez com que Oof retorna.",
+          "playerGoal": "Mantenha o fluxo de Oof para que as compras de upgrade sejam frequentes."
+        },
+        {
+          "title": "Compre atualizações em rajadas",
+          "tag": "Dimensionamento",
+          "text": "Use janelas de cultivo curtas seguidas de atualizações rápidas em vez de ficar muito tempo com a renda não gasta.",
+          "playerGoal": "Empilhe vários ganhos multiplicadores antes que a próxima parede chegue."
+        },
+        {
+          "title": "Toque em Runes após estabilizar",
+          "tag": "__TERMO_20__",
+          "text": "A rolagem de Rune é mais importante quando o loop Noob e Oof já está confortável o suficiente para suportar tentativas repetidas.",
+          "playerGoal": "Use runas para estender as corridas, não para resgatar uma abertura fraca."
+        },
+        {
+          "title": "Prestígio quando os ganhos diminuem",
+          "tag": "Redefinir camada",
+          "text": "Prestígio é a resposta quando outra rodada de compras ou atualizações de Noob não altera mais o ritmo de maneira significativa.",
+          "playerGoal": "Reinicie para reconstruções mais fortes em vez de forçar pequenos ganhos."
+        },
+        {
+          "title": "Reivindique fontes de bônus antecipadamente",
+          "tag": "Aumentos extras",
+          "text": "Roblox Plus, o grupo Roblox, curtidas e o servidor da comunidade alimentam o valor do bônus em sessões mais longas.",
+          "playerGoal": "Bloqueie cada impulso passivo antes de um longo esforço agrícola."
+        }
+      ]
+    },
+    "oof": {
+      "eyebrow": "Rota de Renda",
+      "title": "Noob Incremental Oof Guia Agrícola",
+      "intro": "Oof impulsiona a abertura da economia em Noob Incremental. A rota agrícola mais limpa é expandir Noobs primeiro, comprar atualizações em ondas e adicionar recompensas de código ou aumentos de runas somente depois que a renda básica já estiver se movendo bem.",
+      "priorities": [
+        {
+          "priority": 1,
+          "title": "Compre Noobs antes de qualquer coisa",
+          "resourceFocus": "Oof produção",
+          "timing": "Início da progressão",
+          "reason": "A conta aumenta mais rapidamente quando a contagem base Noob aumenta antes de você perseguir sistemas secundários."
+        },
+        {
+          "priority": 2,
+          "title": "Gaste Oof em atualizações de multiplicador",
+          "resourceFocus": "Atualizar crescimento",
+          "timing": "Quando Oof começa a fluir",
+          "reason": "Uma vez que Oof chega de forma constante, os multiplicadores empurram a próxima onda de atualizações com muito mais força do que o acúmulo ocioso."
+        },
+        {
+          "priority": 3,
+          "title": "Coloque recompensas de código na rotina",
+          "resourceFocus": "Tickets, Tokens, Potions",
+          "timing": "Antes de um longo empurrão",
+          "reason": "Os códigos ativos suavizam a barreira inicial e evitam que a curva de crescimento se achate muito cedo."
+        },
+        {
+          "priority": 4,
+          "title": "Camada Runes para renda estável",
+          "resourceFocus": "Rune eficiência",
+          "timing": "Após o primeiro loop estável",
+          "reason": "Runes compensam melhor quando amplificam uma linha de base forte de Oof em vez de cobrir uma fraca."
+        }
+      ]
+    },
+    "upgrades": {
+      "eyebrow": "Plano de escalonamento",
+      "title": "Noob Incremental Guia de atualizações e estatísticas",
+      "intro": "Use atualizações, estatísticas, ganho de Noobs, ganho de Oof, ganho de Prism, bônus de runas e desbloqueios de prestígio para escalar mais rápido até Noob Incremental.",
+      "headers": {
+        "system": "Sistema",
+        "playerAction": "Ação do Jogador",
+        "effect": "Efeito",
+        "checkpoint": "Ponto de verificação de melhor uso"
+      },
+      "rows": [
+        {
+          "system": "__TERMO_18__",
+          "playerAction": "Compre Noobs como ação inicial principal.",
+          "effect": "Noobs ajuda a gerar Oof, o principal resultado da progressão inicial mostrado no ciclo de jogo oficial.",
+          "checkpoint": "Comece cada execução melhorando a produção baseada em Noob antes de buscar sistemas posteriores."
+        },
+        {
+          "system": "Oof",
+          "playerAction": "Gere Oof até Noobs e fortaleça-o com atualizações.",
+          "effect": "Oof é o principal alvo de produção no ciclo de jogo oficial, e os jogadores de Roblox Plus recebem +10% Oof.",
+          "checkpoint": "Priorize o crescimento de Oof quando as atualizações ainda forem acessíveis e os ganhos estiverem ocorrendo rapidamente."
+        },
+        {
+          "system": "Atualizações",
+          "playerAction": "Compre atualizações depois de construir produção suficiente de Oof.",
+          "effect": "As atualizações tornam o jogador mais forte e suportam um escalonamento mais rápido durante a corrida.",
+          "checkpoint": "Continue atualizando enquanto os custos parecem acessíveis; quando o progresso diminuir, verifique as opções de runas e prestígio."
+        },
+        {
+          "system": "Estatísticas",
+          "playerAction": "Acompanhe as muitas categorias de estatísticas do jogo à medida que elas são desbloqueadas durante a progressão.",
+          "effect": "As estatísticas suportam escalonamento de longo prazo em atualizações, runas, camadas de prestígio e outros recursos.",
+          "checkpoint": "Use o crescimento das estatísticas como um sinal para saber se a rota atual ainda é eficiente."
+        },
+        {
+          "system": "__TERMO_19__",
+          "playerAction": "Use o ganho relacionado a Prism quando disponível através dos sistemas de progressão do jogo.",
+          "effect": "Roblox Plus jogadores recebem +10% Prism de acordo com a página oficial Roblox.",
+          "checkpoint": "Trate Prism como um recurso de progressão com suporte de bônus ao comparar aumentos de conta."
+        },
+        {
+          "system": "__TERMO_20__",
+          "playerAction": "Role runas e suba de nível durante a progressão.",
+          "effect": "Runes fazem parte do ciclo de energia oficial e ajudam a aprofundar o dimensionamento além das atualizações básicas.",
+          "checkpoint": "Adicione a rolagem de runas após o Oof básico e o crescimento da atualização já está em andamento."
+        },
+        {
+          "system": "__TERMO_7__",
+          "playerAction": "Junte-se ao grupo Ghoulax Games e curta o jogo.",
+          "effect": "A página oficial Roblox lista +10% Rune Speed para jogadores que entram no grupo e gostam do jogo.",
+          "checkpoint": "Reivindique isso antes de longas sessões de runas para que o bônus de velocidade funcione durante lançamentos repetidos."
+        },
+        {
+          "system": "__TERMO_8__",
+          "playerAction": "Junte-se ao servidor da comunidade.",
+          "effect": "A página oficial Roblox lista +10% Rune Luck para ingressar no servidor da comunidade.",
+          "checkpoint": "Use isso antes de rolar runas pesadamente, especialmente ao caçar resultados de runas mais fortes."
+        },
+        {
+          "system": "Camadas de Prestígio",
+          "playerAction": "Prestígio após construir poder suficiente com Noobs, atualizações, estatísticas e runas.",
+          "effect": "Prestige desbloqueia novos conteúdos e adiciona camadas de progressão mais profundas.",
+          "checkpoint": "Prestígio quando a opção do jogo está disponível e o próximo desbloqueio é mais valioso do que permanecer na corrida atual."
+        }
+      ],
+      "stats": [
+        "Comece com Noobs e Oof, depois amplie em runas e prestígio quando a rota inicial ficar mais lenta.",
+        "Use bônus de grupo, como Roblox Plus e Discord antes de sessões longas que se baseiam em Prism ou escalonamento de runas.",
+        "Deixe que o crescimento das estatísticas lhe diga quando é hora de deixar uma linha de atualização plana e passar para a próxima camada."
+      ]
+    },
+    "runes": {
+      "eyebrow": "Rune Camada",
+      "title": "Noob Incremental Runes Guia",
+      "intro": "Runes são um dos principais sistemas de escalonamento em Noob Incremental, construídos em torno de rolagem, nivelamento, bônus de velocidade e bônus de sorte.",
+      "cards": [
+        {
+          "title": "Role Runes",
+          "tag": "Ação Básica Rune",
+          "description": "Role runas como parte do ciclo de progressão principal após construir Oof antecipadamente e atualizar a força.",
+          "playerValue": "Adiciona uma camada mais profunda de escalonamento além do Noob básico e do crescimento de atualização.",
+          "bestUse": "Comece a rolar as runas assim que as atualizações iniciais não forem mais a única fonte significativa de progresso."
+        },
+        {
+          "title": "Nível Runes",
+          "tag": "Dimensionamento de longo prazo",
+          "description": "Nivele as runas depois de jogá-las para melhorar seu valor na progressão futura.",
+          "playerValue": "Transforma a coleta de runas em um sistema de energia contínuo, em vez de uma verificação única de rolagem.",
+          "bestUse": "Continue nivelando runas úteis enquanto se prepara para prestígio e desbloqueios posteriores."
+        },
+        {
+          "title": "Rune Speed Bônus",
+          "tag": "+10% Rune Speed",
+          "description": "Junte-se ao grupo Ghoulax Games e curta a experiência Roblox para ativar o bônus Rune Speed listado.",
+          "playerValue": "Ajuda a progressão das runas a ser mais rápida durante sessões repetidas de rolagem.",
+          "bestUse": "Ative antes de longas sessões de runas para que o bônus já esteja em vigor."
+        },
+        {
+          "title": "Rune Luck Bônus",
+          "tag": "+10% Rune Luck",
+          "description": "Junte-se ao servidor da comunidade para ativar o bônus Rune Luck listado na página oficial Roblox.",
+          "playerValue": "Suporta melhores sessões de rolagem de runas, melhorando a sorte nas runas.",
+          "bestUse": "Ative antes de gastar tempo rolando runas ou progressão focada em runas."
+        },
+        {
+          "title": "Rune Tempo de progressão",
+          "tag": "Verificação de progressão",
+          "description": "Use runas após Noobs básico, Oof e atualizações terem criado uma base de execução estável.",
+          "playerValue": "Evita que o progresso inicial se espalhe por muitos sistemas ao mesmo tempo.",
+          "bestUse": "Mude mais atenção para as runas quando os custos de atualização diminuírem ou a preparação para prestígio começar."
+        },
+        {
+          "title": "Configuração da comunidade Rune",
+          "tag": "Preparação de bônus",
+          "description": "Verifique o grupo de jogo, o status do jogo e o servidor da comunidade antes de se concentrar nos sistemas de runas.",
+          "playerValue": "Combina os dois bônus de runas públicas: +10% Rune Speed e +10% Rune Luck.",
+          "bestUse": "Conclua esta configuração uma vez e use-a como ponto de partida padrão para futuras sessões de runas."
+        }
+      ],
+      "bonuses": [
+        "Rolar e nivelar runas após a rota Noob e Oof já estar estável.",
+        "Use os bônus de grupo, like e servidor da comunidade antes de longas sessões de runas.",
+        "Trate as runas como uma camada escalonável que estende corridas fortes e apoia a preparação de prestígio."
+      ]
+    },
+    "prestige": {
+      "eyebrow": "Redefinir tempo",
+      "title": "Noob Incremental Guia de prestígio",
+      "intro": "Prestígio é a camada de redefinição e desbloqueio que leva Noob Incremental além do Oof básico, atualizações, estatísticas e runas.",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Construa a execução básica",
+          "action": "Compre Noobs e gere Oof.",
+          "text": "Isso cria a primeira camada de produção necessária para permitir atualizações e se preparar para sistemas posteriores.",
+          "checkpoint": "Continue construindo enquanto Oof as compras de ganho e atualização ainda parecem rápidas."
+        },
+        {
+          "step": 2,
+          "title": "Compre atualizações de força",
+          "action": "Gaste recursos de progressão em atualizações que tornem a corrida mais forte.",
+          "text": "As atualizações são a principal ponte entre a produção básica do Noob e o escalonamento mais profundo.",
+          "checkpoint": "Continue atualizando até que as próximas atualizações úteis demorem visivelmente mais para serem alcançadas."
+        },
+        {
+          "step": 3,
+          "title": "Adicionar Rune Progressão",
+          "action": "Role runas e suba de nível antes de avançar mais na corrida.",
+          "text": "Runes adiciona outra camada de escalonamento e ajuda a suportar uma progressão mais longa além das atualizações básicas.",
+          "checkpoint": "Use sistemas rúnicos uma vez no início de Oof e o crescimento da atualização esteja estável."
+        },
+        {
+          "step": 4,
+          "title": "Ativar bônus Rune",
+          "action": "Junte-se ao grupo e curta o jogo por +10% Rune Speed, depois entre no servidor da comunidade por +10% Rune Luck.",
+          "text": "Esses bônus melhoram as sessões de runas antes de empurrar com foco no prestígio.",
+          "checkpoint": "Verifique esses bônus antes de investir pesadamente na rolagem de runas."
+        },
+        {
+          "step": 5,
+          "title": "Verifique a opção Prestígio",
+          "action": "Abra a camada de prestígio do jogo quando estiver disponível.",
+          "text": "Prestígio é usado para desbloquear novos conteúdos e avançar para camadas de progressão mais profundas.",
+          "checkpoint": "Reinicialize quando o próximo desbloqueio de prestígio oferecer melhor valor a longo prazo do que permanecer na execução atual."
+        },
+        {
+          "step": 6,
+          "title": "Prestígio e Reconstrução",
+          "action": "Use prestígio e, em seguida, reconstrua através da geração Noobs, Oof, atualizações e runas novamente.",
+          "text": "A redefinição cria uma rota mais forte de longo prazo através do conteúdo recém-desbloqueado.",
+          "checkpoint": "Depois de prestigiar, retorne primeiro à produção inicial, em vez de espalhar a atenção por todos os sistemas imediatamente."
+        },
+        {
+          "step": 7,
+          "title": "Repita através de novas camadas",
+          "action": "Use cada corrida mais forte para alcançar a próxima camada de prestígio e desbloquear novos conteúdos.",
+          "text": "O jogo é projetado em torno de múltiplas camadas de prestígio, portanto, reinicializações repetidas fazem parte da progressão normal.",
+          "checkpoint": "Use cada corrida para melhorar o próximo tempo de reinicialização, em vez de tratar o prestígio como um marco único."
+        }
+      ]
+    },
+    "updates": {
+      "eyebrow": "Links Oficiais",
+      "title": "Noob Incremental Discord e atualizações",
+      "intro": "Use a página oficial Roblox, o grupo Ghoulax Games, a comunidade Discord e a postagem de atualização GhoulaxDev para acompanhar notícias e recompensas de Noob Incremental.",
+      "panelTitle": "Noob Incremental Lista de verificação de bônus rápido",
+      "panelText": "Essas fontes públicas cobrem a página do jogo, as recompensas da comunidade e os principais destinos de rastreamento de atualizações que os jogadores provavelmente usarão entre as sessões de jogo.",
+      "bonusTitle": "Noob Incremental Lista de verificação de bônus",
+      "links": [
+        {
+          "title": "Noob Incremental Roblox Página",
+          "type": "Página oficial do jogo",
+          "href": "https://www.roblox.com/games/76911729991355/Noob-Incremental",
+          "description": "Local principal para jogar Noob Incremental e verificar a descrição oficial do jogo, o ciclo de jogo, os bônus públicos e os créditos listados.",
+          "rewardNote": "Listas Roblox Plus +10% Oof e +10% Prism, tipo grupo +10% Rune Speed e servidor de comunidade +10% Rune Luck.",
+          "bestFor": "Jogando o jogo e confirmando a descrição oficial atual."
+        },
+        {
+          "title": "Ghoulax Games Roblox Grupo",
+          "type": "Grupo Oficial Roblox",
+          "href": "https://www.roblox.com/communities/356937272/Ghoulax-Games",
+          "description": "Grupo oficial Roblox conectado à página do criador Noob Incremental e ao fluxo de bônus de jogos relacionados ao grupo.",
+          "rewardNote": "A página do jogo Roblox lista +10% Rune Speed para entrar no grupo e gostar do jogo.",
+          "bestFor": "Configuração de recompensas vinculadas ao grupo e atualizações Roblox do lado do criador."
+        },
+        {
+          "title": "Ghoulax Studio Discord",
+          "type": "Servidor da comunidade",
+          "href": "https://discord.com/invite/ghoulaxstudio",
+          "description": "Servidor da comunidade vinculado a fontes públicas do jogo para discussão dos jogadores, anúncios e informações da comunidade.",
+          "rewardNote": "A página do jogo Roblox lista +10% Rune Luck para ingressar no servidor da comunidade.",
+          "bestFor": "Rune configuração de sorte, rastreamento de notícias, discussão de código e perguntas da comunidade."
+        },
+        {
+          "title": "GhoulaxDev Postagem de lançamento",
+          "type": "Postagem social do desenvolvedor",
+          "href": "https://x.com/GhoulaxDev/status/2061172178754658457",
+          "description": "Postagem de lançamento do desenvolvedor apontando aos jogadores a experiência Noob Incremental recém-lançada.",
+          "rewardNote": "Útil para confirmar a fonte do anúncio de lançamento e acompanhar futuras postagens de desenvolvedores.",
+          "bestFor": "Atualizações do desenvolvedor e contexto do histórico de lançamento."
+        },
+        {
+          "title": "Códigos Destrutóides Noob Incremental",
+          "type": "Guia de mídia",
+          "href": "https://www.destructoid.com/noob-incremental-codes/",
+          "description": "Guia público de códigos Roblox que cobre códigos ativos, recompensas de código e o caminho de resgate da Loja no jogo.",
+          "rewardNote": "Menciona Tickets, Tokens, Potions e o fluxo de resgate de código baseado em loja.",
+          "bestFor": "Verificando recompensas de código e etapas de resgate junto com fontes oficiais."
+        }
+      ],
+      "bonuses": [
+        "Roblox Plus adiciona +10% Oof e +10% Prism.",
+        "Junte-se ao grupo Roblox e curta o jogo por +10% Rune Speed.",
+        "Participe da comunidade Discord por +10% Rune Luck.",
+        "Mantenha a postagem de lançamento e o guia de código público à mão ao verificar novas ondas de recompensa."
+      ]
+    }
+  },
+  "faq": {
+    "title": "__TERMO_1__",
+    "titleHighlight": "FAQ",
+    "subtitle": "Respostas rápidas para as perguntas que os jogadores fazem com mais frequência antes de uma nova sessão de Noob Incremental.",
+    "questions": [
+      {
+        "question": "Como os códigos Noob Incremental ajudam no progresso inicial?",
+        "answer": "Os códigos Noob Incremental adicionam Tickets, Tokens, Potions e recompensas de marco que aceleram a primeira rota de atualização e tornam a economia de abertura menos restrita."
+      },
+      {
+        "question": "Quando os jogadores de Noob Incremental devem começar a rolar runas?",
+        "answer": "As runas Noob Incremental são mais fortes depois que seu loop Noob e Oof já está estável o suficiente para suportar jogadas repetidas sem desacelerar todo o resto."
+      },
+      {
+        "question": "Quando é o momento certo para prestigiar em Noob Incremental?",
+        "answer": "Prestígio em Noob Incremental quando outra rodada de compras e atualizações de Noob quase não muda seu ritmo e o próximo desbloqueio significativo ainda está bloqueado."
+      },
+      {
+        "question": "Qual é a rota mais rápida para iniciantes em Noob Incremental?",
+        "answer": "A melhor abertura de Noob Incremental é resgatar códigos, aumentar Noobs, construir renda de Oof, comprar atualizações em rajadas e, em seguida, adicionar runas e prestígio somente após a primeira parede aparecer."
+      },
+      {
+        "question": "Onde posso acompanhar atualizações e bônus de Noob Incremental?",
+        "answer": "Acompanhe Noob Incremental através da página oficial do jogo Roblox, do grupo Ghoulax Games Roblox, do Ghoulax Studio Discord e da conta GhoulaxDev X."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para ir mais fundo em Noob Incremental?",
+    "description": "Junte-se à comunidade Ghoulax Studio para lançamentos de código, alertas de atualização e discussões sobre progressão de Noob Incremental.",
+    "joinCommunity": "Junte-se a Discord",
+    "joinGame": "Jogue em Roblox"
+  },
+  "footer": {
+    "title": "__TERMO_0__",
+    "description": "Sua central de recursos para códigos Noob Incremental, runas, rotas de prestígio, prioridades de atualização e guias de progressão para iniciantes.",
+    "resources": "Recursos",
+    "community": "Comunidade",
+    "legal": "Jurídico",
+    "discord": "__TERMO_11__",
+    "twitter": "X/Twitter",
+    "steamCommunity": "Roblox Grupo",
+    "steamStore": "Jogue em Roblox",
+    "about": "Sobre",
+    "privacy": "política de Privacidade",
+    "terms": "Termos de Serviço",
+    "copyrightNotice": "Direitos autorais",
+    "copyright": "© 2026 Noob Incremental Wiki. Não afiliado aos desenvolvedores de Noob Incremental.",
+    "disclaimer": "Site não oficial de recursos feitos por fãs."
+  },
+  "pages": {
+    "codes": {
+      "title": "Noob Incremental Códigos",
+      "description": "Códigos Noob Incremental em funcionamento mais recentes para Tickets, Tokens, Potions e recompensas por marcos.",
+      "metaTitle": "Noob Incremental Códigos - Recompensas ativas e ajuda para resgatar",
+      "metaDescription": "Obtenha os códigos Noob Incremental mais recentes para Tickets, Tokens, Potions e lance recompensas, além de etapas de resgate rápido.",
+      "categoryLabel": "REDEEM CODES",
+      "whatIs": "O que são códigos?",
+      "whatIsDescription": "A seção de códigos Noob Incremental rastreia sequências de resgate ativas, tipos de recompensa e a rota curta de resgate ABX dentro do menu Loja.",
+      "why": "Por que verificar os códigos?",
+      "whySteps": {
+        "step1Title": "Reivindique recursos gratuitos",
+        "step1Description": "Use códigos ativos para adicionar Tickets, Tokens e Potions antes de longas sessões de cultivo.",
+        "step2Title": "Pegue novas gotas com antecedência",
+        "step2Description": "Presentes de lançamento, recompensas por correção de bugs e pacotes de marcos CCU tendem a ser mais importantes quando resgatados imediatamente.",
+        "step3Title": "Mantenha os resgates simples",
+        "step3Description": "Use uma página para ver o status atual do código, notas de recompensa e o caminho exato do resgate."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os códigos"
+    },
+    "guide": {
+      "title": "Noob Incremental Guia",
+      "description": "Rotas para iniciantes, ajuda sobre como jogar e conselhos práticos de progressão para Noob Incremental.",
+      "metaTitle": "Noob Incremental Guia - Rotas para iniciantes e dicas básicas de progressão",
+      "metaDescription": "Navegue pelos artigos do guia Noob Incremental que cobrem rotas para iniciantes, como jogar, conselhos F2P e dicas práticas de progressão inicial.",
+      "categoryLabel": "GAME GUIDE",
+      "whatIs": "O que é a seção do Guia?",
+      "whatIsDescription": "A seção do guia Noob Incremental coleta as orientações mais amplas, incluindo caminhos para iniciantes, explicadores gerais de como jogar e artigos de planejamento de rotas para as primeiras paredes principais.",
+      "why": "Por que ler a seção do guia?",
+      "whySteps": {
+        "step1Title": "Aprenda o Core Loop",
+        "step1Description": "Veja como Noobs, Oof, atualizações, runas e prestígio se conectam antes de entrar em sistemas de nicho.",
+        "step2Title": "Corrigir inícios lentos",
+        "step2Description": "Use uma ordem de abertura mais limpa para que a primeira hora se transforme em escala constante em vez de cliques paralisados.",
+        "step3Title": "Crie hábitos melhores",
+        "step3Description": "Use guias de rota para decidir quando farmar, quando rolar runas e quando reiniciar."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os artigos do guia"
+    },
+    "farming": {
+      "title": "Noob Incremental Agricultura",
+      "description": "Oof rotas agrícolas, ritmo de renda e planejamento de ciclo de recursos para Noob Incremental.",
+      "metaTitle": "Noob Incremental Agricultura - Oof Rotas e Planejamento de Recursos",
+      "metaDescription": "Melhore a agricultura Noob Incremental com melhores loops Oof, ritmo de rendimento e planejamento de rotas para corridas mais fortes.",
+      "categoryLabel": "FARMING ROUTES",
+      "whatIs": "O que é agricultura?",
+      "whatIsDescription": "A seção de agricultura Noob Incremental concentra-se na geração de Oof, rotas de moagem repetíveis e nas escolhas que mantêm o fluxo de recursos forte entre atualizações e redefinições.",
+      "why": "Por que melhorar a agricultura?",
+      "whySteps": {
+        "step1Title": "Aumente Oof mais rápido",
+        "step1Description": "Use melhores ordens de compra e tempo de rota para melhorar a economia principal mais cedo.",
+        "step2Title": "Gaste com Propósito",
+        "step2Description": "Transforme as recompensas de código e a moeda ganha no próximo pico significativo, em vez de atualizações dispersas.",
+        "step3Title": "Apoie todos os sistemas",
+        "step3Description": "A agricultura mais forte alimenta atualizações, sessões de runas e reconstruções de prestígio ao mesmo tempo."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os artigos agrícolas"
+    },
+    "upgrades": {
+      "title": "Noob Incremental Atualizações",
+      "description": "Prioridades de atualização, leitura de estatísticas, dimensionamento de Noob e opções de valor premium para Noob Incremental.",
+      "metaTitle": "Noob Incremental Atualizações - Estatísticas, Noobs e pedido de melhor compra",
+      "metaDescription": "Aprenda as melhores Noob Incremental atualizações para priorizar, como as estatísticas afetam o escalonamento e quando os passes de jogo ou atualizações secretas são importantes.",
+      "categoryLabel": "UPGRADES",
+      "whatIs": "O que são atualizações?",
+      "whatIsDescription": "A seção de atualizações Noob Incremental detalha a loja, o crescimento de estatísticas, o dimensionamento de Noob e as opções premium para que você possa investir nos sistemas que realmente avançam.",
+      "why": "Por que revisar as atualizações?",
+      "whySteps": {
+        "step1Title": "Compre melhores multiplicadores",
+        "step1Description": "Priorize as atualizações que aumentam a produção e a velocidade de reconstrução, em vez de perseguir custos de baixo impacto.",
+        "step2Title": "Leia suas estatísticas",
+        "step2Description": "Use saltos de estatísticas, escalonamento de Noob e desbloqueios de utilitários para decidir quando uma pista ainda vale a pena financiar.",
+        "step3Title": "Compare o valor premium",
+        "step3Description": "Separe passes de jogo fortes e atualizações secretas de opções que só ajudam nas margens."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os artigos de atualização"
+    },
+    "runes": {
+      "title": "Noob Incremental Runes",
+      "description": "Rune rolagem, nivelamento, notas da lista de níveis e planejamento da janela de sorte para Noob Incremental.",
+      "metaTitle": "Noob Incremental Runes - Melhor Runes, níveis e tempo de rolagem",
+      "metaDescription": "Estude runas Noob Incremental com tempo de rolagem, conselhos de nível de runa, notas sobre as melhores runas e planejamento de lista de níveis.",
+      "categoryLabel": "RUNE SYSTEM",
+      "whatIs": "O que são Runes?",
+      "whatIsDescription": "A seção de runas Noob Incremental cobre jogadas de runas, decisões de nivelamento, pensamento de lista de níveis e o tempo necessário para ajustar as sessões de runas em sua rota de progressão mais ampla.",
+      "why": "Por que estudar runas?",
+      "whySteps": {
+        "step1Title": "Cronometre seus rolos",
+        "step1Description": "Inicie sessões de runas quando sua economia puder suportar tentativas repetidas sem atrasar o resto da construção.",
+        "step2Title": "Nivele as peças certas",
+        "step2Description": "Coloque recursos nas runas que permaneçam úteis em ciclos de prestígio e em trabalhos mais longos.",
+        "step3Title": "Use bem o Luck Windows",
+        "step3Description": "Combine reforços, bônus e recursos economizados com sessões de rolagem significativas, em vez de gastá-los casualmente."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os artigos Rune"
+    },
+    "progression": {
+      "title": "Noob Incremental Progressão",
+      "description": "Tempo de prestígio, progressão mundial, crescimento de Prism e planejamento de rota de longo prazo para Noob Incremental.",
+      "metaTitle": "Progressão de Noob Incremental - Prestígio, Mundial e Planejamento de Prism",
+      "metaDescription": "Planeje a progressão de Noob Incremental com tempo de prestígio, rotas de desbloqueio mundial, crescimento de Prism e conselhos de ritmo de longo prazo.",
+      "categoryLabel": "PROGRESSION",
+      "whatIs": "O que é Progressão?",
+      "whatIsDescription": "A seção de progressão de Noob Incremental concentra-se em grandes marcos, como redefinições de prestígio, desbloqueios de mundo, crescimento de Prism e decisões de ritmo que moldam a subida completa da conta.",
+      "why": "Por que planejar a progressão?",
+      "whySteps": {
+        "step1Title": "Redefinir em tempos melhores",
+        "step1Description": "Use prestígio somente após uma desaceleração real ou um limite de desbloqueio significativo aparecer.",
+        "step2Title": "Mapear marcos futuros",
+        "step2Description": "Mantenha as metas mundiais, Prism e max-world em ordem para que cada execução alimente o próximo ponto de verificação de forma limpa.",
+        "step3Title": "Encurtar reconstruções",
+        "step3Description": "Use o planejamento de progressão para retornar aos picos anteriores mais rapidamente após cada reinicialização importante."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os artigos de progressão"
+    },
+    "updates": {
+      "title": "Noob Incremental Atualizações",
+      "description": "Acompanhamento de lançamento, cobertura de notas de patch e planejamento focado em atualização para Noob Incremental.",
+      "metaTitle": "Noob Incremental Atualizações – Notas de versão e acompanhamento de patches",
+      "metaDescription": "Acompanhe as atualizações de Noob Incremental com acompanhamento de lançamento, cobertura de notas de patch e conselhos práticos para adaptação a novos conteúdos.",
+      "categoryLabel": "GAME UPDATES",
+      "whatIs": "O que são atualizações?",
+      "whatIsDescription": "A seção de atualizações Noob Incremental coleta notas de lançamento, resumos de patches e artigos específicos de atualizações para que os jogadores possam reagir rapidamente quando o conteúdo, o equilíbrio ou as recompensas mudarem.",
+      "why": "Por que acompanhar as atualizações?",
+      "whySteps": {
+        "step1Title": "Acompanhe novo conteúdo",
+        "step1Description": "Veja quando lançamentos, patches e eventos importantes alteram o valor das rotas atuais.",
+        "step2Title": "Ajuste mais rápido",
+        "step2Description": "Use a cobertura de atualização para revisitar construções, prioridades de runas e planos de cultivo após alterações de balanceamento.",
+        "step3Title": "Pegue janelas de recompensa",
+        "step3Description": "Os ciclos de patches geralmente trazem novos códigos, bônus de eventos ou oportunidades temporárias de progressão."
+      },
+      "featured": "Destaque e essencial",
+      "all": "Todos os artigos de atualização"
+    }
   }
 }

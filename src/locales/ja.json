@@ -1,11 +1,764 @@
 {
+  "seo": {
+    "home": {
+      "title": "Noob Incremental Wiki - コード、ルーン、Oof、名声",
+      "description": "Noob Incremental Wiki は、アクティブな Roblox コード、Oof ファーミング、ルーン、アップグレード、プレステージ レイヤー、および初心者の進行ルートを追跡し、今日のスケーリングを高速化します。",
+      "keywords": "__ゲーム__, __ゲーム__ ウィキ, Roblox コード, ルーン文字, 威信, アップグレード, Oof, 初心者ガイド",
+      "ogTitle": "Noob Incremental Wiki - コード、ルーン、Oof、名声",
+      "ogDescription": "Noob Incremental Wiki は、アクティブな Roblox コード、Oof ファーミング、ルーン、アップグレード、プレステージ レイヤー、および初心者の進行ルートを追跡し、今日のスケーリングを高速化します。",
+      "twitterTitle": "Noob Incremental Wiki - コード、ルーン、Oof、名声",
+      "twitterDescription": "Noob Incremental Wiki は、アクティブな Roblox コード、Oof ファーミング、ルーン、アップグレード、プレステージ レイヤー、および初心者の進行ルートを追跡し、今日のスケーリングを高速化します。"
+    }
+  },
   "nav": {
-    "codes": "Codes",
-    "guide": "Guide",
-    "farming": "Farming",
-    "upgrades": "Upgrades",
+    "codes": "コード",
+    "guide": "ガイド",
+    "farming": "農業",
+    "upgrades": "アップグレード",
     "runes": "Runes",
-    "progression": "Progression",
-    "updates": "Updates"
+    "progression": "進行状況",
+    "updates": "アップデート"
+  },
+  "common": {
+    "home": "家",
+    "more": "もっと",
+    "moreWikis": "その他のウィキ",
+    "playNow": "Roblox にプレイ",
+    "playVideo": "ビデオを再生する",
+    "watchOnYouTube": "YouTube で視聴",
+    "switchLanguage": "言語を切り替える",
+    "selectLanguage": "言語を選択してください",
+    "switchTheme": "テーマの切り替え",
+    "lightMode": "ライトモード",
+    "darkMode": "ダークモード",
+    "notFound": "ページが見つかりません",
+    "notFoundDescription": "お探しのページは存在しません。",
+    "backToHome": "ホームに戻る",
+    "contentNotFound": "コンテンツが見つかりません",
+    "relatedArticles": "関連記事",
+    "readMore": "続きを読む",
+    "articlesComingSoon": "近日公開予定の記事",
+    "advertisement": "広告",
+    "playerValue": "プレーヤーの価値",
+    "bestUse": "ベストユース",
+    "action": "アクション",
+    "rewardNote": "報酬メモ",
+    "bestFor": "最適な用途"
+  },
+  "hero": {
+    "badge": "階層型 Roblox インクリメンタル アイドル ゲーム",
+    "title": "Noob Incremental Wiki",
+    "description": "Noobs を購入し、アップグレードを積み重ね、ルーンをローリングしてレベルを上げて、Oof の収入を築き、複数のレイヤーを通じて名声を獲得して、より強力な進行を解除します。",
+    "getFreeCodesCTA": "Discord に参加する",
+    "playOnSteamCTA": "Roblox にプレイ",
+    "playOnRobloxCTA": "Roblox にプレイ",
+    "stats": {
+      "stat1": {
+        "value": "10+",
+        "label": "アクティブコード"
+      },
+      "stat2": {
+        "value": "何百もの",
+        "label": "アップグレード"
+      },
+      "stat3": {
+        "value": "複数",
+        "label": "プレステージレイヤー"
+      },
+      "stat4": {
+        "value": "+10%",
+        "label": "Rune Luck ボーナス"
+      }
+    }
+  },
+  "gameFeature": {
+    "title": "Noob Incremental ゲームプレイ",
+    "description": "Roblox の初期の Noob、Oof、ルーン、および威信ループを示す Noob Incremental ゲームプレイの実行をご覧ください。"
+  },
+  "tools": {
+    "title": "Noob Incremental",
+    "titleHighlight": "モジュール",
+    "subtitle": "コード、アップグレード、ルーン、名声、コミュニティ リンク、初期の作業をカバーする 8 つのホームページ モジュールに直接アクセスできます。",
+    "cards": [
+      {
+        "icon": "Gift",
+        "title": "Noob Incremental コード",
+        "description": "アクティブな報酬、マイルストーンのドロップ、および現在の有効期限切れのコードのメモ。",
+        "sectionId": "codes"
+      },
+      {
+        "icon": "ScrollText",
+        "title": "Noob Incremental コードの引き換え方法",
+        "description": "ゲーム内のショップ メニュー内の正確な ABX 引き換えフロー。",
+        "sectionId": "how-to-redeem-codes"
+      },
+      {
+        "icon": "Compass",
+        "title": "Noob Incremental 初心者ガイド",
+        "description": "最初のセッションは、Noobs と Oof からルーンとプレステージにルートされます。",
+        "sectionId": "beginner-guide"
+      },
+      {
+        "icon": "Coins",
+        "title": "Noob Incremental Oof 農業ガイド",
+        "description": "アップグレードとルーンロールを継続的に進めるための早期の収入優先事項。",
+        "sectionId": "oof-farming-guide"
+      },
+      {
+        "icon": "LineChart",
+        "title": "Noob Incremental アップグレードと統計ガイド",
+        "description": "どのアップグレードレーンを最初にプッシュするか、そしてスケーリングをどう読むか。",
+        "sectionId": "upgrades-and-stats-guide"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Noob Incremental Runes ガイド",
+        "description": "Rune 運、レベリング、重複、いつ積極的にロールするか。",
+        "sectionId": "runes-guide"
+      },
+      {
+        "icon": "Layers3",
+        "title": "Noob Incremental プレステージ ガイド",
+        "description": "リセットのタイミング、リビルド順序、プレステージ前のチェックリスト。",
+        "sectionId": "prestige-guide"
+      },
+      {
+        "icon": "Megaphone",
+        "title": "Noob Incremental Discord と更新情報",
+        "description": "公式 Roblox、グループ、Discord、更新追跡リンクが 1 か所にまとめられています。",
+        "sectionId": "discord-and-updates"
+      }
+    ]
+  },
+  "modules": {
+    "codes": {
+      "eyebrow": "無料の特典",
+      "title": "Noob Incremental コード",
+      "intro": "最初の大きな壁によって進行が遅くなる前に、アクティブな Noob Incremental コードを Tickets、Tokens、Potions と引き換えて、マイルストーン報酬を開始してください。",
+      "panelTitle": "Noob Incremental コードノート",
+      "panelText": "現在の報酬は、リリース サポート、バグ修正 Tickets、および CCU お祝いバンドルに偏っています。最初のアップグレード ルートが追加の Tokens、Tickets、Potions から始まるように、早めに引き換えてください。",
+      "expiredTitle": "期限切れの Noob Incremental コード",
+      "expiredNote": "現在の更新スナップショットには、期限切れの Noob Incremental コードはリストされていません。",
+      "tipTitle": "チップを引き換える",
+      "tipText": "各コードを ABX コード セクションに一度に 1 つずつ貼り付け、長いアップグレードまたはルーン セッションの前に報酬を消費します。",
+      "activeCodes": [
+        {
+          "code": "THANKS4JOINING",
+          "status": "アクティブ",
+          "reward": "Tokens、Tickets、および Potions",
+          "rewardType": "混合報酬",
+          "category": "コミュニティの立ち上げ報酬"
+        },
+        {
+          "code": "RELEASE",
+          "status": "アクティブ",
+          "reward": "Tokens、Tickets、および Potions",
+          "rewardType": "混合報酬",
+          "category": "解放報酬"
+        },
+        {
+          "code": "WWWRELEASE",
+          "status": "アクティブ",
+          "reward": "Tokens、Tickets、および Potions",
+          "rewardType": "混合報酬",
+          "category": "解放報酬"
+        },
+        {
+          "code": "BUGFIX1",
+          "status": "アクティブ",
+          "reward": "10 Tickets",
+          "rewardType": "Tickets",
+          "category": "バグ修正報酬"
+        },
+        {
+          "code": "BUGFIX2",
+          "status": "アクティブ",
+          "reward": "10 Tickets",
+          "rewardType": "Tickets",
+          "category": "バグ修正報酬"
+        },
+        {
+          "code": "BUGFIX3",
+          "status": "アクティブ",
+          "reward": "10 Tickets",
+          "rewardType": "Tickets",
+          "category": "バグ修正報酬"
+        },
+        {
+          "code": "1.5KCCU!!",
+          "status": "アクティブ",
+          "reward": "__期間_9__",
+          "rewardType": "__期間_9__",
+          "category": "CCU マイルストーン報酬"
+        },
+        {
+          "code": "2KCCU!!",
+          "status": "アクティブ",
+          "reward": "__期間_9__",
+          "rewardType": "__期間_9__",
+          "category": "CCU マイルストーン報酬"
+        },
+        {
+          "code": "3KCCU!!",
+          "status": "アクティブ",
+          "reward": "Tokens、Tickets、および Potions",
+          "rewardType": "混合報酬",
+          "category": "CCU マイルストーン報酬"
+        },
+        {
+          "code": "4KCCU!!",
+          "status": "アクティブ",
+          "reward": "Tokens および Tickets",
+          "rewardType": "混合報酬",
+          "category": "CCU マイルストーン報酬"
+        }
+      ]
+    },
+    "redeem": {
+      "eyebrow": "引き換えガイド",
+      "title": "Noob Incremental コードの引き換え方法",
+      "intro": "ショップ メニューと ABX コード ボックスを使用して、Noob Incremental 特典を受け取ります。パスは短いですが、コードフィールドは多くのプレイヤーが予想しているよりもショップパネルの下にあります。",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Noob Incremental を起動する",
+          "text": "Roblox で Noob Incremental を開き、完全なゲーム インターフェイスの読み込みが完了するまで待ちます。",
+          "action": "体験を始める"
+        },
+        {
+          "step": 2,
+          "title": "ショップを開く",
+          "text": "画面下部の「ショップ」ボタンを使用して、報酬とブーストのメニューを開きます。",
+          "action": "タップショップ"
+        },
+        {
+          "step": 3,
+          "title": "ABX セクションまでスクロールします",
+          "text": "ショップ パネル内に ABX コード入力領域が表示されるまでスクロールを続けます。",
+          "action": "ABX を検索"
+        },
+        {
+          "step": 4,
+          "title": "コードを 1 つ入力してください",
+          "text": "アクティブな Noob Incremental コードを 1 つ、記載どおりにフィールドに貼り付けるか入力します。",
+          "action": "一度に 1 つのコード"
+        },
+        {
+          "step": 5,
+          "title": "プレス引き換え",
+          "text": "添付された Tickets、Tokens、Potions、またはマイルストーン報酬を獲得し、次のアクティブなコードに対してこの手順を繰り返します。",
+          "action": "報酬を集める"
+        }
+      ]
+    },
+    "beginner": {
+      "eyebrow": "スタータールート",
+      "title": "Noob Incremental 初心者ガイド",
+      "intro": "最初の Noob Incremental セッションでは、コア ループをすぐに教える必要があります。Noobs を購入し、Oof を上げ、アップグレードに費やし、ループが安定したらルーンをロールし、進捗が平坦になり始めた後にのみ名声を獲得します。",
+      "goalLabel": "プレイヤーの目標:",
+      "cards": [
+        {
+          "title": "まずNoobsを購入してください",
+          "tag": "コアループ",
+          "text": "すべての初期の実行は、Noob カウントを拡大することから始まり、Oof 世代がすぐに上昇し始めます。",
+          "playerGoal": "より深い星系を追う前に、安定したOofフロアを構築してください。"
+        },
+        {
+          "title": "Oof を勢いに変える",
+          "tag": "主なリソース",
+          "text": "Oof は開始フェーズのエンジンであるため、遅いパッチはすべて、Oof の復帰速度を改善することで解決する必要があります。",
+          "playerGoal": "Oof の流れを維持して、アップグレードの購入が頻繁に行われるようにします。"
+        },
+        {
+          "title": "アップグレードをバーストで購入する",
+          "tag": "スケーリング",
+          "text": "未使用の収入にあまり長く座るのではなく、短いファーミング期間を使用し、その後すぐにアップグレードをバーストします。",
+          "playerGoal": "次の壁が到着する前に、いくつかの乗数ゲインを積み重ねてください。"
+        },
+        {
+          "title": "安定したら Runes をタッチします",
+          "tag": "Runes",
+          "text": "Noob および Oof ループがすでに再試行をサポートできるほど快適になっている場合、Rune ローリングはさらに重要になります。",
+          "playerGoal": "ルーンを使用するのは、弱いオープニングを救うためではなく、ランを延長するためです。"
+        },
+        {
+          "title": "獲得が鈍化したときの威信",
+          "tag": "レイヤをリセット",
+          "text": "Noob の別のラウンドの購入またはアップグレードによって有意義な方法でペースが変化しなくなった場合は、プレステージが答えです。",
+          "playerGoal": "わずかな利益を強制するのではなく、より強力な再構築のためにリセットします。"
+        },
+        {
+          "title": "ボーナスソースを早めに請求しましょう",
+          "tag": "追加ブースト",
+          "text": "Roblox Plus、Roblox グループ、いいね、コミュニティ サーバーはすべて、ボーナス値をより長いセッションにフィードします。",
+          "playerGoal": "長いファーミングプッシュの前に、すべてのパッシブブーストを固定してください。"
+        }
+      ]
+    },
+    "oof": {
+      "eyebrow": "収入ルート",
+      "title": "Noob Incremental Oof 農業ガイド",
+      "intro": "Oof は、Noob Incremental の開始経済を推進します。最もクリーンな農業ルートは、まず Noobs を拡張し、アップグレードを段階的に購入し、ベーシック インカムが既に順調に進んだ後でのみ、コード報酬やルーン ブーストを実行に組み込むことです。",
+      "priorities": [
+        {
+          "priority": 1,
+          "title": "何よりも前に Noobs を購入してください",
+          "resourceFocus": "Oof 制作",
+          "timing": "進行の始まり",
+          "reason": "サイド システムを追跡する前に、基本 Noob カウントが増加すると、アカウントのスケールが速くなります。"
+        },
+        {
+          "priority": 2,
+          "title": "マルチプライヤーのアップグレードに Oof を費やす",
+          "resourceFocus": "アップグレードの成長",
+          "timing": "Oof が流れ始めるとき",
+          "reason": "Oof が着実に到着すると、マルチプライヤーはアイドル状態の溜め込みよりもはるかに困難にアップグレードの次の波を推進します。"
+        },
+        {
+          "priority": 3,
+          "title": "コード報酬をグラインドにドロップ",
+          "resourceFocus": "Tickets、Tokens、Potions",
+          "timing": "長押しの前に",
+          "reason": "アクティブ コードは初期の壁を滑らかにし、成長曲線が早期に平坦になるのを防ぎます。"
+        },
+        {
+          "priority": 4,
+          "title": "Runes 安定した収入を得る",
+          "resourceFocus": "Rune 効率",
+          "timing": "最初の安定したループの後",
+          "reason": "Runes は、弱いベースラインをカバーするのではなく、強い Oof ベースラインを増幅する場合に最も効果的です。"
+        }
+      ]
+    },
+    "upgrades": {
+      "eyebrow": "スケーリング計画",
+      "title": "Noob Incremental アップグレードと統計ガイド",
+      "intro": "アップグレード、統計、Noobs、Oof の獲得、Prism の獲得、ルーン ボーナス、威信のロック解除を使用して、Noob Incremental までの期間をより速くスケールします。",
+      "headers": {
+        "system": "システム",
+        "playerAction": "プレイヤーのアクション",
+        "effect": "効果",
+        "checkpoint": "最適な使用チェックポイント"
+      },
+      "rows": [
+        {
+          "system": "Noobs",
+          "playerAction": "コアの開始アクションとして Noobs を購入します。",
+          "effect": "Noobs は、公式のプレイ ループに表示される主要な初期進行出力である Oof の生成に役立ちます。",
+          "checkpoint": "後のシステムを追いかける前に、Noob ベースの生産を改善することからすべての実行を開始します。"
+        },
+        {
+          "system": "Oof",
+          "playerAction": "Oof から Noobs までを生成し、アップグレードで強化します。",
+          "effect": "Oof は公式ゲームプレイ ループの主な生産ターゲットであり、Roblox Plus プレイヤーは +10% Oof を受け取ります。",
+          "checkpoint": "アップグレードがまだ手頃で、利益が急速に増加している場合は、Oof の成長を優先します。"
+        },
+        {
+          "system": "アップグレード",
+          "playerAction": "十分な Oof プロダクションを構築した後、アップグレードを購入してください。",
+          "effect": "アップグレードによりプレーヤーはより強くなり、実行全体でのより高速なスケーリングがサポートされます。",
+          "checkpoint": "コストが達成できると思われる間はアップグレードを続けてください。進行が遅い場合は、ルーンと威信のオプションを確認してください。"
+        },
+        {
+          "system": "統計",
+          "playerAction": "進行を通じてロックが解除されるゲームの多くのステータス カテゴリを追跡します。",
+          "effect": "統計は、アップグレード、ルーン、プレステージ レイヤー、その他の機能にわたる長期的なスケーリングをサポートします。",
+          "checkpoint": "現在のルートがまだ効率的であるかどうかのシグナルとして統計の成長を使用します。"
+        },
+        {
+          "system": "Prism",
+          "playerAction": "ゲームの進行システムを通じて利用可能な場合は、Prism 関連のゲインを使用します。",
+          "effect": "公式 Roblox ページによると、Roblox Plus プレイヤーは +10% Prism を受け取ります。",
+          "checkpoint": "アカウントブーストを比較するときは、Prism をボーナスでサポートされる進行リソースとして扱います。"
+        },
+        {
+          "system": "Runes",
+          "playerAction": "進行中にルーンをロールしてレベルアップします。",
+          "effect": "Runes は公式の電源ループの一部であり、基本的なアップグレードを超えてスケ​​ーリングを強化するのに役立ちます。",
+          "checkpoint": "基本的な Oof の後にルーン ローリングを追加し、アップグレードの成長がすでに進んでいます。"
+        },
+        {
+          "system": "__期間_7__",
+          "playerAction": "Ghoulax Games グループに参加して、ゲームを気に入ってください。",
+          "effect": "公式 Roblox ページには、グループに参加してゲームを気に入ったプレイヤー向けに +10% Rune Speed がリストされています。",
+          "checkpoint": "長いルーンセッションの前にこれを要求すると、繰り返しローリング中にスピードボーナスが機能します。"
+        },
+        {
+          "system": "__期間_8__",
+          "playerAction": "コミュニティサーバーに参加します。",
+          "effect": "公式 Roblox ページには、コミュニティ サーバーに参加するための +10% Rune Luck がリストされています。",
+          "checkpoint": "特により強力なルーン結果を狩る場合は、ルーンを大量にローリングする前にこれを使用してください。"
+        },
+        {
+          "system": "プレステージレイヤー",
+          "playerAction": "Noobs、アップグレード、ステータス、ルーンから十分な力を構築した後の威信。",
+          "effect": "プレステージは新しいコンテンツのロックを解除し、より深い進行レイヤーを追加します。",
+          "checkpoint": "ゲーム内オプションが利用可能であり、次のロック解除が現在のランに留まるより価値がある場合の名声。"
+        }
+      ],
+      "stats": [
+        "Noobs と Oof から始めて、初期のルートが遅くなったらルーンとプレステージに範囲を広げます。",
+        "Prism やルーン スケーリングに頼る長いセッションの前に、Roblox Plus や Discord などのグループ ボーナスを使用してください。",
+        "統計の成長によって、フラットなアップグレード レーンを離れて次のレイヤーに移行する時期がわかります。"
+      ]
+    },
+    "runes": {
+      "eyebrow": "Rune レイヤー",
+      "title": "Noob Incremental Runes ガイド",
+      "intro": "Runes は、Noob Incremental の主要なスケーリング システムの 1 つで、ローリング、レベリング、スピード ボーナス、運のボーナスを中心に構築されています。",
+      "cards": [
+        {
+          "title": "ロールRunes",
+          "tag": "コア Rune アクション",
+          "description": "十分な初期Oofを構築し、強度をアップグレードした後、メインの進行ループの一部としてルーンをロールします。",
+          "playerValue": "基本的な Noob を超えたより深いスケーリング層を追加し、アップグレードを拡張します。",
+          "bestUse": "早期のアップグレードが唯一の有意義な進歩の源ではなくなったら、ルーンのローリングを開始します。"
+        },
+        {
+          "title": "レベル Runes",
+          "tag": "長期的なスケーリング",
+          "description": "将来の進行を通じて価値を向上させるために、ルーンを転がした後にレベルを上げます。",
+          "playerValue": "ルーン収集を 1 回限りのロールチェックではなく、継続的な電力システムに変えます。",
+          "bestUse": "名声とその後のロック解除の準備をしながら、有用なルーンをレベルアップし続けます。"
+        },
+        {
+          "title": "Rune Speed ボーナス",
+          "tag": "+10% Rune Speed",
+          "description": "Ghoulax Games グループに参加し、Roblox エクスペリエンスを気に入って、リストされている Rune Speed ボーナスを有効にします。",
+          "playerValue": "ロールセッションを繰り返す間、ルーンの進行がより速く感じられるようになります。",
+          "bestUse": "長いルーンセッションの前にアクティブ化すると、ボーナスがすでに適用されます。"
+        },
+        {
+          "title": "Rune Luck ボーナス",
+          "tag": "+10% Rune Luck",
+          "description": "コミュニティ サーバーに参加して、公式 Roblox ページからリストされている Rune Luck ボーナスを有効にします。",
+          "playerValue": "ルーン運を向上させることで、より良いルーンローリングセッションをサポートします。",
+          "bestUse": "ルーンローリングやルーン中心の進行に時間を費やす前にアクティブ化してください。"
+        },
+        {
+          "title": "Rune 進行のタイミング",
+          "tag": "進捗チェック",
+          "description": "基本的な Noobs、Oof、およびアップグレードによって安定した実行基盤が構築された後にルーンを使用します。",
+          "playerValue": "初期の進行状況が一度にあまりにも多くのシステムにあまりにも薄く広がるのを防ぎます。",
+          "bestUse": "アップグレードのコストが下がったり、威信の準備が始まったりした場合は、ルーンにさらに注意を移してください。"
+        },
+        {
+          "title": "コミュニティ Rune のセットアップ",
+          "tag": "ボーナスの準備",
+          "description": "ルーン システムに焦点を当てる前に、ゲーム グループ、ゲームのようなステータス、およびコミュニティ サーバーを確認してください。",
+          "playerValue": "両方のパブリック ルーン ボーナスを組み合わせます: +10% Rune Speed と +10% Rune Luck。",
+          "bestUse": "このセットアップを一度完了すると、それが今後のルーン セッションのデフォルトの開始点として使用されます。"
+        }
+      ],
+      "bonuses": [
+        "Noob および Oof ルートがすでに安定した後、ルーンをロールしてレベルを上げます。",
+        "長いルーンセッションの前に、グループ、いいね、コミュニティサーバーのボーナスを使用してください。",
+        "ルーンを、強力なランを拡張し、威信の準備をサポートするスケーリング レイヤーとして扱います。"
+      ]
+    },
+    "prestige": {
+      "eyebrow": "リセットタイミング",
+      "title": "Noob Incremental プレステージ ガイド",
+      "intro": "プレステージは、Noob Incremental を基本的な Oof、アップグレード、統計、およびルーンを超えたリセットおよびロック解除レイヤーです。",
+      "steps": [
+        {
+          "step": 1,
+          "title": "ベースランを構築する",
+          "action": "Noobs を購入し、Oof を生成します。",
+          "text": "これにより、アップグレードを行って後のシステムに備えるために必要な、本番環境の最初のレイヤーが作成されます。",
+          "checkpoint": "Oof の獲得とアップグレードの購入がまだ早いと感じられる間、構築を続けてください。"
+        },
+        {
+          "step": 2,
+          "title": "購入強度のアップグレード",
+          "action": "進行リソースをアップグレードに費やして、走りを強化します。",
+          "text": "アップグレードは、基本的な Noob 運用とより詳細なスケーリングの間の主要な橋渡しとなります。",
+          "checkpoint": "次の有用なアップグレードに到達するまでに著しく時間がかかるまで、アップグレードを続けます。"
+        },
+        {
+          "step": 3,
+          "title": "Rune の進行状況を追加",
+          "action": "ルーンを転がしてレベルを上げてから、ランの奥へ進みましょう。",
+          "text": "Runes 別のスケーリング レイヤーを追加し、基本的なアップグレードを超えた長期の進行をサポートします。",
+          "checkpoint": "Oof の早い段階で一度ルーン システムを使用すると、アップグレードの成長が安定します。"
+        },
+        {
+          "step": 4,
+          "title": "Rune ボーナスを有効にする",
+          "action": "グループに参加して +10% Rune Speed のゲームを気に入ってから、+10% Rune Luck のコミュニティ サーバーに参加してください。",
+          "text": "これらのボーナスにより、名声重視のプッシュ前のルーン セッションが向上します。",
+          "checkpoint": "ルーンローリングに多額の投資をする前に、これらのボーナスを確認してください。"
+        },
+        {
+          "step": 5,
+          "title": "プレステージオプションを確認してください",
+          "action": "ゲーム内の威信レイヤーが利用可能になったら開きます。",
+          "text": "プレステージは、新しいコンテンツのロックを解除し、より深い進行レイヤーに移動するために使用されます。",
+          "checkpoint": "次のプレステージのロック解除により、現在の実行に留まるよりも長期的な価値が向上する場合にリセットします。"
+        },
+        {
+          "step": 6,
+          "title": "威信と再構築",
+          "action": "プレステージを使用し、Noobs、Oof の生成、アップグレード、およびルーンを再度実行して再構築します。",
+          "text": "リセットにより、新しくロックが解除されたコンテンツを通じて、より強力な長期ルートが作成されます。",
+          "checkpoint": "プレステージを設定した後は、すぐにすべてのシステムに注意を広げるのではなく、最初に初期の運用環境に戻ります。"
+        },
+        {
+          "step": 7,
+          "title": "新しいレイヤーを繰り返します",
+          "action": "より強力なランを使用して次の名声層に到達し、新しいコンテンツのロックを解除します。",
+          "text": "ゲームは複数の名声層を中心に設計されているため、繰り返しのリセットは通常の進行の一部です。",
+          "checkpoint": "名声を 1 回限りのマイルストーンとして扱うのではなく、各実行を使用して次のリセット タイミングを改善します。"
+        }
+      ]
+    },
+    "updates": {
+      "eyebrow": "公式リンク",
+      "title": "Noob Incremental Discord と更新情報",
+      "intro": "公式 Roblox ページ、Ghoulax Games グループ、コミュニティ Discord、および GhoulaxDev 更新投稿を使用して、Noob Incremental のニュースと報酬を追跡します。",
+      "panelTitle": "Noob Incremental ボーナスの簡単なチェックリスト",
+      "panelText": "これらの公開ソースには、ゲーム ページ、コミュニティの報酬、プレーヤーがプレイ セッション間で使用する可能性が最も高い主な更新追跡先が含まれています。",
+      "bonusTitle": "Noob Incremental ボーナス チェックリスト",
+      "links": [
+        {
+          "title": "Noob Incremental Roblox ページ",
+          "type": "公式ゲームページ",
+          "href": "https://www.roblox.com/games/76911729991355/Noob-Incremental",
+          "description": "Noob Incremental をプレイし、公式のゲーム説明、ゲームプレイ ループ、公開ボーナス、およびリストされたクレジットを確認するための主な場所です。",
+          "rewardNote": "Roblox Plus +10% Oof および +10% Prism、グループのような +10% Rune Speed、およびコミュニティ サーバー +10% Rune Luck をリストします。",
+          "bestFor": "ゲームをプレイして現在の公式説明を確認します。"
+        },
+        {
+          "title": "Ghoulax Games Roblox グループ",
+          "type": "公式Robloxグループ",
+          "href": "https://www.roblox.com/communities/356937272/Ghoulax-Games",
+          "description": "公式 Roblox グループは、Noob Incremental クリエイター ページおよびグループ関連のゲーム ボーナス フローに接続されています。",
+          "rewardNote": "Roblox ゲーム ページには、グループに参加してゲームを気に入った場合の +10% Rune Speed がリストされています。",
+          "bestFor": "グループにリンクされた報酬設定とクリエイター側の Roblox 更新。"
+        },
+        {
+          "title": "Ghoulax Studio Discord",
+          "type": "コミュニティサーバー",
+          "href": "https://discord.com/invite/ghoulaxstudio",
+          "description": "プレイヤーのディスカッション、アナウンス、コミュニティ情報のためのゲームのパブリック ソースからリンクされたコミュニティ サーバー。",
+          "rewardNote": "Roblox ゲーム ページには、コミュニティ サーバーに参加するための +10% Rune Luck がリストされています。",
+          "bestFor": "Rune 運の設定、ニュースの追跡、コードのディスカッション、コミュニティの質問。"
+        },
+        {
+          "title": "GhoulaxDev 投稿を開始",
+          "type": "開発者のソーシャル投稿",
+          "href": "https://x.com/GhoulaxDev/status/2061172178754658457",
+          "description": "開発者は、プレイヤーに新しくリリースされた Noob Incremental エクスペリエンスを示すポストを起動します。",
+          "rewardNote": "発売発表ソースを確認したり、将来の開発者の投稿をフォローしたりするのに役立ちます。",
+          "bestFor": "開発者の最新情報とリリース履歴のコンテキスト。"
+        },
+        {
+          "title": "Destructoid Noob Incremental コード",
+          "type": "メディアガイド",
+          "href": "https://www.destructoid.com/noob-incremental-codes/",
+          "description": "公開 Roblox コード ガイドでは、有効なコード、コード特典、ゲーム内ショップの引き換えパスについて説明しています。",
+          "rewardNote": "Tickets、Tokens、Potions、およびショップベースのコード引き換えフローについて説明します。",
+          "bestFor": "コード特典と引き換え手順を公式ソースと合わせて確認します。"
+        }
+      ],
+      "bonuses": [
+        "Roblox Plus は +10% Oof と +10% Prism を追加します。",
+        "Roblox グループに参加して、+10% Rune Speed 分のゲームを気に入ってください。",
+        "+10% Rune Luck のコミュニティ Discord に参加してください。",
+        "新しい報酬ウェーブを確認するときは、ローンチ投稿と公開コード ガイドを手元に置いてください。"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Noob Incremental",
+    "titleHighlight": "FAQ",
+    "subtitle": "新しい Noob Incremental セッションの前にプレイヤーが最もよく尋ねる質問に対する簡単な回答。",
+    "questions": [
+      {
+        "question": "Noob Incremental コードは早期の進歩にどのように役立ちますか?",
+        "answer": "Noob Incremental コードは、Tickets、Tokens、Potions、および最初のアップグレード ルートをスピードアップし、オープニング エコノミーの窮屈さを緩和するマイルストーン報酬を追加します。"
+      },
+      {
+        "question": "Noob Incremental プレイヤーはいつルーンを振り始めるべきですか?",
+        "answer": "Noob Incremental ルーンは、Noob および Oof ループがすでに十分に安定しており、他のすべての速度を低下させることなく繰り返しロールをサポートできるようになった後に最も強力になります。"
+      },
+      {
+        "question": "Noob Incremental で威信を高めるのに適切な時期はいつですか?",
+        "answer": "Noob Incremental での名声は、Noob の購入とアップグレードの別のラウンドでペースがほとんど変わらず、次の意味のあるロック解除がまだゲートされているときです。"
+      },
+      {
+        "question": "最速の Noob Incremental 初心者向けルートは何ですか?",
+        "answer": "最良の Noob Incremental オープナーは、コードを引き換え、Noobs を上げ、Oof の収入を築き、アップグレードを一気に購入し、最初の壁が現れた後にのみルーンと名声を重ねていくことです。"
+      },
+      {
+        "question": "Noob Incremental のアップデートやボーナスはどこで追跡できますか?",
+        "answer": "公式 Roblox ゲーム ページ、Ghoulax Games Roblox グループ、Ghoulax Studio Discord、および GhoulaxDev X アカウントを通じて Noob Incremental を追跡します。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Noob Incremental をさらに深く進める準備はできていますか?",
+    "description": "Ghoulax Studio コミュニティに参加して、コードのドロップ、更新アラート、Noob Incremental の進行状況に関するディスカッションを入手してください。",
+    "joinCommunity": "Discord に参加する",
+    "joinGame": "Roblox にプレイ"
+  },
+  "footer": {
+    "title": "Noob Incremental Wiki",
+    "description": "Noob Incremental コード、ルーン、名声ルート、アップグレードの優先順位、初心者向けの進行ガイドのリソース ハブ。",
+    "resources": "リソース",
+    "community": "コミュニティ",
+    "legal": "法律上の",
+    "discord": "Discord",
+    "twitter": "X/ツイッター",
+    "steamCommunity": "Roblox グループ",
+    "steamStore": "Roblox にプレイ",
+    "about": "について",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyrightNotice": "著作権",
+    "copyright": "© 2026 Noob Incremental Wiki. Noob Incremental の開発者とは無関係です。",
+    "disclaimer": "非公式のファンメイドのリソース Web サイト。"
+  },
+  "pages": {
+    "codes": {
+      "title": "Noob Incremental コード",
+      "description": "Tickets、Tokens、Potions、およびマイルストーン報酬用の最新の動作する Noob Incremental コード。",
+      "metaTitle": "Noob Incremental コード - アクティブな特典と引き換えのヘルプ",
+      "metaDescription": "Tickets、Tokens、Potions の最新の Noob Incremental コードを入手し、特典を開始し、さらに素早い引き換え手順を入手してください。",
+      "categoryLabel": "REDEEM CODES",
+      "whatIs": "コードとは何ですか?",
+      "whatIsDescription": "Noob Incremental コード セクションでは、アクティブな引き換え文字列、特典の種類、ショップ メニュー内の短い ABX 引き換えルートを追跡します。",
+      "why": "コードをチェックする理由",
+      "whySteps": {
+        "step1Title": "無料リソースを請求する",
+        "step1Description": "長いファーミング セッションの前に、アクティブ コードを使用して Tickets、Tokens、および Potions を追加します。",
+        "step2Title": "新しいドロップを早期にキャッチ",
+        "step2Description": "リリース ギフト、バグ修正報酬、CCU マイルストーン バンドルは、すぐに引き換えられる場合に最も重要になる傾向があります。",
+        "step3Title": "引き換えをシンプルに保つ",
+        "step3Description": "現在のコードのステータス、特典メモ、正確な引き換えパスを 1 ページで確認できます。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべてのコード"
+    },
+    "guide": {
+      "title": "Noob Incremental ガイド",
+      "description": "Noob Incremental の初心者ルート、プレイ方法のヘルプ、および実践的な進行アドバイス。",
+      "metaTitle": "Noob Incremental ガイド - 初心者ルートと中核となる進行のヒント",
+      "metaDescription": "初心者向けのルート、プレイ方法、F2P のアドバイス、実践的な序盤の進行のヒントを網羅した Noob Incremental ガイド記事を参照してください。",
+      "categoryLabel": "GAME GUIDE",
+      "whatIs": "ガイドセクションとは何ですか?",
+      "whatIsDescription": "Noob Incremental ガイド セクションには、初心者向けの道、一般的なプレイ方法の説明、最初の大きな壁のルート計画記事など、最も広範なウォークスルーが集められています。",
+      "why": "ガイドセクションを読む理由は何ですか?",
+      "whySteps": {
+        "step1Title": "コアループを学ぶ",
+        "step1Description": "ニッチなシステムに分岐する前に、Noobs、Oof、アップグレード、ルーン、および威信がどのように関係するかを確認してください。",
+        "step2Title": "遅いスタートを修正する",
+        "step2Description": "よりクリーンな開始順序を使用して、最初の 1 時間が停止したクリックではなく安定したスケーリングに変わるようにします。",
+        "step3Title": "より良い習慣を築く",
+        "step3Description": "ルート ガイドを使用して、いつファームするか、いつルーンをロールするか、いつリセットするかを決定します。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべてのガイド記事"
+    },
+    "farming": {
+      "title": "Noob Incremental 農業",
+      "description": "Oof 農業ルート、収入ペース、Noob Incremental のリソース ループ計画。",
+      "metaTitle": "Noob Incremental 農業 - Oof ルートとリソース計画",
+      "metaDescription": "より優れた Oof ループ、収入ペーシング、より強力な実行のためのルート計画により、Noob Incremental 農業を改善します。",
+      "categoryLabel": "FARMING ROUTES",
+      "whatIs": "農業とは何ですか?",
+      "whatIsDescription": "Noob Incremental ファーミング セクションでは、Oof の生成、反復可能な研削ルート、アップグレードとリセットの間のリソース フローを強力に保つための選択に焦点を当てています。",
+      "why": "なぜ農業を改善するのでしょうか？",
+      "whySteps": {
+        "step1Title": "Oof をより早く上げる",
+        "step1Description": "主要な経済をより早く改善するには、より適切な発注書とルートのタイミングを使用します。",
+        "step2Title": "目的を持って支出する",
+        "step2Description": "散在的なアップグレードではなく、コード報酬と獲得した通貨を次の有意義なスパイクに変えます。",
+        "step3Title": "あらゆるシステムをサポート",
+        "step3Description": "より強力な農業は、アップグレード、ルーンセッション、名声の再構築を同時に提供します。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべての農業記事"
+    },
+    "upgrades": {
+      "title": "Noob Incremental アップグレード",
+      "description": "アップグレードの優先順位、統計値の読み取り、Noob スケーリング、および Noob Incremental のプレミアム値の選択。",
+      "metaTitle": "Noob Incremental アップグレード - 統計、Noobs、ベストバイ注文",
+      "metaDescription": "優先順位を付けるのに最適な Noob Incremental アップグレード、統計がスケーリングに与える影響、ゲームパスやシークレット アップグレードがいつ重要になるかを学びます。",
+      "categoryLabel": "__自動_0__",
+      "whatIs": "アップグレードとは何ですか?",
+      "whatIsDescription": "Noob Incremental アップグレード セクションでは、ショップ、統計の成長、Noob スケーリング、プレミアム オプションを詳しく説明しているため、実際に実行を進めるシステムに投資できます。",
+      "why": "アップグレードを検討する理由",
+      "whySteps": {
+        "step1Title": "より良い乗数を購入する",
+        "step1Description": "影響の少ないコストを追求するのではなく、出力と再構築速度を向上させるアップグレードを優先します。",
+        "step2Title": "統計を読む",
+        "step2Description": "統計ジャンプ、Noob スケーリング、およびユーティリティのロック解除を使用して、レーンに資金を投入する価値がある時期を判断します。",
+        "step3Title": "プレミアム価値を比較する",
+        "step3Description": "強力なゲームパスや秘密のアップグレードを、ギリギリで役立つだけのオプションから分離します。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべてのアップグレード記事"
+    },
+    "runes": {
+      "title": "Noob Incremental Runes",
+      "description": "Rune ローリング、レベリング、Tier リストのメモ、Noob Incremental の運枠計画。",
+      "metaTitle": "Noob Incremental Runes - 最高の Runes、レベル、ロール タイミング",
+      "metaDescription": "ロールのタイミング、ルーン レベルのアドバイス、最高のルーンのメモ、ティア リストの計画を使用して、Noob Incremental のルーンを研究します。",
+      "categoryLabel": "RUNE SYSTEM",
+      "whatIs": "Runes とは何ですか?",
+      "whatIsDescription": "Noob Incremental ルーン セクションでは、ルーン ロール、レベリングの決定、ティア リストの考え方、およびルーン セッションを幅広い進行ルートに組み込むために必要なタイミングについて説明します。",
+      "why": "なぜルーン文字を勉強するのでしょうか？",
+      "whySteps": {
+        "step1Title": "ロールの時間を計る",
+        "step1Description": "経済が残りのビルドを停止させることなく繰り返しの試行をサポートできるときに、ルーン セッションを開始します。",
+        "step2Title": "適切なピースを水平にする",
+        "step2Description": "ルーンにリソースを投入すると、名声サイクルや長期にわたるグラインドにわたって有用であり続けます。",
+        "step3Title": "Luck Windows を上手に活用する",
+        "step3Description": "ブースト、ボーナス、保存されたリソースを無造作に消費するのではなく、有意義なロール セッションと組み合わせてください。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべてのRune記事"
+    },
+    "progression": {
+      "title": "Noob Incremental 進行状況",
+      "description": "威信のタイミング、世界の進歩、Prism の成長、Noob Incremental の長期ルート計画。",
+      "metaTitle": "Noob Incremental の進行 - プレステージ、ワールド、および Prism 計画",
+      "metaDescription": "名声のタイミング、世界のロック解除ルート、Prism の成長、および長期的なペースのアドバイスを使用して、Noob Incremental の進行を計画します。",
+      "categoryLabel": "__自動_0__",
+      "whatIs": "プログレッションとは何ですか?",
+      "whatIsDescription": "Noob Incremental の進行セクションでは、名声のリセット、世界のロック解除、Prism の成長、アカウント全体の上昇を形作るペースの決定などの大きなマイルストーンに焦点を当てています。",
+      "why": "なぜ進行を計画するのでしょうか?",
+      "whySteps": {
+        "step1Title": "より良いタイミングでリセットする",
+        "step1Description": "実際に速度が低下するか、意味のあるロック解除しきい値が表示された場合にのみ、プレステージを使用してください。",
+        "step2Title": "将来のマイルストーンを計画する",
+        "step2Description": "world、Prism、および max-world の目標を順番に維持し、各実行で次のチェックポイントにクリーンなフィードを提供します。",
+        "step3Title": "リビルドの短縮",
+        "step3Description": "進行計画を使用して、各メジャー リセット後に以前のピークに早く戻ることができます。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべての進捗記事"
+    },
+    "updates": {
+      "title": "Noob Incremental 更新情報",
+      "description": "Noob Incremental のリリース追跡、パッチノート カバレッジ、アップデートに重点を置いた計画。",
+      "metaTitle": "Noob Incremental 更新 - リリース ノートとパッチ追跡",
+      "metaDescription": "Noob Incremental のアップデートに従って、リリース追跡、パッチノートの内容、新しいコンテンツに適応するための実践的なアドバイスを確認してください。",
+      "categoryLabel": "GAME UPDATES",
+      "whatIs": "アップデートとは何ですか?",
+      "whatIsDescription": "Noob Incremental アップデート セクションには、リリース ノート、パッチ概要、アップデート固有の記事が収集されているため、コンテンツ、バランス、報酬が変更されたときにプレイヤーがすぐに対応できます。",
+      "why": "更新情報をフォローする理由",
+      "whySteps": {
+        "step1Title": "新しいコンテンツを追跡する",
+        "step1Description": "リリース、パッチ、マイルストーン イベントによって現在のルートの価値がいつ変更されるかを確認します。",
+        "step2Title": "より速く調整する",
+        "step2Description": "アップデートカバレッジを使用して、バランス変更後にビルド、ルーンの優先順位、農業計画を再検討します。",
+        "step3Title": "キャッチ報酬ウィンドウ",
+        "step3Description": "パッチ サイクルでは、多くの場合、新しいコード、イベント ボーナス、または一時的な進行の機会がもたらされます。"
+      },
+      "featured": "注目＆必需品",
+      "all": "すべての更新記事"
+    }
   }
 }

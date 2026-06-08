@@ -718,14 +718,14 @@ export default function HomePageClient({
                 <p className="text-sm text-muted-foreground">{card.description}</p>
                 <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
                   <p className="text-sm">
-                    <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
-                      Player Value:
+                      <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                      {t.common.playerValue}:
                     </span>{" "}
                     <span className="text-muted-foreground">{card.playerValue}</span>
                   </p>
                   <p className="mt-3 text-sm">
-                    <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
-                      Best Use:
+                      <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                      {t.common.bestUse}:
                     </span>{" "}
                     <span className="text-muted-foreground">{card.bestUse}</span>
                   </p>
@@ -770,7 +770,7 @@ export default function HomePageClient({
                   <p className="text-sm text-muted-foreground">{step.text}</p>
                   <div className="mt-3 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] px-4 py-3 text-sm">
                     <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
-                      Action:
+                      {t.common.action}:
                     </span>{" "}
                     <span className="text-muted-foreground">{step.action}</span>
                   </div>
@@ -824,13 +824,13 @@ export default function HomePageClient({
                   <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
                     <p className="text-sm">
                       <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
-                        Reward Note:
+                        {t.common.rewardNote}:
                       </span>{" "}
                       <span className="text-muted-foreground">{item.rewardNote}</span>
                     </p>
                     <p className="mt-3 text-sm">
                       <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
-                        Best For:
+                        {t.common.bestFor}:
                       </span>{" "}
                       <span className="text-muted-foreground">{item.bestFor}</span>
                     </p>
