@@ -648,31 +648,31 @@ export default function HomePageClient({
           <div className="overflow-hidden rounded-2xl border border-border">
             <div className="grid bg-[hsl(var(--nav-theme)/0.1)] text-sm font-semibold text-foreground md:grid-cols-4">
               <div className="border-b border-border px-4 py-3 md:border-b-0 md:border-r">
-                {t.modules.upgrades.headers.area}
+                {t.modules.upgrades.headers.system}
               </div>
               <div className="border-b border-border px-4 py-3 md:border-b-0 md:border-r">
-                {t.modules.upgrades.headers.bestFocus}
+                {t.modules.upgrades.headers.playerAction}
               </div>
               <div className="border-b border-border px-4 py-3 md:border-b-0 md:border-r">
-                {t.modules.upgrades.headers.whenToBuy}
+                {t.modules.upgrades.headers.effect}
               </div>
-              <div className="px-4 py-3">{t.modules.upgrades.headers.why}</div>
+              <div className="px-4 py-3">{t.modules.upgrades.headers.checkpoint}</div>
             </div>
 
             {t.modules.upgrades.rows.map((row: any) => (
               <div
-                key={row.area}
+                key={row.system}
                 className="grid border-t border-border bg-white/5 md:grid-cols-4"
               >
-                <div className="px-4 py-4 font-semibold">{row.area}</div>
+                <div className="px-4 py-4 font-semibold">{row.system}</div>
                 <div className="px-4 py-4 text-sm text-muted-foreground">
-                  {row.bestFocus}
+                  {row.playerAction}
                 </div>
                 <div className="px-4 py-4 text-sm text-muted-foreground">
-                  {row.whenToBuy}
+                  {row.effect}
                 </div>
                 <div className="px-4 py-4 text-sm text-muted-foreground">
-                  {row.why}
+                  {row.checkpoint}
                 </div>
               </div>
             ))}
@@ -700,22 +700,36 @@ export default function HomePageClient({
             intro={t.modules.runes.intro}
           />
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {t.modules.runes.cards.map((card: any) => (
               <article
-                key={card.name}
+                key={card.title}
                 className="rounded-2xl border border-border bg-white/5 p-6 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)]"
               >
-                <div className="mb-3 flex items-center gap-3">
+                <div className="mb-4 flex items-start gap-3">
                   <Sparkles className="h-5 w-5 text-[hsl(var(--nav-theme-light))]" />
                   <div>
-                    <h3 className="text-xl font-bold">{card.name}</h3>
+                    <h3 className="text-xl font-bold">{card.title}</h3>
                     <p className="text-xs uppercase tracking-[0.14em] text-[hsl(var(--nav-theme-light))]">
-                      {card.focus}
+                      {card.tag}
                     </p>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground">{card.description}</p>
+                <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                  <p className="text-sm">
+                    <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                      Player Value:
+                    </span>{" "}
+                    <span className="text-muted-foreground">{card.playerValue}</span>
+                  </p>
+                  <p className="mt-3 text-sm">
+                    <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                      Best Use:
+                    </span>{" "}
+                    <span className="text-muted-foreground">{card.bestUse}</span>
+                  </p>
+                </div>
               </article>
             ))}
           </div>
@@ -754,6 +768,12 @@ export default function HomePageClient({
                 <div>
                   <h3 className="mb-2 text-xl font-bold">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.text}</p>
+                  <div className="mt-3 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] px-4 py-3 text-sm">
+                    <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                      Action:
+                    </span>{" "}
+                    <span className="text-muted-foreground">{step.action}</span>
+                  </div>
                   <div className="mt-3 inline-flex rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
                     {step.checkpoint}
                   </div>
@@ -772,77 +792,65 @@ export default function HomePageClient({
             intro={t.modules.updates.intro}
           />
 
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                {
-                  icon: BookOpen,
-                  label: t.modules.updates.links.roblox.label,
-                  description: t.modules.updates.links.roblox.description,
-                  href: robloxGameUrl,
-                },
-                {
-                  icon: Compass,
-                  label: t.modules.updates.links.group.label,
-                  description: t.modules.updates.links.group.description,
-                  href: robloxGroupUrl,
-                },
-                {
-                  icon: Megaphone,
-                  label: t.modules.updates.links.discord.label,
-                  description: t.modules.updates.links.discord.description,
-                  href: discordUrl,
-                },
-                {
-                  icon: ScrollText,
-                  label: t.modules.updates.links.twitter.label,
-                  description: t.modules.updates.links.twitter.description,
-                  href: twitterUrl,
-                },
-              ].map((item) => (
+                BookOpen,
+                Compass,
+                Megaphone,
+                ScrollText,
+                ExternalLink,
+              ].map((Icon, index) => {
+                const item = t.modules.updates.links[index];
+                return (
                 <a
-                  key={item.label}
+                  key={item.title}
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group rounded-2xl border border-border bg-white/5 p-5 transition-all hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)]"
                 >
-                  <item.icon className="mb-4 h-6 w-6 text-[hsl(var(--nav-theme-light))]" />
+                  <Icon className="mb-4 h-6 w-6 text-[hsl(var(--nav-theme-light))]" />
+                  <div className="mb-3 inline-flex rounded-full border border-[hsl(var(--nav-theme)/0.22)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1 text-xs text-[hsl(var(--nav-theme-light))]">
+                    {item.type}
+                  </div>
                   <h3 className="mb-2 flex items-center gap-2 text-lg font-bold">
-                    <span>{item.label}</span>
+                    <span>{item.title}</span>
                     <ExternalLink className="h-4 w-4 opacity-70 transition group-hover:translate-x-0.5" />
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {item.description}
                   </p>
+                  <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                    <p className="text-sm">
+                      <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                        Reward Note:
+                      </span>{" "}
+                      <span className="text-muted-foreground">{item.rewardNote}</span>
+                    </p>
+                    <p className="mt-3 text-sm">
+                      <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                        Best For:
+                      </span>{" "}
+                      <span className="text-muted-foreground">{item.bestFor}</span>
+                    </p>
+                  </div>
                 </a>
-              ))}
+                );
+              })}
             </div>
 
             <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.22)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.12),transparent)] p-6">
               <div className="mb-5 flex items-center gap-3">
                 <Megaphone className="h-6 w-6 text-[hsl(var(--nav-theme-light))]" />
                 <h3 className="text-xl font-bold">
-                  {t.modules.updates.timelineTitle}
+                  {t.modules.updates.panelTitle}
                 </h3>
               </div>
 
-              <div className="space-y-4 border-l border-[hsl(var(--nav-theme)/0.25)] pl-5">
-                {t.modules.updates.entries.map((entry: any) => (
-                  <article key={entry.title} className="relative">
-                    <div className="absolute -left-[1.43rem] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-background bg-[hsl(var(--nav-theme))]" />
-                    <div className="rounded-xl border border-border bg-white/5 p-4">
-                      <div className="mb-2 inline-flex rounded-full border border-[hsl(var(--nav-theme)/0.22)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1 text-xs text-[hsl(var(--nav-theme-light))]">
-                        {entry.type}
-                      </div>
-                      <h4 className="font-bold">{entry.title}</h4>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        {entry.description}
-                      </p>
-                    </div>
-                  </article>
-                ))}
-              </div>
+              <p className="text-sm leading-7 text-muted-foreground">
+                {t.modules.updates.panelText}
+              </p>
 
               <div className="mt-5 rounded-xl border border-border bg-white/5 p-4">
                 <h4 className="mb-2 font-semibold">{t.modules.updates.bonusTitle}</h4>

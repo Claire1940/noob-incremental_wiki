@@ -314,153 +314,239 @@
     "upgrades": {
       "eyebrow": "Scaling Plan",
       "title": "Noob Incremental Upgrades and Stats Guide",
-      "intro": "Noob Incremental progression feels smoother when you treat upgrades and stats like a route instead of a random shop dump. Push the lane that improves your next few minutes, then rotate when the value curve starts flattening.",
+      "intro": "Use upgrades, stats, Noobs, Oof gain, Prism gain, rune bonuses, and prestige unlocks to scale faster through Noob Incremental.",
       "headers": {
-        "area": "Upgrade Area",
-        "bestFocus": "Best Focus",
-        "whenToBuy": "When to Buy",
-        "why": "Why It Matters"
+        "system": "System",
+        "playerAction": "Player Action",
+        "effect": "Effect",
+        "checkpoint": "Best-Use Checkpoint"
       },
       "rows": [
         {
-          "area": "Noob Upgrades",
-          "bestFocus": "Raw generation and multiplier boosts",
-          "whenToBuy": "Immediately after your first Oof flow stabilizes",
-          "why": "This lane keeps the entire account moving and makes every later system easier to fund."
+          "system": "Noobs",
+          "playerAction": "Buy Noobs as the core starting action.",
+          "effect": "Noobs help generate Oof, the main early progression output shown in the official play loop.",
+          "checkpoint": "Start every run by improving Noob-based production before chasing later systems."
         },
         {
-          "area": "Stat Growth",
-          "bestFocus": "Stats that multiply your current build",
-          "whenToBuy": "Whenever a stat bump clearly changes the pace of upgrades",
-          "why": "Stats are where small purchases turn into large account-wide scaling jumps."
+          "system": "Oof",
+          "playerAction": "Generate Oof through Noobs and strengthen it with upgrades.",
+          "effect": "Oof is the main production target in the official gameplay loop, and Roblox Plus players receive +10% Oof.",
+          "checkpoint": "Prioritize Oof growth when upgrades are still affordable and gains are moving quickly."
         },
         {
-          "area": "Rune Support",
-          "bestFocus": "Luck and speed support around active rune sessions",
-          "whenToBuy": "After the core Oof route is comfortable",
-          "why": "Rune support pays off best when the account can afford repeated rolls and upgrades."
+          "system": "Upgrades",
+          "playerAction": "Buy upgrades after building enough Oof production.",
+          "effect": "Upgrades make the player stronger and support faster scaling across the run.",
+          "checkpoint": "Keep upgrading while costs feel reachable; when progress slows, check runes and prestige options."
         },
         {
-          "area": "Prestige Utility",
-          "bestFocus": "Anything that shortens the rebuild after a reset",
-          "whenToBuy": "Right before or right after a prestige cycle",
-          "why": "These upgrades turn resets into accelerators instead of downtime."
+          "system": "Stats",
+          "playerAction": "Track the game's many stat categories as they unlock through progression.",
+          "effect": "Stats support long-term scaling across upgrades, runes, prestige layers, and other features.",
+          "checkpoint": "Use stat growth as a signal for whether the current route is still efficient."
+        },
+        {
+          "system": "Prism",
+          "playerAction": "Use Prism-related gain where available through the game's progression systems.",
+          "effect": "Roblox Plus players receive +10% Prism according to the official Roblox page.",
+          "checkpoint": "Treat Prism as a bonus-supported progression resource when comparing account boosts."
+        },
+        {
+          "system": "Runes",
+          "playerAction": "Roll runes and level them up during progression.",
+          "effect": "Runes are part of the official power loop and help deepen scaling beyond basic upgrades.",
+          "checkpoint": "Add rune rolling after basic Oof and upgrade growth are already moving."
+        },
+        {
+          "system": "Rune Speed",
+          "playerAction": "Join the Ghoulax Games group and like the game.",
+          "effect": "The official Roblox page lists +10% Rune Speed for players who join the group and like the game.",
+          "checkpoint": "Claim this before long rune sessions so the speed bonus works during repeated rolling."
+        },
+        {
+          "system": "Rune Luck",
+          "playerAction": "Join the community server.",
+          "effect": "The official Roblox page lists +10% Rune Luck for joining the community server.",
+          "checkpoint": "Use this before rolling runes heavily, especially when hunting stronger rune outcomes."
+        },
+        {
+          "system": "Prestige Layers",
+          "playerAction": "Prestige after building enough power from Noobs, upgrades, stats, and runes.",
+          "effect": "Prestige unlocks new content and adds deeper progression layers.",
+          "checkpoint": "Prestige when the in-game option is available and the next unlock is more valuable than staying in the current run."
         }
       ],
       "stats": [
-        "Watch for stats that improve more than one part of your current loop.",
-        "Do not sit on large Oof piles if a multiplier purchase is available now.",
-        "When a shop tier stops changing tempo, rotate into the next system instead of forcing it."
+        "Start with Noobs and Oof, then widen into runes and prestige when the early route slows.",
+        "Use group, like, Roblox Plus, and Discord bonuses before long sessions that lean on Prism or rune scaling.",
+        "Let stat growth tell you when it is time to leave a flat upgrade lane and move into the next layer."
       ]
     },
     "runes": {
       "eyebrow": "Rune Layer",
       "title": "Noob Incremental Runes Guide",
-      "intro": "Runes are the long-session accelerators in Noob Incremental. Treat rune rolling as a planned investment: build enough income first, roll during your strongest windows, and keep duplicate or weaker outcomes from draining your momentum.",
+      "intro": "Runes are one of the key scaling systems in Noob Incremental, built around rolling, leveling, speed bonuses, and luck bonuses.",
       "cards": [
         {
-          "name": "Roll During Strong Windows",
-          "focus": "Timing",
-          "description": "Rune sessions feel much better after an upgrade spike or code redemption because you can afford more attempts without stalling your main growth."
+          "title": "Roll Runes",
+          "tag": "Core Rune Action",
+          "description": "Roll runes as part of the main progression loop after building enough early Oof and upgrade strength.",
+          "playerValue": "Adds a deeper layer of scaling beyond basic Noob and upgrade growth.",
+          "bestUse": "Begin rune rolling once early upgrades are no longer the only meaningful source of progress."
         },
         {
-          "name": "Prioritize Useful Levels",
-          "focus": "Leveling",
-          "description": "A rune that already supports your current route is usually a better level target than gambling away all your progress for a different effect."
+          "title": "Level Runes",
+          "tag": "Long-Term Scaling",
+          "description": "Level runes after rolling them to improve their value across future progression.",
+          "playerValue": "Turns rune collection into an ongoing power system instead of a one-time roll check.",
+          "bestUse": "Keep leveling useful runes while preparing for prestige and later unlocks."
         },
         {
-          "name": "Use Luck Boosts Intentionally",
-          "focus": "Rune Luck",
-          "description": "Luck bonuses from the community server and potion windows are best saved for serious roll batches instead of casual one-off attempts."
+          "title": "Rune Speed Bonus",
+          "tag": "+10% Rune Speed",
+          "description": "Join the Ghoulax Games group and like the Roblox experience to activate the listed Rune Speed bonus.",
+          "playerValue": "Helps rune progression feel faster during repeated roll sessions.",
+          "bestUse": "Activate before long rune sessions so the bonus is already in place."
         },
         {
-          "name": "Do Not Overvalue Duplicates",
-          "focus": "Rune Choice",
-          "description": "Duplicate or low-impact runes should not drag a run off-course. Keep the account focused on what actually changes your pace right now."
+          "title": "Rune Luck Bonus",
+          "tag": "+10% Rune Luck",
+          "description": "Join the community server to activate the listed Rune Luck bonus from the official Roblox page.",
+          "playerValue": "Supports better rune rolling sessions by improving rune luck.",
+          "bestUse": "Activate before spending time on rune rolling or rune-focused progression."
+        },
+        {
+          "title": "Rune Progression Timing",
+          "tag": "Progression Check",
+          "description": "Use runes after basic Noobs, Oof, and upgrades have created a stable run foundation.",
+          "playerValue": "Keeps early progress from spreading too thin across too many systems at once.",
+          "bestUse": "Shift more attention to runes when upgrade costs slow down or prestige preparation begins."
+        },
+        {
+          "title": "Community Rune Setup",
+          "tag": "Bonus Prep",
+          "description": "Check the game group, game like status, and community server before focusing on rune systems.",
+          "playerValue": "Combines both public rune bonuses: +10% Rune Speed and +10% Rune Luck.",
+          "bestUse": "Complete this setup once, then use it as the default starting point for future rune sessions."
         }
       ],
       "bonuses": [
-        "Join the community server for +10% Rune Luck.",
-        "Use Rune Speed and Luck boosts during planned roll sessions.",
-        "Let runes extend a strong run instead of replacing your core income route."
+        "Roll and level runes after the Noob and Oof route is already stable.",
+        "Use the group, like, and community server bonuses before long rune sessions.",
+        "Treat runes as a scaling layer that extends strong runs and supports prestige preparation."
       ]
     },
     "prestige": {
       "eyebrow": "Reset Timing",
       "title": "Noob Incremental Prestige Guide",
-      "intro": "Prestige is where Noob Incremental starts compounding properly. A good reset comes after your current loop slows down, your next unlock is gated behind a wall, and you already know what the rebuild will buy first.",
+      "intro": "Prestige is the reset-and-unlock layer that pushes Noob Incremental beyond basic Oof, upgrades, stats, and runes.",
       "steps": [
         {
           "step": 1,
-          "title": "Check Your Current Pace",
-          "text": "If Oof, upgrades, and rune gains are all flattening out, the run is ready for a prestige instead of more forced farming.",
-          "checkpoint": "Progress is clearly slowing"
+          "title": "Build the Base Run",
+          "action": "Buy Noobs and generate Oof.",
+          "text": "This creates the first layer of production needed to afford upgrades and prepare for later systems.",
+          "checkpoint": "Keep building while Oof gain and upgrade purchases still feel fast."
         },
         {
           "step": 2,
-          "title": "Buy the Last Efficient Upgrades",
-          "text": "Spend any easy value before resetting so you do not throw away obvious gains that would improve the prestige result.",
-          "checkpoint": "No cheap boosts left"
+          "title": "Buy Strength Upgrades",
+          "action": "Spend progression resources on upgrades that make the run stronger.",
+          "text": "Upgrades are the main bridge between basic Noob production and deeper scaling.",
+          "checkpoint": "Continue upgrading until the next useful upgrades take noticeably longer to reach."
         },
         {
           "step": 3,
-          "title": "Reset With a Rebuild Plan",
-          "text": "Know the first few Noob, Oof, and upgrade purchases you want to make after the reset so the next run starts fast.",
-          "checkpoint": "First rebuild steps mapped"
+          "title": "Add Rune Progression",
+          "action": "Roll runes and level them up before pushing deeper into the run.",
+          "text": "Runes add another scaling layer and help support longer progression beyond basic upgrades.",
+          "checkpoint": "Use rune systems once early Oof and upgrade growth are stable."
         },
         {
           "step": 4,
-          "title": "Use the Fresh Layer to Push Further",
-          "text": "The point of prestiging is to hit the next unlock range sooner, not to recreate the exact same slow route.",
-          "checkpoint": "Aim beyond the old wall"
+          "title": "Activate Rune Bonuses",
+          "action": "Join the group and like the game for +10% Rune Speed, then join the community server for +10% Rune Luck.",
+          "text": "These bonuses improve rune sessions before prestige-focused pushing.",
+          "checkpoint": "Check these bonuses before investing heavily into rune rolling."
+        },
+        {
+          "step": 5,
+          "title": "Check the Prestige Option",
+          "action": "Open the in-game prestige layer when it becomes available.",
+          "text": "Prestige is used to unlock new content and move into deeper progression layers.",
+          "checkpoint": "Reset when the next prestige unlock gives better long-term value than staying in the current run."
+        },
+        {
+          "step": 6,
+          "title": "Prestige and Rebuild",
+          "action": "Use prestige, then rebuild through Noobs, Oof generation, upgrades, and runes again.",
+          "text": "The reset creates a stronger long-term route through newly unlocked content.",
+          "checkpoint": "After prestiging, return to early production first instead of spreading attention across every system immediately."
+        },
+        {
+          "step": 7,
+          "title": "Repeat Through New Layers",
+          "action": "Use each stronger run to reach the next prestige layer and new content unlocks.",
+          "text": "The game is designed around multiple prestige layers, so repeated resets are part of normal progression.",
+          "checkpoint": "Use each run to improve the next reset timing instead of treating prestige as a one-time milestone."
         }
       ]
     },
     "updates": {
       "eyebrow": "Official Links",
       "title": "Noob Incremental Discord and Updates",
-      "intro": "Keep the official Noob Incremental entry points close at hand so you can track new code drops, group bonuses, and developer updates without digging through unrelated pages.",
-      "timelineTitle": "Noob Incremental Update Snapshot",
+      "intro": "Use the official Roblox page, Ghoulax Games group, community Discord, and GhoulaxDev update post to track Noob Incremental news and rewards.",
+      "panelTitle": "Noob Incremental Quick Bonus Checklist",
+      "panelText": "These public sources cover the game page, community rewards, and the main update-tracking destinations players are most likely to use between play sessions.",
       "bonusTitle": "Noob Incremental Bonus Checklist",
-      "links": {
-        "roblox": {
-          "label": "Noob Incremental on Roblox",
-          "description": "Launch the game, read the official description, and confirm the current live experience."
-        },
-        "group": {
-          "label": "Ghoulax Games Roblox Group",
-          "description": "Keep the official group link handy for social updates and any group-based bonus checks."
-        },
-        "discord": {
-          "label": "Ghoulax Studio Discord",
-          "description": "Watch for code drops, community discussions, and fast update notes from the live player base."
-        },
-        "twitter": {
-          "label": "GhoulaxDev on X",
-          "description": "Follow the developer feed for announcements, rollout signals, and public update posts."
-        }
-      },
-      "entries": [
+      "links": [
         {
-          "title": "Launch Reward Wave",
-          "type": "Codes",
-          "description": "Release and community launch rewards currently shape the active code list, making early code redemption part of the standard opening route."
+          "title": "Noob Incremental Roblox Page",
+          "type": "Official Game Page",
+          "href": "https://www.roblox.com/games/76911729991355/Noob-Incremental",
+          "description": "Main place to play Noob Incremental and check the official game description, gameplay loop, public bonuses, and listed credits.",
+          "rewardNote": "Lists Roblox Plus +10% Oof and +10% Prism, group-like +10% Rune Speed, and community server +10% Rune Luck.",
+          "bestFor": "Playing the game and confirming the current official description."
         },
         {
-          "title": "Bug-Fix Ticket Drops",
-          "type": "Hotfix",
-          "description": "The BUGFIX code series gives direct Ticket support, which is useful for smoothing out the early economy."
+          "title": "Ghoulax Games Roblox Group",
+          "type": "Official Roblox Group",
+          "href": "https://www.roblox.com/communities/356937272/Ghoulax-Games",
+          "description": "Official Roblox group connected to the Noob Incremental creator page and group-related game bonus flow.",
+          "rewardNote": "The Roblox game page lists +10% Rune Speed for joining the group and liking the game.",
+          "bestFor": "Group-linked reward setup and creator-side Roblox updates."
         },
         {
-          "title": "CCU Milestone Rewards",
-          "type": "Milestones",
-          "description": "The 1.5K, 2K, 3K, and 4K CCU code chain adds Potions, Tickets, and Tokens tied to player-count milestones."
+          "title": "Ghoulax Studio Discord",
+          "type": "Community Server",
+          "href": "https://discord.com/invite/ghoulaxstudio",
+          "description": "Community server linked from the game's public sources for player discussion, announcements, and community information.",
+          "rewardNote": "The Roblox game page lists +10% Rune Luck for joining the community server.",
+          "bestFor": "Rune luck setup, news tracking, code discussion, and community questions."
+        },
+        {
+          "title": "GhoulaxDev Launch Post",
+          "type": "Developer Social Post",
+          "href": "https://x.com/GhoulaxDev/status/2061172178754658457",
+          "description": "Developer launch post pointing players to the newly released Noob Incremental experience.",
+          "rewardNote": "Useful for confirming the launch announcement source and following future developer posts.",
+          "bestFor": "Developer updates and release-history context."
+        },
+        {
+          "title": "Destructoid Noob Incremental Codes",
+          "type": "Media Guide",
+          "href": "https://www.destructoid.com/noob-incremental-codes/",
+          "description": "Public Roblox codes guide that covers active codes, code rewards, and the in-game Shop redemption path.",
+          "rewardNote": "Mentions Tickets, Tokens, Potions, and the Shop-based code redemption flow.",
+          "bestFor": "Checking code rewards and redeem steps alongside official sources."
         }
       ],
       "bonuses": [
         "Roblox Plus adds +10% Oof and +10% Prism.",
         "Join the Roblox group and like the game for +10% Rune Speed.",
-        "Join the community Discord for +10% Rune Luck."
+        "Join the community Discord for +10% Rune Luck.",
+        "Keep the launch post and the public code guide handy when checking new reward waves."
       ]
     }
   },
