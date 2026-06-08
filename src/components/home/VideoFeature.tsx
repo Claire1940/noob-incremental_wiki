@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
-import { ExternalLink } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ExternalLink, PlayCircle } from "lucide-react";
 
 interface VideoFeatureProps {
   videoId: string;
@@ -9,20 +9,39 @@ interface VideoFeatureProps {
 }
 
 export function VideoFeature({ videoId, title }: VideoFeatureProps) {
-  const watchUrl = useMemo(
-    () => `https://www.youtube.com/watch?v=${videoId}`,
-    [videoId],
-  );
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [manualPlay, setManualPlay] = useState(false);
 
-  const embedUrl = useMemo(
-    () =>
-      `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&rel=0`,
-    [videoId],
-  );
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.45 },
+    );
+
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const shouldAutoplay = isVisible || manualPlay;
+  const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=${shouldAutoplay ? 1 : 0}&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0`;
 
   return (
     <div className="space-y-4">
-      <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingBottom: "56.25%" }}>
+      <div
+        ref={containerRef}
+        className="relative w-full overflow-hidden rounded-lg"
+        style={{ paddingBottom: "56.25%" }}
+      >
         <iframe
           className="absolute top-0 left-0 w-full h-full"
           src={embedUrl}
@@ -31,6 +50,20 @@ export function VideoFeature({ videoId, title }: VideoFeatureProps) {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         />
+
+        {!shouldAutoplay ? (
+          <button
+            type="button"
+            onClick={() => setManualPlay(true)}
+            className="absolute inset-0 flex items-center justify-center bg-black/35 transition hover:bg-black/25"
+            aria-label={`Play ${title}`}
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--nav-theme)/0.35)] bg-[hsl(var(--nav-theme)/0.9)] px-5 py-3 text-sm font-semibold text-white shadow-lg">
+              <PlayCircle className="h-5 w-5" />
+              <span>Play Video</span>
+            </span>
+          </button>
+        ) : null}
       </div>
 
       <div className="flex justify-center">

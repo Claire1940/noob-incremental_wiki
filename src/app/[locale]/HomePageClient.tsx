@@ -1,25 +1,17 @@
 "use client";
 
-import { useState, Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import {
-  AlertTriangle,
   ArrowRight,
   BookOpen,
   Check,
-  ChevronDown,
-  ClipboardCheck,
-  Clock,
-  Eye,
+  Compass,
   ExternalLink,
-  Gamepad2,
-  Hammer,
-  Home,
-  MessageCircle,
-  Package,
-  Settings,
+  Gift,
+  LineChart,
+  Megaphone,
+  ScrollText,
   Sparkles,
-  Star,
-  TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
 import { useMessages } from "next-intl";
@@ -31,56 +23,49 @@ import { SidebarAd } from "@/components/ads/SidebarAd";
 import { scrollToSection } from "@/lib/scrollToSection";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
 import type { ContentItemWithType } from "@/lib/getLatestArticles";
-import type { ModuleLinkMap } from "@/lib/buildModuleLinkMap";
 
-// Lazy load heavy components
 const HeroStats = lazy(() => import("@/components/home/HeroStats"));
 const FAQSection = lazy(() => import("@/components/home/FAQSection"));
 const CTASection = lazy(() => import("@/components/home/CTASection"));
 
-// Loading placeholder
 const LoadingPlaceholder = ({ height = "h-64" }: { height?: string }) => (
   <div
-    className={`${height} bg-white/5 border border-border rounded-xl animate-pulse`}
+    className={`${height} animate-pulse rounded-xl border border-border bg-white/5`}
   />
 );
 
-// Conditionally render text as a link or plain span
-function LinkedTitle({
-  linkData,
-  children,
-  className,
-  locale,
+function SectionHeader({
+  eyebrow,
+  title,
+  intro,
 }: {
-  linkData: { url: string; title: string } | null | undefined;
-  children: React.ReactNode;
-  className?: string;
-  locale: string;
+  eyebrow?: string;
+  title: string;
+  intro: string;
 }) {
-  if (linkData) {
-    const href = locale === "en" ? linkData.url : `/${locale}${linkData.url}`;
-    return (
-      <Link
-        href={href}
-        className={`${className || ""} hover:text-[hsl(var(--nav-theme-light))] hover:underline decoration-[hsl(var(--nav-theme-light))/0.4] underline-offset-4 transition-colors`}
-        title={linkData.title}
-      >
-        {children}
-      </Link>
-    );
-  }
-  return <>{children}</>;
+  return (
+    <div className="mb-8 text-center scroll-reveal md:mb-12">
+      {eyebrow ? (
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[hsl(var(--nav-theme)/0.28)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-[hsl(var(--nav-theme-light))]">
+          <Sparkles className="h-3.5 w-3.5" />
+          <span>{eyebrow}</span>
+        </div>
+      ) : null}
+      <h2 className="text-3xl font-bold tracking-tight md:text-5xl">{title}</h2>
+      <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg">
+        {intro}
+      </p>
+    </div>
+  );
 }
 
 interface HomePageClientProps {
   latestArticles: ContentItemWithType[];
-  moduleLinkMap: ModuleLinkMap;
   locale: string;
 }
 
 export default function HomePageClient({
   latestArticles,
-  moduleLinkMap,
   locale,
 }: HomePageClientProps) {
   const t = useMessages() as any;
@@ -95,8 +80,8 @@ export default function HomePageClient({
   const twitterUrl = "https://x.com/GhoulaxDev";
   const youtubeUrl = `https://www.youtube.com/watch?v=${youtubeVideoId}`;
   const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}`;
+  const mobileBannerAd = getPreferredMobileBannerSelection();
 
-  // Structured data
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -155,10 +140,6 @@ export default function HomePageClient({
         gamePlatform: ["Roblox", "PC", "Mobile", "Tablet"],
         applicationCategory: "Game",
         genre: ["Incremental", "Idle", "Roblox"],
-        numberOfPlayers: {
-          minValue: 1,
-          maxValue: 20,
-        },
         offers: {
           "@type": "Offer",
           price: "0",
@@ -179,23 +160,16 @@ export default function HomePageClient({
     ],
   };
 
-  // FAQ accordion states
-  const [faqExpanded, setFaqExpanded] = useState<number | null>(null);
-  const [deckExpanded, setDeckExpanded] = useState<number | null>(null);
-  const mobileBannerAd = getPreferredMobileBannerSelection();
-
   return (
     <div className="home-shell min-h-screen bg-background text-foreground">
-      {/* Structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* 左侧广告容器 - Fixed 定位 */}
       <aside
-        className="hidden xl:block fixed top-20 w-40 z-10"
-        style={{ left: "calc((100vw - 896px) / 2 - 180px)" }}
+        className="fixed top-20 z-10 hidden w-40 xl:block"
+        style={{ left: "calc((100vw - 1024px) / 2 - 180px)" }}
       >
         <SidebarAd
           type="sidebar-160x300"
@@ -203,10 +177,9 @@ export default function HomePageClient({
         />
       </aside>
 
-      {/* 右侧广告容器 - Fixed 定位 */}
       <aside
-        className="hidden xl:block fixed top-20 w-40 z-10"
-        style={{ right: "calc((100vw - 896px) / 2 - 180px)" }}
+        className="fixed top-20 z-10 hidden w-40 xl:block"
+        style={{ right: "calc((100vw - 1024px) / 2 - 180px)" }}
       >
         <SidebarAd
           type="sidebar-160x600"
@@ -214,75 +187,55 @@ export default function HomePageClient({
         />
       </aside>
 
-      {/* 广告位 1: 移动端横幅 Sticky */}
-      {/* <div className="sticky top-20 z-20 border-b border-border py-2">
-        <AdBanner type="banner-320x50" adKey={process.env.NEXT_PUBLIC_AD_MOBILE_320X50} />
-      </div> */}
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 pt-24 pb-14 md:pt-32 md:pb-20">
+      <section className="relative overflow-hidden px-4 pb-14 pt-24 md:pb-20 md:pt-32">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-8 scroll-reveal">
-            {/* Badge */}
-            <div
-              className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 md:px-4 md:py-2
-                            bg-[hsl(var(--nav-theme)/0.1)]
-                            border border-[hsl(var(--nav-theme)/0.3)] mb-4 md:mb-6"
-            >
-              <Sparkles className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
-              <span className="text-xs md:text-sm font-medium">
+          <div className="mb-8 text-center scroll-reveal">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[hsl(var(--nav-theme)/0.3)] bg-[hsl(var(--nav-theme)/0.1)] px-3 py-1.5 md:mb-6 md:px-4 md:py-2">
+              <Sparkles className="h-4 w-4 text-[hsl(var(--nav-theme-light))]" />
+              <span className="text-xs font-medium md:text-sm">
                 {t.hero.badge}
               </span>
             </div>
 
-            {/* Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 leading-[1.05]">
+            <h1 className="mb-4 text-4xl font-bold leading-[1.05] sm:text-5xl md:mb-6 md:text-7xl">
               {t.hero.title}
             </h1>
 
-            {/* Description */}
             <p className="mx-auto mb-8 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg md:mb-10 md:max-w-3xl md:text-2xl">
               {t.hero.description}
             </p>
 
-            {/* CTA Buttons */}
             <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row md:mb-12 md:gap-4">
               <a
                 href={discordUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-8 md:py-4
-                           bg-[hsl(var(--nav-theme))] hover:bg-[hsl(var(--nav-theme)/0.9)]
-                           text-white rounded-lg font-semibold text-base md:text-lg transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[hsl(var(--nav-theme))] px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[hsl(var(--nav-theme)/0.9)] md:px-8 md:py-4 md:text-lg"
               >
-                <BookOpen className="w-5 h-5" />
+                <BookOpen className="h-5 w-5" />
                 {t.hero.getFreeCodesCTA}
               </a>
               <a
                 href={robloxGameUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-8 md:py-4
-                           border border-border hover:bg-white/10 rounded-lg
-                           font-semibold text-base md:text-lg transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3.5 text-base font-semibold transition-colors hover:bg-white/10 md:px-8 md:py-4 md:text-lg"
               >
                 {t.hero.playOnRobloxCTA}
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="h-5 w-5" />
               </a>
             </div>
           </div>
 
-          {/* Stats */}
           <Suspense fallback={<LoadingPlaceholder height="h-32" />}>
             <HeroStats stats={Object.values(t.hero.stats)} />
           </Suspense>
         </div>
       </section>
 
-      {/* Video Section */}
       <section className="px-4 py-10 md:py-12">
-        <div className="scroll-reveal container mx-auto max-w-6xl">
-          <div className="relative overflow-hidden rounded-2xl">
+        <div className="container mx-auto max-w-5xl scroll-reveal">
+          <div className="overflow-hidden rounded-2xl border border-[hsl(var(--nav-theme)/0.18)] bg-[radial-gradient(circle_at_top,hsl(var(--nav-theme)/0.16),transparent_60%),linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent)] p-2 md:p-3">
             <VideoFeature
               videoId={youtubeVideoId}
               title="I Went From POOR to TRILLIONAIRE in Roblox Noob Incremental..."
@@ -291,90 +244,204 @@ export default function HomePageClient({
         </div>
       </section>
 
-      {/* Tools Grid - 16 Navigation Cards */}
-      <section className="px-4 py-14 md:py-20 bg-white/[0.02]">
+      <section className="bg-white/[0.02] px-4 py-14 md:py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8 md:mb-12 scroll-reveal">
-            <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+          <div className="mb-8 text-center scroll-reveal md:mb-12">
+            <h2 className="text-3xl font-bold md:text-5xl">
               {t.tools.title}{" "}
               <span className="text-[hsl(var(--nav-theme-light))]">
                 {t.tools.titleHighlight}
               </span>
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground md:text-lg">
               {t.tools.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-            {t.tools.cards.map((card: any, index: number) => {
-              // 映射卡片索引到 section ID
-              const sectionIds = [
-                "beginner-guide",
-                "apotheosis-crafting",
-                "tools-weapons",
-                "storage-inventory",
-                "qualia-base-building",
-                "world-regions",
-                "creatures-enemies",
-                "mobility-gear",
-                "farming-growth",
-                "best-early-unlocks",
-                "achievement-tracker",
-                "singleplayer-faq",
-                "steam-deck-controller",
-                "settings-accessibility",
-                "updates-patch-notes",
-                "crash-fix",
-              ];
-              const sectionId = sectionIds[index];
+            <a
+              href="#codes"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("codes");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[0].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[0].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[0].description}
+              </p>
+            </a>
 
-              return (
-                <button
-                  key={index}
-                  onClick={() => scrollToSection(sectionId)}
-                  className="scroll-reveal group rounded-xl border border-border p-4 md:p-6
-                             bg-card hover:border-[hsl(var(--nav-theme)/0.5)]
-                             transition-all duration-300 cursor-pointer text-left
-                             hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.1)]"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <div
-                    className="mb-3 h-10 w-10 rounded-lg md:mb-4 md:h-12 md:w-12
-                                  bg-[hsl(var(--nav-theme)/0.1)]
-                                  flex items-center justify-center
-                                  group-hover:bg-[hsl(var(--nav-theme)/0.2)]
-                                  transition-colors"
-                  >
-                    <DynamicIcon
-                      name={card.icon}
-                      className="h-5 w-5 md:h-6 md:w-6 text-[hsl(var(--nav-theme-light))]"
-                    />
-                  </div>
-                  <h3 className="mb-1.5 text-sm md:text-base font-semibold">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {card.description}
-                  </p>
-                </button>
-              );
-            })}
+            <a
+              href="#how-to-redeem-codes"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("how-to-redeem-codes");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[1].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[1].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[1].description}
+              </p>
+            </a>
+
+            <a
+              href="#beginner-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("beginner-guide");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[2].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[2].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[2].description}
+              </p>
+            </a>
+
+            <a
+              href="#oof-farming-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("oof-farming-guide");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[3].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[3].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[3].description}
+              </p>
+            </a>
+
+            <a
+              href="#upgrades-and-stats-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("upgrades-and-stats-guide");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[4].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[4].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[4].description}
+              </p>
+            </a>
+
+            <a
+              href="#runes-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("runes-guide");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[5].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[5].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[5].description}
+              </p>
+            </a>
+
+            <a
+              href="#prestige-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("prestige-guide");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[6].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[6].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[6].description}
+              </p>
+            </a>
+
+            <a
+              href="#discord-and-updates"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("discord-and-updates");
+              }}
+              className="group cursor-pointer rounded-xl border border-border bg-card p-4 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)] md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)] md:mb-4 md:h-12 md:w-12">
+                <DynamicIcon
+                  name={t.tools.cards[7].icon}
+                  className="h-5 w-5 text-[hsl(var(--nav-theme-light))] md:h-6 md:w-6"
+                />
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold md:text-base">
+                {t.tools.cards[7].title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.tools.cards[7].description}
+              </p>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* 广告位 2: 首屏内容之后再加载广告 */}
       <NativeBannerAd adKey={process.env.NEXT_PUBLIC_AD_NATIVE_BANNER || ""} />
 
-      {/* Latest Updates Section */}
-      <LatestGuidesAccordion
-        articles={latestArticles}
-        locale={locale}
-        max={12}
-      />
+      <LatestGuidesAccordion articles={latestArticles} locale={locale} max={12} />
 
-      {/* 广告位 3: 移动端优先使用方形，桌面端保留横幅 */}
       <AdBanner
         type="banner-300x250"
         adKey={process.env.NEXT_PUBLIC_AD_BANNER_300X250}
@@ -386,79 +453,79 @@ export default function HomePageClient({
         className="hidden md:flex"
       />
 
-      {/* Module 1: Beginner Guide */}
-      <section id="beginner-guide" className="scroll-mt-24 px-4 py-14 md:py-20">
+      <section id="codes" className="scroll-mt-24 px-4 py-14 md:py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8 md:mb-12 scroll-reveal">
-            <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksBeginnerGuide"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksBeginnerGuide.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-              {t.modules.lucidBlocksBeginnerGuide.intro}
-            </p>
-          </div>
+          <SectionHeader
+            eyebrow={t.modules.codes.eyebrow}
+            title={t.modules.codes.title}
+            intro={t.modules.codes.intro}
+          />
 
-          {/* Steps */}
-          <div className="scroll-reveal space-y-3 md:space-y-4 mb-8 md:mb-10">
-            {t.modules.lucidBlocksBeginnerGuide.steps.map(
-              (step: any, index: number) => (
-                <div
-                  key={index}
-                  className="flex gap-3 md:gap-4 p-4 md:p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
+          <div className="grid gap-6 lg:grid-cols-[1.7fr_1fr]">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {t.modules.codes.activeCodes.map((item: any) => (
+                <article
+                  key={item.code}
+                  className="rounded-2xl border border-border bg-white/5 p-5 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)]"
                 >
-                  <div className="flex h-10 w-10 md:h-12 md:w-12 flex-shrink-0 items-center justify-center rounded-full border-2 border-[hsl(var(--nav-theme)/0.5)] bg-[hsl(var(--nav-theme)/0.2)]">
-                    <span className="text-base md:text-xl font-bold text-[hsl(var(--nav-theme-light))]">
-                      {index + 1}
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[hsl(var(--nav-theme-light))]">
+                      <Gift className="h-3.5 w-3.5" />
+                      <span>{item.status}</span>
+                    </div>
+                    <span className="text-xs text-muted-foreground">
+                      {item.category}
                     </span>
                   </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-bold mb-1.5 md:mb-2">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksBeginnerGuide::steps::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {step.title}
-                      </LinkedTitle>
-                    </h3>
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      {step.description}
-                    </p>
+                  <h3 className="mb-2 text-xl font-bold tracking-wide">
+                    {item.code}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {item.reward}
+                  </p>
+                  <div className="mt-4 inline-flex rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                    {item.rewardType}
                   </div>
-                </div>
-              ),
-            )}
-          </div>
-
-          {/* Quick Tips */}
-          <div className="scroll-reveal p-4 md:p-6 bg-[hsl(var(--nav-theme)/0.05)] border border-[hsl(var(--nav-theme)/0.3)] rounded-xl">
-            <div className="flex items-center gap-2 mb-3 md:mb-4">
-              <BookOpen className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-              <h3 className="font-bold text-base md:text-lg">Quick Tips</h3>
+                </article>
+              ))}
             </div>
-            <ul className="space-y-2">
-              {t.modules.lucidBlocksBeginnerGuide.quickTips.map(
-                (tip: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-[hsl(var(--nav-theme-light))] mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground text-sm">{tip}</span>
-                  </li>
-                ),
-              )}
-            </ul>
+
+            <aside className="rounded-2xl border border-[hsl(var(--nav-theme)/0.25)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.12),transparent)] p-6">
+              <div className="mb-5">
+                <h3 className="text-lg font-bold">{t.modules.codes.panelTitle}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {t.modules.codes.panelText}
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="rounded-xl border border-border bg-white/5 p-4">
+                  <div className="mb-2 flex items-center gap-2">
+                    <ScrollText className="h-4 w-4 text-[hsl(var(--nav-theme-light))]" />
+                    <h4 className="font-semibold">
+                      {t.modules.codes.expiredTitle}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {t.modules.codes.expiredNote}
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-border bg-white/5 p-4">
+                  <div className="mb-2 flex items-center gap-2">
+                    <Check className="h-4 w-4 text-[hsl(var(--nav-theme-light))]" />
+                    <h4 className="font-semibold">{t.modules.codes.tipTitle}</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {t.modules.codes.tipText}
+                  </p>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      {/* 广告位 4: 第一模块之后的阅读停顿位 */}
       <AdBanner
         type="banner-300x250"
         adKey={process.env.NEXT_PUBLIC_AD_BANNER_300X250}
@@ -470,897 +537,332 @@ export default function HomePageClient({
         className="hidden md:flex"
       />
 
-      {/* Module 2: Apotheosis Crafting */}
-      <section
-        id="apotheosis-crafting"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
+      <section id="how-to-redeem-codes" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksApotheosisCrafting"]}
-                locale={locale}
+          <SectionHeader
+            eyebrow={t.modules.redeem.eyebrow}
+            title={t.modules.redeem.title}
+            intro={t.modules.redeem.intro}
+          />
+
+          <div className="grid gap-4 md:grid-cols-5">
+            {t.modules.redeem.steps.map((step: any) => (
+              <article
+                key={step.step}
+                className="rounded-2xl border border-border bg-white/5 p-5 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)]"
               >
-                {t.modules.lucidBlocksApotheosisCrafting.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksApotheosisCrafting.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {t.modules.lucidBlocksApotheosisCrafting.cards.map(
-              (card: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <h3 className="font-bold text-lg mb-2 text-[hsl(var(--nav-theme-light))]">
-                    <LinkedTitle
-                      linkData={
-                        moduleLinkMap[
-                          `lucidBlocksApotheosisCrafting::cards::${index}`
-                        ]
-                      }
-                      locale={locale}
-                    >
-                      {card.name}
-                    </LinkedTitle>
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {card.description}
-                  </p>
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full border border-[hsl(var(--nav-theme)/0.35)] bg-[hsl(var(--nav-theme)/0.12)] text-lg font-bold text-[hsl(var(--nav-theme-light))]">
+                  {step.step}
                 </div>
-              ),
-            )}
-          </div>
-          <div className="scroll-reveal flex flex-wrap gap-3 justify-center">
-            {t.modules.lucidBlocksApotheosisCrafting.milestones.map(
-              (m: string, i: number) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm"
-                >
-                  <Check className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
-                  {m}
-                </span>
-              ),
-            )}
+                <h3 className="mb-2 text-lg font-bold">{step.title}</h3>
+                <p className="mb-3 text-sm text-muted-foreground">{step.text}</p>
+                <div className="inline-flex rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                  {step.action}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Module 3: Tools and Weapons */}
-      <section id="tools-weapons" className="scroll-mt-24 px-4 py-20">
+      <section id="beginner-guide" className="scroll-mt-24 px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksToolsAndWeapons"]}
-                locale={locale}
+          <SectionHeader
+            eyebrow={t.modules.beginner.eyebrow}
+            title={t.modules.beginner.title}
+            intro={t.modules.beginner.intro}
+          />
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {t.modules.beginner.cards.map((card: any) => (
+              <article
+                key={card.title}
+                className="rounded-2xl border border-border bg-white/5 p-6 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)]"
               >
-                {t.modules.lucidBlocksToolsAndWeapons.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksToolsAndWeapons.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {t.modules.lucidBlocksToolsAndWeapons.items.map(
-              (item: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Hammer className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <span className="text-xs px-2 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)]">
-                      {item.type}
-                    </span>
-                  </div>
-                  <h3 className="font-bold mb-2">
-                    <LinkedTitle
-                      linkData={
-                        moduleLinkMap[
-                          `lucidBlocksToolsAndWeapons::items::${index}`
-                        ]
-                      }
-                      locale={locale}
-                    >
-                      {item.name}
-                    </LinkedTitle>
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {item.description}
-                  </p>
+                <div className="mb-3 inline-flex rounded-full border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1 text-xs font-semibold text-[hsl(var(--nav-theme-light))]">
+                  {card.tag}
                 </div>
-              ),
-            )}
+                <h3 className="mb-2 text-xl font-bold">{card.title}</h3>
+                <p className="text-sm text-muted-foreground">{card.text}</p>
+                <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] p-3 text-sm">
+                  <span className="font-semibold text-[hsl(var(--nav-theme-light))]">
+                    {t.modules.beginner.goalLabel}
+                  </span>{" "}
+                  <span className="text-muted-foreground">{card.playerGoal}</span>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Module 4: Storage and Inventory */}
-      <section
-        id="storage-inventory"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
+      <section id="oof-farming-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksStorageAndInventory"]}
-                locale={locale}
+          <SectionHeader
+            eyebrow={t.modules.oof.eyebrow}
+            title={t.modules.oof.title}
+            intro={t.modules.oof.intro}
+          />
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {t.modules.oof.priorities.map((item: any) => (
+              <article
+                key={item.priority}
+                className="rounded-2xl border border-border bg-white/5 p-5 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)]"
               >
-                {t.modules.lucidBlocksStorageAndInventory.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksStorageAndInventory.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {t.modules.lucidBlocksStorageAndInventory.solutions.map(
-              (s: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <h3 className="font-bold">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksStorageAndInventory::solutions::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {s.name}
-                      </LinkedTitle>
-                    </h3>
-                    <span className="text-xs px-2 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)]">
-                      {s.role}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    {s.description}
-                  </p>
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[hsl(var(--nav-theme))] text-sm font-bold text-white">
+                    {item.priority}
+                  </span>
+                  <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                    {item.timing}
+                  </span>
                 </div>
-              ),
-            )}
-          </div>
-          <div className="scroll-reveal p-6 bg-[hsl(var(--nav-theme)/0.05)] border border-[hsl(var(--nav-theme)/0.3)] rounded-xl">
-            <div className="flex items-center gap-2 mb-4">
-              <Package className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-              <h3 className="font-bold">Management Tips</h3>
-            </div>
-            <ul className="space-y-2">
-              {t.modules.lucidBlocksStorageAndInventory.managementTips.map(
-                (tip: string, i: number) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-[hsl(var(--nav-theme-light))] mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground text-sm">{tip}</span>
-                  </li>
-                ),
-              )}
-            </ul>
+                <h3 className="mb-2 text-lg font-bold">{item.title}</h3>
+                <p className="mb-3 text-sm text-muted-foreground">{item.reason}</p>
+                <div className="text-xs uppercase tracking-[0.14em] text-[hsl(var(--nav-theme-light))]">
+                  {item.resourceFocus}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Module 5: Qualia and Base Building */}
-      <section
-        id="qualia-base-building"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksQualiaAndBaseBuilding"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksQualiaAndBaseBuilding.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksQualiaAndBaseBuilding.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {t.modules.lucidBlocksQualiaAndBaseBuilding.cards.map(
-              (card: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <h3 className="font-bold text-lg mb-2 text-[hsl(var(--nav-theme-light))]">
-                    <LinkedTitle
-                      linkData={
-                        moduleLinkMap[
-                          `lucidBlocksQualiaAndBaseBuilding::cards::${index}`
-                        ]
-                      }
-                      locale={locale}
-                    >
-                      {card.name}
-                    </LinkedTitle>
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {card.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-          <div className="scroll-reveal grid grid-cols-2 md:grid-cols-4 gap-4">
-            {t.modules.lucidBlocksQualiaAndBaseBuilding.highlights.map(
-              (h: string, i: number) => (
-                <div
-                  key={i}
-                  className="p-4 bg-white/5 border border-border rounded-xl text-center hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <Home className="w-6 h-6 text-[hsl(var(--nav-theme-light))] mx-auto mb-2" />
-                  <p className="text-sm">{h}</p>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Module 6: World Regions */}
-      <section id="world-regions" className="scroll-mt-24 px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksWorldRegions"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksWorldRegions.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksWorldRegions.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-4">
-            {t.modules.lucidBlocksWorldRegions.regions.map(
-              (region: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Eye className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <h3 className="font-bold">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksWorldRegions::regions::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {region.name}
-                      </LinkedTitle>
-                    </h3>
-                    <span className="text-xs px-2 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)]">
-                      {region.type}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    {region.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Module 7: Creatures and Enemies */}
-      <section
-        id="creatures-enemies"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksCreaturesAndEnemies"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksCreaturesAndEnemies.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksCreaturesAndEnemies.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {t.modules.lucidBlocksCreaturesAndEnemies.creatures.map(
-              (c: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="mb-3">
-                    <span
-                      className={`text-xs px-2 py-1 rounded-full border ${["Hostile Enemy", "Major Threat", "Elite Threat"].includes(c.role) ? "bg-amber-500/10 border-amber-500/30 text-amber-300" : "bg-[hsl(var(--nav-theme)/0.1)] border-[hsl(var(--nav-theme)/0.3)]"}`}
-                    >
-                      {c.role}
-                    </span>
-                  </div>
-                  <h3 className="font-bold mb-2">
-                    <LinkedTitle
-                      linkData={
-                        moduleLinkMap[
-                          `lucidBlocksCreaturesAndEnemies::creatures::${index}`
-                        ]
-                      }
-                      locale={locale}
-                    >
-                      {c.name}
-                    </LinkedTitle>
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {c.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Module 8: Mobility Gear */}
-      <section id="mobility-gear" className="scroll-mt-24 px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksMobilityGear"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksMobilityGear.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksMobilityGear.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            {t.modules.lucidBlocksMobilityGear.items.map(
-              (item: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <ArrowRight className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <span className="text-xs px-2 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)]">
-                      {item.type}
-                    </span>
-                  </div>
-                  <h3 className="font-bold mb-2">
-                    <LinkedTitle
-                      linkData={
-                        moduleLinkMap[
-                          `lucidBlocksMobilityGear::items::${index}`
-                        ]
-                      }
-                      locale={locale}
-                    >
-                      {item.name}
-                    </LinkedTitle>
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {item.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-          <div className="scroll-reveal flex flex-wrap gap-3 justify-center">
-            {t.modules.lucidBlocksMobilityGear.unlockMilestones.map(
-              (m: string, i: number) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm"
-                >
-                  <Check className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
-                  {m}
-                </span>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* 广告位 6: 移动端横幅 320×50 */}
-      {mobileBannerAd && (
+      {mobileBannerAd ? (
         <AdBanner
           type={mobileBannerAd.type}
           adKey={mobileBannerAd.adKey}
           className="md:hidden"
         />
-      )}
+      ) : null}
 
-      {/* Module 9: Farming and Growth */}
-      <section id="farming-growth" className="scroll-mt-24 px-4 py-20">
+      <section id="upgrades-and-stats-guide" className="scroll-mt-24 px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksFarmingAndGrowth"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksFarmingAndGrowth.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksFarmingAndGrowth.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {t.modules.lucidBlocksFarmingAndGrowth.sections.map(
-              (s: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <TrendingUp className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <h3 className="font-bold">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksFarmingAndGrowth::sections::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {s.name}
-                      </LinkedTitle>
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    {s.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-          <div className="scroll-reveal flex flex-wrap gap-3 justify-center">
-            {t.modules.lucidBlocksFarmingAndGrowth.growthMilestones.map(
-              (m: string, i: number) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm"
-                >
-                  <Check className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
-                  {m}
-                </span>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
+          <SectionHeader
+            eyebrow={t.modules.upgrades.eyebrow}
+            title={t.modules.upgrades.title}
+            intro={t.modules.upgrades.intro}
+          />
 
-      {/* Module 10: Best Early Unlocks */}
-      <section
-        id="best-early-unlocks"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksBestEarlyUnlocks"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksBestEarlyUnlocks.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksBestEarlyUnlocks.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {t.modules.lucidBlocksBestEarlyUnlocks.priorities.map(
-              (p: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <Star className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <span
-                      className={`text-xs px-2 py-1 rounded-full border ${p.priority === "Essential" ? "bg-amber-500/10 border-amber-500/30 text-amber-300" : p.priority === "Very High" ? "bg-orange-500/10 border-orange-500/30 text-orange-300" : "bg-[hsl(var(--nav-theme)/0.1)] border-[hsl(var(--nav-theme)/0.3)]"}`}
-                    >
-                      {p.priority}
-                    </span>
-                  </div>
-                  <h3 className="font-bold mb-2">
-                    <LinkedTitle
-                      linkData={
-                        moduleLinkMap[
-                          `lucidBlocksBestEarlyUnlocks::priorities::${index}`
-                        ]
-                      }
-                      locale={locale}
-                    >
-                      {p.name}
-                    </LinkedTitle>
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {p.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Module 11: Achievement Tracker */}
-      <section id="achievement-tracker" className="scroll-mt-24 px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksAchievementTracker"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksAchievementTracker.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksAchievementTracker.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal space-y-6">
-            {t.modules.lucidBlocksAchievementTracker.groups.map(
-              (group: any, gi: number) => (
-                <div
-                  key={gi}
-                  className="p-6 bg-white/5 border border-border rounded-xl"
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <ClipboardCheck className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <h3 className="font-bold text-lg">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksAchievementTracker::groups::${gi}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {group.name}
-                      </LinkedTitle>
-                    </h3>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {group.achievements.map((a: any, ai: number) => (
-                      <div
-                        key={ai}
-                        className="p-3 bg-white/5 border border-border rounded-lg"
-                      >
-                        <p className="font-semibold text-sm text-[hsl(var(--nav-theme-light))]">
-                          {a.title}
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          {a.description}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Module 12: Singleplayer FAQ */}
-      <section
-        id="singleplayer-faq"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={
-                  moduleLinkMap["lucidBlocksSingleplayerAndPlatformFAQ"]
-                }
-                locale={locale}
-              >
-                {t.modules.lucidBlocksSingleplayerAndPlatformFAQ.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksSingleplayerAndPlatformFAQ.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal space-y-2">
-            {t.modules.lucidBlocksSingleplayerAndPlatformFAQ.faqs.map(
-              (faq: any, index: number) => (
-                <div
-                  key={index}
-                  className="border border-border rounded-xl overflow-hidden"
-                >
-                  <button
-                    onClick={() =>
-                      setFaqExpanded(faqExpanded === index ? null : index)
-                    }
-                    className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors"
-                  >
-                    <span className="font-semibold">{faq.question}</span>
-                    <ChevronDown
-                      className={`w-5 h-5 flex-shrink-0 transition-transform ${faqExpanded === index ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                  {faqExpanded === index && (
-                    <div className="px-5 pb-5 text-muted-foreground text-sm">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Module 13: Steam Deck and Controller */}
-      <section id="steam-deck-controller" className="scroll-mt-24 px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Gamepad2 className="w-8 h-8 text-[hsl(var(--nav-theme-light))]" />
-              <h2 className="text-4xl md:text-5xl font-bold">
-                <LinkedTitle
-                  linkData={moduleLinkMap["lucidBlocksSteamDeckAndController"]}
-                  locale={locale}
-                >
-                  {t.modules.lucidBlocksSteamDeckAndController.title}
-                </LinkedTitle>
-              </h2>
+          <div className="overflow-hidden rounded-2xl border border-border">
+            <div className="grid bg-[hsl(var(--nav-theme)/0.1)] text-sm font-semibold text-foreground md:grid-cols-4">
+              <div className="border-b border-border px-4 py-3 md:border-b-0 md:border-r">
+                {t.modules.upgrades.headers.area}
+              </div>
+              <div className="border-b border-border px-4 py-3 md:border-b-0 md:border-r">
+                {t.modules.upgrades.headers.bestFocus}
+              </div>
+              <div className="border-b border-border px-4 py-3 md:border-b-0 md:border-r">
+                {t.modules.upgrades.headers.whenToBuy}
+              </div>
+              <div className="px-4 py-3">{t.modules.upgrades.headers.why}</div>
             </div>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksSteamDeckAndController.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal space-y-2">
-            {t.modules.lucidBlocksSteamDeckAndController.faqs.map(
-              (faq: any, index: number) => (
-                <div
-                  key={index}
-                  className="border border-border rounded-xl overflow-hidden"
-                >
-                  <button
-                    onClick={() =>
-                      setDeckExpanded(deckExpanded === index ? null : index)
-                    }
-                    className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors"
-                  >
-                    <span className="font-semibold">{faq.question}</span>
-                    <ChevronDown
-                      className={`w-5 h-5 flex-shrink-0 transition-transform ${deckExpanded === index ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                  {deckExpanded === index && (
-                    <div className="px-5 pb-5 text-muted-foreground text-sm">
-                      {faq.answer}
-                    </div>
-                  )}
+
+            {t.modules.upgrades.rows.map((row: any) => (
+              <div
+                key={row.area}
+                className="grid border-t border-border bg-white/5 md:grid-cols-4"
+              >
+                <div className="px-4 py-4 font-semibold">{row.area}</div>
+                <div className="px-4 py-4 text-sm text-muted-foreground">
+                  {row.bestFocus}
                 </div>
-              ),
-            )}
+                <div className="px-4 py-4 text-sm text-muted-foreground">
+                  {row.whenToBuy}
+                </div>
+                <div className="px-4 py-4 text-sm text-muted-foreground">
+                  {row.why}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {t.modules.upgrades.stats.map((item: string) => (
+              <div
+                key={item}
+                className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--nav-theme)/0.22)] bg-[hsl(var(--nav-theme)/0.08)] px-4 py-2 text-sm"
+              >
+                <LineChart className="h-4 w-4 text-[hsl(var(--nav-theme-light))]" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Module 14: Settings and Accessibility */}
-      <section
-        id="settings-accessibility"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
+      <section id="runes-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksSettingsAndAccessibility"]}
-                locale={locale}
-              >
-                {t.modules.lucidBlocksSettingsAndAccessibility.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksSettingsAndAccessibility.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-4">
-            {t.modules.lucidBlocksSettingsAndAccessibility.settings.map(
-              (s: any, index: number) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Settings className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
-                    <h3 className="font-bold">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksSettingsAndAccessibility::settings::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {s.name}
-                      </LinkedTitle>
-                    </h3>
-                    <span className="text-xs px-2 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)]">
-                      {s.type}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    {s.description}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
+          <SectionHeader
+            eyebrow={t.modules.runes.eyebrow}
+            title={t.modules.runes.title}
+            intro={t.modules.runes.intro}
+          />
 
-      {/* Module 15: Updates and Patch Notes */}
-      <section id="updates-patch-notes" className="scroll-mt-24 px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={moduleLinkMap["lucidBlocksUpdatesAndPatchNotes"]}
-                locale={locale}
+          <div className="grid gap-4 md:grid-cols-2">
+            {t.modules.runes.cards.map((card: any) => (
+              <article
+                key={card.name}
+                className="rounded-2xl border border-border bg-white/5 p-6 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)]"
               >
-                {t.modules.lucidBlocksUpdatesAndPatchNotes.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksUpdatesAndPatchNotes.intro}
-            </p>
-          </div>
-          <div className="scroll-reveal relative pl-6 border-l-2 border-[hsl(var(--nav-theme)/0.3)] space-y-8">
-            {t.modules.lucidBlocksUpdatesAndPatchNotes.entries.map(
-              (entry: any, index: number) => (
-                <div key={index} className="relative">
-                  <div className="absolute -left-[1.4rem] w-4 h-4 rounded-full bg-[hsl(var(--nav-theme))] border-2 border-background" />
-                  <div className="p-5 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)]">
-                        {entry.type}
-                      </span>
-                      <Clock className="w-4 h-4 text-muted-foreground" />
-                    </div>
-                    <h3 className="font-bold mb-1">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksUpdatesAndPatchNotes::entries::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {entry.title}
-                      </LinkedTitle>
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {entry.description}
+                <div className="mb-3 flex items-center gap-3">
+                  <Sparkles className="h-5 w-5 text-[hsl(var(--nav-theme-light))]" />
+                  <div>
+                    <h3 className="text-xl font-bold">{card.name}</h3>
+                    <p className="text-xs uppercase tracking-[0.14em] text-[hsl(var(--nav-theme-light))]">
+                      {card.focus}
                     </p>
                   </div>
                 </div>
-              ),
-            )}
+                <p className="text-sm text-muted-foreground">{card.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {t.modules.runes.bonuses.map((item: string) => (
+              <div
+                key={item}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-4 py-2 text-sm text-muted-foreground"
+              >
+                <Check className="h-4 w-4 text-[hsl(var(--nav-theme-light))]" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Module 16: Crash Fix and Troubleshooting */}
-      <section
-        id="crash-fix"
-        className="scroll-mt-24 px-4 py-20 bg-white/[0.02]"
-      >
+      <section id="prestige-guide" className="scroll-mt-24 px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 scroll-reveal">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <LinkedTitle
-                linkData={
-                  moduleLinkMap["lucidBlocksCrashFixAndTroubleshooting"]
-                }
-                locale={locale}
+          <SectionHeader
+            eyebrow={t.modules.prestige.eyebrow}
+            title={t.modules.prestige.title}
+            intro={t.modules.prestige.intro}
+          />
+
+          <div className="space-y-4">
+            {t.modules.prestige.steps.map((step: any) => (
+              <article
+                key={step.step}
+                className="flex gap-4 rounded-2xl border border-border bg-white/5 p-5 transition-colors hover:border-[hsl(var(--nav-theme)/0.5)] md:p-6"
               >
-                {t.modules.lucidBlocksCrashFixAndTroubleshooting.title}
-              </LinkedTitle>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {t.modules.lucidBlocksCrashFixAndTroubleshooting.intro}
-            </p>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[hsl(var(--nav-theme)/0.35)] bg-[hsl(var(--nav-theme)/0.12)] text-lg font-bold text-[hsl(var(--nav-theme-light))]">
+                  {step.step}
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl font-bold">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.text}</p>
+                  <div className="mt-3 inline-flex rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                    {step.checkpoint}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
-          <div className="scroll-reveal space-y-4 mb-8">
-            {t.modules.lucidBlocksCrashFixAndTroubleshooting.steps.map(
-              (step: any, index: number) => (
-                <div
-                  key={index}
-                  className="flex gap-4 p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
+        </div>
+      </section>
+
+      <section id="discord-and-updates" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <SectionHeader
+            eyebrow={t.modules.updates.eyebrow}
+            title={t.modules.updates.title}
+            intro={t.modules.updates.intro}
+          />
+
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  icon: BookOpen,
+                  label: t.modules.updates.links.roblox.label,
+                  description: t.modules.updates.links.roblox.description,
+                  href: robloxGameUrl,
+                },
+                {
+                  icon: Compass,
+                  label: t.modules.updates.links.group.label,
+                  description: t.modules.updates.links.group.description,
+                  href: robloxGroupUrl,
+                },
+                {
+                  icon: Megaphone,
+                  label: t.modules.updates.links.discord.label,
+                  description: t.modules.updates.links.discord.description,
+                  href: discordUrl,
+                },
+                {
+                  icon: ScrollText,
+                  label: t.modules.updates.links.twitter.label,
+                  description: t.modules.updates.links.twitter.description,
+                  href: twitterUrl,
+                },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-2xl border border-border bg-white/5 p-5 transition-all hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.12)]"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[hsl(var(--nav-theme)/0.2)] border-2 border-[hsl(var(--nav-theme)/0.5)] flex items-center justify-center">
-                    <span className="text-xl font-bold text-[hsl(var(--nav-theme-light))]">
-                      {index + 1}
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">
-                      <LinkedTitle
-                        linkData={
-                          moduleLinkMap[
-                            `lucidBlocksCrashFixAndTroubleshooting::steps::${index}`
-                          ]
-                        }
-                        locale={locale}
-                      >
-                        {step.title}
-                      </LinkedTitle>
-                    </h3>
-                    <p className="text-muted-foreground">{step.description}</p>
-                  </div>
-                </div>
-              ),
-            )}
-          </div>
-          <div className="scroll-reveal p-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-bold text-yellow-400 mb-2">
-                  Still having issues?
+                  <item.icon className="mb-4 h-6 w-6 text-[hsl(var(--nav-theme-light))]" />
+                  <h3 className="mb-2 flex items-center gap-2 text-lg font-bold">
+                    <span>{item.label}</span>
+                    <ExternalLink className="h-4 w-4 opacity-70 transition group-hover:translate-x-0.5" />
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
+                </a>
+              ))}
+            </div>
+
+            <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.22)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.12),transparent)] p-6">
+              <div className="mb-5 flex items-center gap-3">
+                <Megaphone className="h-6 w-6 text-[hsl(var(--nav-theme-light))]" />
+                <h3 className="text-xl font-bold">
+                  {t.modules.updates.timelineTitle}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Report bugs with your logs through the official channels:
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href={discordUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors"
-                  >
-                    <MessageCircle className="w-4 h-4" /> Discord{" "}
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                  <a
-                    href={robloxGameUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors"
-                  >
-                    Play on Roblox <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
+              </div>
+
+              <div className="space-y-4 border-l border-[hsl(var(--nav-theme)/0.25)] pl-5">
+                {t.modules.updates.entries.map((entry: any) => (
+                  <article key={entry.title} className="relative">
+                    <div className="absolute -left-[1.43rem] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-background bg-[hsl(var(--nav-theme))]" />
+                    <div className="rounded-xl border border-border bg-white/5 p-4">
+                      <div className="mb-2 inline-flex rounded-full border border-[hsl(var(--nav-theme)/0.22)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1 text-xs text-[hsl(var(--nav-theme-light))]">
+                        {entry.type}
+                      </div>
+                      <h4 className="font-bold">{entry.title}</h4>
+                      <p className="mt-2 text-sm text-muted-foreground">
+                        {entry.description}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-5 rounded-xl border border-border bg-white/5 p-4">
+                <h4 className="mb-2 font-semibold">{t.modules.updates.bonusTitle}</h4>
+                <ul className="space-y-2">
+                  {t.modules.updates.bonuses.map((item: string) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--nav-theme-light))]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
       <Suspense fallback={<LoadingPlaceholder />}>
         <FAQSection
           title={t.faq.title}
@@ -1370,7 +872,6 @@ export default function HomePageClient({
         />
       </Suspense>
 
-      {/* CTA Section */}
       <Suspense fallback={<LoadingPlaceholder />}>
         <CTASection
           title={t.cta.title}
@@ -1380,7 +881,6 @@ export default function HomePageClient({
         />
       </Suspense>
 
-      {/* Ad Banner 3 */}
       <AdBanner
         type="banner-300x250"
         adKey={process.env.NEXT_PUBLIC_AD_BANNER_300X250}
@@ -1392,13 +892,11 @@ export default function HomePageClient({
         className="hidden md:flex"
       />
 
-      {/* Footer */}
-      <footer className="bg-white/[0.02] border-t border-border">
+      <footer className="border-t border-border bg-white/[0.02]">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            {/* Brand */}
+          <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-4">
             <div>
-              <h3 className="text-xl font-bold mb-4 text-[hsl(var(--nav-theme-light))]">
+              <h3 className="mb-4 text-xl font-bold text-[hsl(var(--nav-theme-light))]">
                 {t.footer.title}
               </h3>
               <p className="text-sm text-muted-foreground">
@@ -1406,16 +904,15 @@ export default function HomePageClient({
               </p>
             </div>
 
-            {/* Community - External Links Only */}
             <div>
-              <h4 className="font-semibold mb-4">{t.footer.community}</h4>
+              <h4 className="mb-4 font-semibold">{t.footer.community}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
                     href={discordUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.discord}
                   </a>
@@ -1425,7 +922,7 @@ export default function HomePageClient({
                     href={twitterUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.twitter}
                   </a>
@@ -1435,7 +932,7 @@ export default function HomePageClient({
                     href={robloxGroupUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.steamCommunity}
                   </a>
@@ -1445,7 +942,7 @@ export default function HomePageClient({
                     href={robloxGameUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.steamStore}
                   </a>
@@ -1453,14 +950,13 @@ export default function HomePageClient({
               </ul>
             </div>
 
-            {/* Legal - Internal Routes Only */}
             <div>
-              <h4 className="font-semibold mb-4">{t.footer.legal}</h4>
+              <h4 className="mb-4 font-semibold">{t.footer.legal}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
                     href="/about"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.about}
                   </Link>
@@ -1468,7 +964,7 @@ export default function HomePageClient({
                 <li>
                   <Link
                     href="/privacy-policy"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.privacy}
                   </Link>
@@ -1476,7 +972,7 @@ export default function HomePageClient({
                 <li>
                   <Link
                     href="/terms-of-service"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.terms}
                   </Link>
@@ -1484,7 +980,7 @@ export default function HomePageClient({
                 <li>
                   <Link
                     href="/copyright"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
                   >
                     {t.footer.copyrightNotice}
                   </Link>
@@ -1492,9 +988,8 @@ export default function HomePageClient({
               </ul>
             </div>
 
-            {/* Copyright */}
             <div>
-              <p className="text-sm text-muted-foreground mb-2">
+              <p className="mb-2 text-sm text-muted-foreground">
                 {t.footer.copyright}
               </p>
               <p className="text-xs text-muted-foreground">
