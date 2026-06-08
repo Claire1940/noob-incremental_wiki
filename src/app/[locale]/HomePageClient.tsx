@@ -86,13 +86,15 @@ export default function HomePageClient({
   const t = useMessages() as any;
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://noob-incremental.wiki";
+  const youtubeVideoId = "Y3FeBkpbT6g";
   const robloxGameUrl =
     "https://www.roblox.com/games/76911729991355/Noob-Incremental";
   const robloxGroupUrl =
     "https://www.roblox.com/communities/356937272/Ghoulax-Games";
   const discordUrl = "https://discord.com/invite/ghoulaxstudio";
   const twitterUrl = "https://x.com/GhoulaxDev";
-  const youtubeUrl = "https://www.youtube.com/watch?v=Y3FeBkpbT6g";
+  const youtubeUrl = `https://www.youtube.com/watch?v=${youtubeVideoId}`;
+  const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}`;
 
   // Structured data
   const structuredData = {
@@ -170,9 +172,8 @@ export default function HomePageClient({
         name: "I Went From POOR to TRILLIONAIRE in Roblox Noob Incremental...",
         description:
           "Gameplay showcase video for Noob Incremental on Roblox, used here as an embeddable preview for the game loop and progression style.",
-        uploadDate: "2026-06-08",
         thumbnailUrl: `${siteUrl}/images/hero.webp`,
-        embedUrl: "https://www.youtube.com/embed/Y3FeBkpbT6g",
+        embedUrl: youtubeEmbedUrl,
         url: youtubeUrl,
       },
     ],
@@ -246,15 +247,17 @@ export default function HomePageClient({
 
             {/* CTA Buttons */}
             <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row md:mb-12 md:gap-4">
-              <button
-                onClick={() => scrollToSection("beginner-guide")}
+              <a
+                href={discordUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-8 md:py-4
                            bg-[hsl(var(--nav-theme))] hover:bg-[hsl(var(--nav-theme)/0.9)]
                            text-white rounded-lg font-semibold text-base md:text-lg transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
                 {t.hero.getFreeCodesCTA}
-              </button>
+              </a>
               <a
                 href={robloxGameUrl}
                 target="_blank"
@@ -281,7 +284,7 @@ export default function HomePageClient({
         <div className="scroll-reveal container mx-auto max-w-6xl">
           <div className="relative overflow-hidden rounded-2xl">
             <VideoFeature
-              videoId="Y3FeBkpbT6g"
+              videoId={youtubeVideoId}
               title="I Went From POOR to TRILLIONAIRE in Roblox Noob Incremental..."
             />
           </div>

@@ -37,7 +37,7 @@
     "badge": "Layered Roblox Incremental Idle Game",
     "title": "Noob Incremental Wiki",
     "description": "Build Oof income by buying Noobs, stacking upgrades, rolling and leveling Runes, then prestiging through multiple layers to unlock stronger progression.",
-    "getFreeCodesCTA": "Get Free Codes",
+    "getFreeCodesCTA": "Join Discord",
     "playOnSteamCTA": "Play on Roblox",
     "playOnRobloxCTA": "Play on Roblox",
     "stats": {
@@ -787,13 +787,13 @@
   },
   "cta": {
     "title": "Ready to Progress in Noob Incremental?",
-    "description": "Join the Ghoulax Studio community for update alerts, code drops, and Noob Incremental discussions.",
+    "description": "Join the Ghoulax Studio community for code drops, update alerts, and Noob Incremental progression discussions.",
     "joinCommunity": "Join Discord",
     "joinGame": "Play on Roblox"
   },
   "footer": {
     "title": "Noob Incremental Wiki",
-    "description": "Your resource hub for Noob Incremental codes, runes, prestige, upgrades, and beginner progression guides.",
+    "description": "Your resource hub for Noob Incremental codes, runes, prestige routes, upgrade priorities, and beginner progression guides.",
     "resources": "Resources",
     "community": "Community",
     "legal": "Legal",

@@ -43,8 +43,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations("seo.home");
 
   return {
+    metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
+    keywords: t("keywords"),
     robots: {
       index: true,
       follow: true,
