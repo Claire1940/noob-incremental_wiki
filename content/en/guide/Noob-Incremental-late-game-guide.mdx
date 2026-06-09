@@ -1,0 +1,145 @@
+import { Map, Swords, Trophy, Target, Shield, Sparkles } from 'lucide-react'
+import { Callout } from '@/components/mdx/Callout'
+import { Card, CardGrid } from '@/components/mdx/CardGrid'
+import { Checklist } from '@/components/mdx/Checklist'
+import { FAQ } from '@/components/mdx/FAQ'
+import { Steps, Step } from '@/components/mdx/Steps'
+import { Section } from '@/components/mdx/Section'
+import { YouTubeEmbed } from '@/components/mdx/YouTubeEmbed'
+
+export const metadata = {
+  title: "Noob Incremental Late Game Guide: Scaling & Prestige Tactics",
+  description: "Master the late game of Noob Incremental with advanced strategies for prestige layers, rune optimization, and high-efficiency Oof farming.",
+  category: "Guide",
+  image: "https://placehold.co/800x400/6366f1/fff?text=Late+Game+Strategy",
+  date: "2026-06-09",
+  author: "Noob Incremental Wiki Team"
+}
+
+<Callout type="info" title="Quick Guide">
+- **Noob Incremental late game guide** focuses on maximizing production through prestige layers and rune management.
+- Prioritize **Rune Luck and Speed** bonuses to ensure efficient stat scaling before resetting.
+- Prestige only when the **gain multiplier** significantly outweighs the cost of rebuilding your base.
+- Late game success relies on balancing **Oof income** with long-term rune leveling.
+</Callout>
+
+<Section icon={Trophy} title="Late Game Progression Overview">
+
+Transitioning into the late game of Noob Incremental requires a shift from rapid early-game expansion to calculated resource management. At this stage, your progression is no longer just about buying the next cheapest upgrade; it is about optimizing your prestige timing and rune efficacy.
+
+**Video Highlights:**
+- Understanding the scaling walls in later prestige layers.
+- Optimal rune rolling strategies for advanced players.
+- How to manage Oof production post-prestige.
+
+<YouTubeEmbed videoId="dQw4w9WgXcQ" title="Noob Incremental Advanced Progression" />
+
+<Callout type="tip" title="Strategy Note">
+Always verify your current **Rune Luck bonus** before attempting to roll for high-tier runes. Small incremental gains in luck lead to massive long-term output differences.
+</Callout>
+
+</Section>
+
+<Section icon={Target} title="Prestige Layer Strategy">
+
+Prestige is the engine of your late-game power. Understanding when to trigger a reset is the most critical skill for any player looking to climb the leaderboards.
+
+| Prestige Layer | Primary Goal | Best Time to Reset |
+| :--- | :--- | :--- |
+| Layer 1 | Unlock basic multipliers | When upgrade costs stall |
+| Layer 2 | Prism efficiency boost | After maxing current rune level |
+| Layer 3 | Stat scaling optimization | When Oof growth drops < 5% |
+
+<Steps>
+  <Step num="1" title="Evaluate Current Output">
+    Check your Oof per second (OPS) against the potential gain from your next prestige layer.
+  </Step>
+  <Step num="2" title="Clear Rune Requirements">
+    Ensure you have leveled up your primary runes as much as possible before the reset.
+  </Step>
+  <Step num="3" title="Execute Reset">
+    Trigger the prestige and immediately focus on buying high-impact Noob upgrades first.
+  </Step>
+</Steps>
+
+<Callout type="warning" title="Prestige Warning">
+Do not prestige just because the button is available. If your current run still has room for exponential Oof growth, stay in the run to accumulate more base stats.
+</Callout>
+
+</Section>
+
+<Section icon={Sparkles} title="Rune Optimization & Luck">
+
+Runes are your primary source of multiplicative power in the late game. Managing these effectively requires a disciplined approach to rolling and leveling.
+
+<CardGrid cols={3}>
+  <Card title="Rune Luck">
+    - Increases high-tier drop chance
+    - Essential for end-game sets
+    - Boosted by community server
+  </Card>
+  <Card title="Rune Speed">
+    - Reduces roll cooldowns
+    - Improves farming efficiency
+    - Boosted by group activity
+  </Card>
+  <Card title="Rune Leveling">
+    - Multiplies base rune effects
+    - Requires consistent Oof input
+    - Priority for long-term power
+  </Card>
+</CardGrid>
+
+<Callout type="success" title="Efficiency Boost">
+Combine the **+10% Rune Speed** (group benefit) and **+10% Rune Luck** (community server) to cut your roll time and increase your yield simultaneously.
+</Callout>
+
+</Section>
+
+<Section icon={Shield} title="Farming Efficiency Checklist">
+
+Use this checklist to ensure you are not missing out on hidden multipliers that impact your late-game speed.
+
+<Checklist
+  id="late-game-checklist"
+  title="Daily Maintenance Tasks:"
+  items={[
+    "Verify all active community codes are redeemed",
+    "Confirm group membership for speed bonuses",
+    "Check for recent patch notes regarding balance changes",
+    "Set a target goal for the current prestige layer"
+  ]}
+/>
+
+<Callout type="info" title="Resource Management">
+Keep your Oof production stable by maintaining a strict ratio between Noob purchases and upgrade investments. Use the table below to gauge your focus:
+
+| Resource | Focus Level | Late Game Utility |
+| :--- | :--- | :--- |
+| Noobs | Moderate | Base production floor |
+| Upgrades | High | Multiplier scaling |
+| Runes | Very High | Exponential power |
+| Potions | Situational | Burst farming |
+
+</Callout>
+
+</Section>
+
+<Section icon={Map} title="FAQ">
+
+<FAQ items={[
+  {
+    question: "When is the best time to prestige in the late game?",
+    answer: "Prestige when your Oof growth rate slows to under 5% per hour, and the potential prestige reward offers a significant jump in your base multiplier."
+  },
+  {
+    question: "Should I prioritize Rune Luck or Rune Speed?",
+    answer: "Rune Luck is better for finding rare high-tier runes, while Rune Speed is superior for mass-rolling and leveling existing runes quickly."
+  },
+  {
+    question: "Are there any hidden late-game mechanics?",
+    answer: "Most late-game mechanics revolve around the compounding effects of prestige layers and maximized rune sets. Always check the official Ghoulax Studio Discord for specific update-related meta shifts."
+  }
+]} />
+
+</Section>
