@@ -6,6 +6,7 @@ import {
 	LineChart,
 	Newspaper,
 	Sparkles,
+	Users,
 	type LucideIcon,
 } from 'lucide-react'
 
@@ -24,6 +25,7 @@ export const NAVIGATION_CONFIG: NavigationItem[] = [
 	{ key: 'runes', path: '/runes', icon: Sparkles, isContentType: true },
 	{ key: 'progression', path: '/progression', icon: Layers3, isContentType: true },
 	{ key: 'updates', path: '/updates', icon: Newspaper, isContentType: true },
+	{ key: 'community', path: '/community', icon: Users, isContentType: true },
 ]
 
 // 从配置派生内容类型列表（用于路由和内容加载）
