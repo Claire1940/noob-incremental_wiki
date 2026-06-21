@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getLatestArticles } from '@/lib/getLatestArticles'
 import type { Language } from '@/lib/content'
 import HomePageClient from './HomePageClient'
@@ -10,6 +10,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params
+  setRequestLocale(locale)
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://noob-incremental.wiki'
   const t = await getTranslations({ locale, namespace: 'seo.home' })
   const pageUrl = locale === 'en' ? siteUrl : `${siteUrl}/${locale}`
@@ -42,6 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params
+  setRequestLocale(locale)
 
   const latestArticles = await getLatestArticles(locale as Language, 30)
 
