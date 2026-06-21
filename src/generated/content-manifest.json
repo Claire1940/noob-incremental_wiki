@@ -1,0 +1,690 @@
+{
+  "en": {
+    "codes": [
+      {
+        "slug": "Noob-Incremental-codes",
+        "file": "Noob-Incremental-codes"
+      }
+    ],
+    "community": [
+      {
+        "slug": "Noob-Incremental-discord",
+        "file": "Noob-Incremental-discord"
+      },
+      {
+        "slug": "Noob-Incremental-reddit",
+        "file": "Noob-Incremental-reddit"
+      },
+      {
+        "slug": "Noob-Incremental-trello",
+        "file": "Noob-Incremental-trello"
+      },
+      {
+        "slug": "Noob-Incremental-youtube",
+        "file": "Noob-Incremental-youtube"
+      }
+    ],
+    "farming": [
+      {
+        "slug": "Noob-Incremental-AFK-guide",
+        "file": "Noob-Incremental-AFK-guide"
+      },
+      {
+        "slug": "Noob-Incremental-farmer",
+        "file": "Noob-Incremental-farmer"
+      },
+      {
+        "slug": "Noob-Incremental-farming",
+        "file": "Noob-Incremental-farming"
+      },
+      {
+        "slug": "Noob-Incremental-guild",
+        "file": "Noob-Incremental-guild"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "Noob-Incremental-beginner-guide",
+        "file": "Noob-Incremental-beginner-guide"
+      },
+      {
+        "slug": "Noob-Incremental-f2p-guide",
+        "file": "Noob-Incremental-f2p-guide"
+      },
+      {
+        "slug": "Noob-Incremental-guide",
+        "file": "Noob-Incremental-guide"
+      },
+      {
+        "slug": "Noob-Incremental-how-to-play",
+        "file": "Noob-Incremental-how-to-play"
+      },
+      {
+        "slug": "Noob-Incremental-late-game-guide",
+        "file": "Noob-Incremental-late-game-guide"
+      },
+      {
+        "slug": "Noob-Incremental-mistakes",
+        "file": "Noob-Incremental-mistakes"
+      },
+      {
+        "slug": "Noob-Incremental-noob-to-pro",
+        "file": "Noob-Incremental-noob-to-pro"
+      },
+      {
+        "slug": "Noob-Incremental-tips",
+        "file": "Noob-Incremental-tips"
+      },
+      {
+        "slug": "Noob-Incremental-tricks",
+        "file": "Noob-Incremental-tricks"
+      }
+    ],
+    "progression": [
+      {
+        "slug": "Noob-Incremental-max-level",
+        "file": "Noob-Incremental-max-level"
+      },
+      {
+        "slug": "Noob-Incremental-max-world",
+        "file": "Noob-Incremental-max-world"
+      },
+      {
+        "slug": "Noob-Incremental-oof",
+        "file": "Noob-Incremental-oof"
+      },
+      {
+        "slug": "Noob-Incremental-prestige",
+        "file": "Noob-Incremental-prestige"
+      },
+      {
+        "slug": "Noob-Incremental-prism",
+        "file": "Noob-Incremental-prism"
+      },
+      {
+        "slug": "Noob-Incremental-progression",
+        "file": "Noob-Incremental-progression"
+      },
+      {
+        "slug": "Noob-Incremental-world-2",
+        "file": "Noob-Incremental-world-2"
+      },
+      {
+        "slug": "Noob-Incremental-world-3",
+        "file": "Noob-Incremental-world-3"
+      }
+    ],
+    "runes": [
+      {
+        "slug": "Noob-Incremental-best-runes",
+        "file": "Noob-Incremental-best-runes"
+      },
+      {
+        "slug": "Noob-Incremental-rune-level",
+        "file": "Noob-Incremental-rune-level"
+      },
+      {
+        "slug": "Noob-Incremental-rune-tier-list",
+        "file": "Noob-Incremental-rune-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-rune",
+        "file": "Noob-Incremental-rune"
+      },
+      {
+        "slug": "Noob-Incremental-runes-guide",
+        "file": "Noob-Incremental-runes-guide"
+      }
+    ],
+    "updates": [
+      {
+        "slug": "Noob-Incremental-new-update",
+        "file": "Noob-Incremental-new-update"
+      },
+      {
+        "slug": "Noob-Incremental-release",
+        "file": "Noob-Incremental-release"
+      },
+      {
+        "slug": "Noob-Incremental-update-1",
+        "file": "Noob-Incremental-update-1"
+      },
+      {
+        "slug": "Noob-Incremental-update-2",
+        "file": "Noob-Incremental-update-2"
+      },
+      {
+        "slug": "Noob-Incremental-update",
+        "file": "Noob-Incremental-update"
+      }
+    ],
+    "upgrades": [
+      {
+        "slug": "Noob-Incremental-best-upgrades",
+        "file": "Noob-Incremental-best-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses-tier-list",
+        "file": "Noob-Incremental-gamepasses-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses",
+        "file": "Noob-Incremental-gamepasses"
+      },
+      {
+        "slug": "Noob-Incremental-noobs",
+        "file": "Noob-Incremental-noobs"
+      },
+      {
+        "slug": "Noob-Incremental-secret-upgrades",
+        "file": "Noob-Incremental-secret-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-stats",
+        "file": "Noob-Incremental-stats"
+      },
+      {
+        "slug": "Noob-Incremental-upgrades",
+        "file": "Noob-Incremental-upgrades"
+      }
+    ]
+  },
+  "ja": {
+    "codes": [
+      {
+        "slug": "Noob-Incremental-codes",
+        "file": "Noob-Incremental-codes"
+      }
+    ],
+    "community": [
+      {
+        "slug": "Noob-Incremental-discord",
+        "file": "Noob-Incremental-discord"
+      },
+      {
+        "slug": "Noob-Incremental-reddit",
+        "file": "Noob-Incremental-reddit"
+      },
+      {
+        "slug": "Noob-Incremental-trello",
+        "file": "Noob-Incremental-trello"
+      }
+    ],
+    "farming": [
+      {
+        "slug": "Noob-Incremental-farmer",
+        "file": "Noob-Incremental-farmer"
+      },
+      {
+        "slug": "Noob-Incremental-farming",
+        "file": "Noob-Incremental-farming"
+      },
+      {
+        "slug": "Noob-Incremental-guild",
+        "file": "Noob-Incremental-guild"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "Noob-Incremental-beginner-guide",
+        "file": "Noob-Incremental-beginner-guide"
+      },
+      {
+        "slug": "Noob-Incremental-f2p-guide",
+        "file": "Noob-Incremental-f2p-guide"
+      },
+      {
+        "slug": "Noob-Incremental-guide",
+        "file": "Noob-Incremental-guide"
+      },
+      {
+        "slug": "Noob-Incremental-how-to-play",
+        "file": "Noob-Incremental-how-to-play"
+      },
+      {
+        "slug": "Noob-Incremental-noob-to-pro",
+        "file": "Noob-Incremental-noob-to-pro"
+      },
+      {
+        "slug": "Noob-Incremental-tips",
+        "file": "Noob-Incremental-tips"
+      },
+      {
+        "slug": "Noob-Incremental-tricks",
+        "file": "Noob-Incremental-tricks"
+      }
+    ],
+    "progression": [
+      {
+        "slug": "Noob-Incremental-max-world",
+        "file": "Noob-Incremental-max-world"
+      },
+      {
+        "slug": "Noob-Incremental-oof",
+        "file": "Noob-Incremental-oof"
+      },
+      {
+        "slug": "Noob-Incremental-prestige",
+        "file": "Noob-Incremental-prestige"
+      },
+      {
+        "slug": "Noob-Incremental-prism",
+        "file": "Noob-Incremental-prism"
+      },
+      {
+        "slug": "Noob-Incremental-progression",
+        "file": "Noob-Incremental-progression"
+      },
+      {
+        "slug": "Noob-Incremental-world-2",
+        "file": "Noob-Incremental-world-2"
+      },
+      {
+        "slug": "Noob-Incremental-world-3",
+        "file": "Noob-Incremental-world-3"
+      }
+    ],
+    "runes": [
+      {
+        "slug": "Noob-Incremental-best-runes",
+        "file": "Noob-Incremental-best-runes"
+      },
+      {
+        "slug": "Noob-Incremental-rune-level",
+        "file": "Noob-Incremental-rune-level"
+      },
+      {
+        "slug": "Noob-Incremental-rune-tier-list",
+        "file": "Noob-Incremental-rune-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-rune",
+        "file": "Noob-Incremental-rune"
+      },
+      {
+        "slug": "Noob-Incremental-runes-guide",
+        "file": "Noob-Incremental-runes-guide"
+      }
+    ],
+    "updates": [
+      {
+        "slug": "Noob-Incremental-new-update",
+        "file": "Noob-Incremental-new-update"
+      },
+      {
+        "slug": "Noob-Incremental-release",
+        "file": "Noob-Incremental-release"
+      },
+      {
+        "slug": "Noob-Incremental-update-1",
+        "file": "Noob-Incremental-update-1"
+      },
+      {
+        "slug": "Noob-Incremental-update",
+        "file": "Noob-Incremental-update"
+      }
+    ],
+    "upgrades": [
+      {
+        "slug": "Noob-Incremental-best-upgrades",
+        "file": "Noob-Incremental-best-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses-tier-list",
+        "file": "Noob-Incremental-gamepasses-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses",
+        "file": "Noob-Incremental-gamepasses"
+      },
+      {
+        "slug": "Noob-Incremental-noobs",
+        "file": "Noob-Incremental-noobs"
+      },
+      {
+        "slug": "Noob-Incremental-secret-upgrades",
+        "file": "Noob-Incremental-secret-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-stats",
+        "file": "Noob-Incremental-stats"
+      },
+      {
+        "slug": "Noob-Incremental-upgrades",
+        "file": "Noob-Incremental-upgrades"
+      }
+    ]
+  },
+  "pt": {
+    "codes": [
+      {
+        "slug": "Noob-Incremental-codes",
+        "file": "Noob-Incremental-codes"
+      }
+    ],
+    "community": [
+      {
+        "slug": "Noob-Incremental-discord",
+        "file": "Noob-Incremental-discord"
+      },
+      {
+        "slug": "Noob-Incremental-reddit",
+        "file": "Noob-Incremental-reddit"
+      },
+      {
+        "slug": "Noob-Incremental-trello",
+        "file": "Noob-Incremental-trello"
+      }
+    ],
+    "farming": [
+      {
+        "slug": "Noob-Incremental-farmer",
+        "file": "Noob-Incremental-farmer"
+      },
+      {
+        "slug": "Noob-Incremental-farming",
+        "file": "Noob-Incremental-farming"
+      },
+      {
+        "slug": "Noob-Incremental-guild",
+        "file": "Noob-Incremental-guild"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "Noob-Incremental-beginner-guide",
+        "file": "Noob-Incremental-beginner-guide"
+      },
+      {
+        "slug": "Noob-Incremental-f2p-guide",
+        "file": "Noob-Incremental-f2p-guide"
+      },
+      {
+        "slug": "Noob-Incremental-guide",
+        "file": "Noob-Incremental-guide"
+      },
+      {
+        "slug": "Noob-Incremental-how-to-play",
+        "file": "Noob-Incremental-how-to-play"
+      },
+      {
+        "slug": "Noob-Incremental-noob-to-pro",
+        "file": "Noob-Incremental-noob-to-pro"
+      },
+      {
+        "slug": "Noob-Incremental-tips",
+        "file": "Noob-Incremental-tips"
+      },
+      {
+        "slug": "Noob-Incremental-tricks",
+        "file": "Noob-Incremental-tricks"
+      }
+    ],
+    "progression": [
+      {
+        "slug": "Noob-Incremental-max-world",
+        "file": "Noob-Incremental-max-world"
+      },
+      {
+        "slug": "Noob-Incremental-oof",
+        "file": "Noob-Incremental-oof"
+      },
+      {
+        "slug": "Noob-Incremental-prestige",
+        "file": "Noob-Incremental-prestige"
+      },
+      {
+        "slug": "Noob-Incremental-prism",
+        "file": "Noob-Incremental-prism"
+      },
+      {
+        "slug": "Noob-Incremental-progression",
+        "file": "Noob-Incremental-progression"
+      },
+      {
+        "slug": "Noob-Incremental-world-2",
+        "file": "Noob-Incremental-world-2"
+      },
+      {
+        "slug": "Noob-Incremental-world-3",
+        "file": "Noob-Incremental-world-3"
+      }
+    ],
+    "runes": [
+      {
+        "slug": "Noob-Incremental-best-runes",
+        "file": "Noob-Incremental-best-runes"
+      },
+      {
+        "slug": "Noob-Incremental-rune-level",
+        "file": "Noob-Incremental-rune-level"
+      },
+      {
+        "slug": "Noob-Incremental-rune-tier-list",
+        "file": "Noob-Incremental-rune-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-rune",
+        "file": "Noob-Incremental-rune"
+      },
+      {
+        "slug": "Noob-Incremental-runes-guide",
+        "file": "Noob-Incremental-runes-guide"
+      }
+    ],
+    "updates": [
+      {
+        "slug": "Noob-Incremental-new-update",
+        "file": "Noob-Incremental-new-update"
+      },
+      {
+        "slug": "Noob-Incremental-release",
+        "file": "Noob-Incremental-release"
+      },
+      {
+        "slug": "Noob-Incremental-update-1",
+        "file": "Noob-Incremental-update-1"
+      },
+      {
+        "slug": "Noob-Incremental-update",
+        "file": "Noob-Incremental-update"
+      }
+    ],
+    "upgrades": [
+      {
+        "slug": "Noob-Incremental-best-upgrades",
+        "file": "Noob-Incremental-best-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses-tier-list",
+        "file": "Noob-Incremental-gamepasses-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses",
+        "file": "Noob-Incremental-gamepasses"
+      },
+      {
+        "slug": "Noob-Incremental-noobs",
+        "file": "Noob-Incremental-noobs"
+      },
+      {
+        "slug": "Noob-Incremental-secret-upgrades",
+        "file": "Noob-Incremental-secret-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-stats",
+        "file": "Noob-Incremental-stats"
+      },
+      {
+        "slug": "Noob-Incremental-upgrades",
+        "file": "Noob-Incremental-upgrades"
+      }
+    ]
+  },
+  "vi": {
+    "codes": [
+      {
+        "slug": "Noob-Incremental-codes",
+        "file": "Noob-Incremental-codes"
+      }
+    ],
+    "community": [
+      {
+        "slug": "Noob-Incremental-discord",
+        "file": "Noob-Incremental-discord"
+      },
+      {
+        "slug": "Noob-Incremental-reddit",
+        "file": "Noob-Incremental-reddit"
+      },
+      {
+        "slug": "Noob-Incremental-trello",
+        "file": "Noob-Incremental-trello"
+      }
+    ],
+    "farming": [
+      {
+        "slug": "Noob-Incremental-farmer",
+        "file": "Noob-Incremental-farmer"
+      },
+      {
+        "slug": "Noob-Incremental-farming",
+        "file": "Noob-Incremental-farming"
+      },
+      {
+        "slug": "Noob-Incremental-guild",
+        "file": "Noob-Incremental-guild"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "Noob-Incremental-beginner-guide",
+        "file": "Noob-Incremental-beginner-guide"
+      },
+      {
+        "slug": "Noob-Incremental-f2p-guide",
+        "file": "Noob-Incremental-f2p-guide"
+      },
+      {
+        "slug": "Noob-Incremental-guide",
+        "file": "Noob-Incremental-guide"
+      },
+      {
+        "slug": "Noob-Incremental-how-to-play",
+        "file": "Noob-Incremental-how-to-play"
+      },
+      {
+        "slug": "Noob-Incremental-noob-to-pro",
+        "file": "Noob-Incremental-noob-to-pro"
+      },
+      {
+        "slug": "Noob-Incremental-tips",
+        "file": "Noob-Incremental-tips"
+      },
+      {
+        "slug": "Noob-Incremental-tricks",
+        "file": "Noob-Incremental-tricks"
+      }
+    ],
+    "progression": [
+      {
+        "slug": "Noob-Incremental-max-world",
+        "file": "Noob-Incremental-max-world"
+      },
+      {
+        "slug": "Noob-Incremental-oof",
+        "file": "Noob-Incremental-oof"
+      },
+      {
+        "slug": "Noob-Incremental-prestige",
+        "file": "Noob-Incremental-prestige"
+      },
+      {
+        "slug": "Noob-Incremental-prism",
+        "file": "Noob-Incremental-prism"
+      },
+      {
+        "slug": "Noob-Incremental-progression",
+        "file": "Noob-Incremental-progression"
+      },
+      {
+        "slug": "Noob-Incremental-world-2",
+        "file": "Noob-Incremental-world-2"
+      },
+      {
+        "slug": "Noob-Incremental-world-3",
+        "file": "Noob-Incremental-world-3"
+      }
+    ],
+    "runes": [
+      {
+        "slug": "Noob-Incremental-best-runes",
+        "file": "Noob-Incremental-best-runes"
+      },
+      {
+        "slug": "Noob-Incremental-rune-level",
+        "file": "Noob-Incremental-rune-level"
+      },
+      {
+        "slug": "Noob-Incremental-rune-tier-list",
+        "file": "Noob-Incremental-rune-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-rune",
+        "file": "Noob-Incremental-rune"
+      },
+      {
+        "slug": "Noob-Incremental-runes-guide",
+        "file": "Noob-Incremental-runes-guide"
+      }
+    ],
+    "updates": [
+      {
+        "slug": "Noob-Incremental-new-update",
+        "file": "Noob-Incremental-new-update"
+      },
+      {
+        "slug": "Noob-Incremental-release",
+        "file": "Noob-Incremental-release"
+      },
+      {
+        "slug": "Noob-Incremental-update-1",
+        "file": "Noob-Incremental-update-1"
+      },
+      {
+        "slug": "Noob-Incremental-update",
+        "file": "Noob-Incremental-update"
+      }
+    ],
+    "upgrades": [
+      {
+        "slug": "Noob-Incremental-best-upgrades",
+        "file": "Noob-Incremental-best-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses-tier-list",
+        "file": "Noob-Incremental-gamepasses-tier-list"
+      },
+      {
+        "slug": "Noob-Incremental-gamepasses",
+        "file": "Noob-Incremental-gamepasses"
+      },
+      {
+        "slug": "Noob-Incremental-noobs",
+        "file": "Noob-Incremental-noobs"
+      },
+      {
+        "slug": "Noob-Incremental-secret-upgrades",
+        "file": "Noob-Incremental-secret-upgrades"
+      },
+      {
+        "slug": "Noob-Incremental-stats",
+        "file": "Noob-Incremental-stats"
+      },
+      {
+        "slug": "Noob-Incremental-upgrades",
+        "file": "Noob-Incremental-upgrades"
+      }
+    ]
+  }
+}
